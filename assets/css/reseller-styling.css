@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #00a3a3;
+    min-height: 100vh;
+    font-family: "Jost", sans-serif;
+    font-weight: 700;
+    background-size: cover;
+    background-position: top;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Alfa Slab One", serif;
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: normal;
+    color: #0d3627;
+}
+
+h3 {
+    font-family: "Saira Stencil One", sans-serif;
+    font-style: normal;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #ffd700;
+    background: #1a1f2e;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+
+/* === HERO SECTION === */
+.reseller-hero {
+    width: 100%;
+    padding: 140px 20px 80px;
+    background: linear-gradient(rgba(13, 54, 39, 0.8), rgba(0, 163, 163, 0.7)), url('../images/logo/8k.png');
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 0 24px 24px;
+    margin-bottom: 20px;
+}
+
+.reseller-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.reseller-hero h1 {
+    font-family: "Alfa Slab One", serif;
+    font-size: 3rem;
+    color: #ffd700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.reseller-hero p {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    color: #f1f1f1;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* === INTRO SECTION === */
+.reseller-intro {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.intro-content strong {
+    color: #00a3a3;
+    font-weight: 800;
+}
+
+/* === PRICING SECTION === */
+.reseller-pricing {
+    padding: 60px 20px;
+    background-color: #00a3a3;
+    width: 100%;
+}
+
+.reseller-pricing h2 {
+    color: #ffffff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.reseller-pricing .sub-heading {
+    text-align: center;
+    color: #e0f7fa;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.reseller-pricing .pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reseller-pricing .price-card {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    max-width: 350px;
+    text-align: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.reseller-pricing .price-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.reseller-pricing h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    background: none;
+    border: none;
+    color: #333;
+    padding: 0;
+}
+
+.reseller-pricing .credits {
+    font-size: 1.8rem;
+    font-family: "Saira Stencil One", sans-serif;
+    color: #00bcd4;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.reseller-pricing .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.reseller-pricing .guarantee {
+    font-size: 0.85rem;
+    color: #28a745;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.reseller-pricing ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.reseller-pricing ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.reseller-pricing ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.ribbon {
+    position: absolute;
+    top: 25px;
+    right: -30px;
+    width: 150px;
+    background: #ffd700;
+    color: #000;
+    font-weight: 800;
+    text-align: center;
+    transform: rotate(45deg);
+    font-size: 0.8rem;
+    padding: 8px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* === FEATURES SECTION === */
+.features-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sub-heading {
+    margin-bottom: 10px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.icon-header {
+    margin: 0 auto 15px;
+    font-size: 3rem;
+}
+
+.feature-title {
+    background: none;
+    border: none;
+    background: linear-gradient(90deg, #0060ff, #00b7ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.feature-description {
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .reseller-hero {
+        background-attachment: scroll;
+        background-size: min(500px, 90%);
+        padding: 120px 15px 50px;
+    }
+
+    .reseller-hero h1 {
+        font-size: 2rem;
+    }
+
+    .reseller-hero p {
+        font-size: 1.1rem;
+    }
+
+    .reseller-pricing .price-card {
+        flex: 1 1 45%;
+    }
+
+    .reseller-pricing .price-card.featured {
+        transform: scale(1.02);
+        border: 4px solid #ffd700;
+        z-index: 2;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .reseller-intro {
+        padding: 40px 15px;
+    }
+
+    .intro-content {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .reseller-pricing .pricing-grid {
+        gap: 1.5rem;
+    }
+
+    .reseller-pricing .price-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #00a3a3;
+    min-height: 100vh;
+    font-family: "Jost", sans-serif;
+    font-weight: 700;
+    background-size: cover;
+    background-position: top;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* === how to install === */
+.how-to-install {
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.how-to-install h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Center page heading and intro paragraph */
+.how-to-install .container h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #004d40;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
+}
+
+.how-to-install .container > p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.install-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.install-card {
+  flex: 1 1 300px;
+  max-width: 320px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  background: #fafafa;
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  max-width: 320px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.install-card:hover {
+  transform: translateY(-5px);
+}
+
+.install-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Headings / copy inside cards */
+.install-card h2 {
+  font-size: 1.15rem;
+  margin: 10px 0 8px;
+  color: #00796b;
+  font-weight: 600;
+}
+
+.install-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+/* Read more button */
+.read-more {
+  margin-top: auto;
+  display: inline-block;
+  padding: 10px 18px;
+  background: #009688;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.read-more:hover,
+.read-more:focus {
+  background: #00796b;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  outline: none;
+}
+
+/* === privacy policy .FIRESTICK-guide,.Refund-Policy,.terms-of-use  === */
+.privacy-policy,
+.TiviMate-guide,
+.Windows-guide,
+.IPTVSmarters-guide,
+.FIRESTICK-guide,
+ .Refund-Policy,
+  .terms-of-use {
+  padding: 60px 20px;
+  background: #fff;
+  color: #333;
+  line-height: 1.7;
+}
+
+.privacy-policy .container,
+.Windows-guide .container,
+.TiviMate-guide .container,
+.IPTVSmarters-guide .container,
+.FIRESTICK-guide .container,
+ .Refund-Policy .container, 
+ .terms-of-use .container {
+  font-weight: 700;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.privacy-policy h1,
+.Windows-guide h1,
+.TiviMate-guide h1,
+.IPTVSmarters-guide h1,
+.FIRESTICK-guide h1,
+.Refund-Policy h1,
+ .terms-of-use h1 {
+  font-size: clamp(1.8rem, 1.36rem + 2.18vw, 3rem); /* Responsive font size */
+  color: #00796b;
+  margin-bottom: 30px;
+}
+
+.privacy-policy h2,
+.TiviMate-guide h2,
+.Windows-guide h2,
+.IPTVSmarters-guide h2,
+.FIRESTICK-guide h2,
+ .Refund-Policy h2, 
+ .terms-of-use h2 {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.privacy-policy p, 
+.Windows-guide p,
+.TiviMate-guide p,
+.IPTVSmarters-guide p,
+.FIRESTICK-guide p,
+.Refund-Policy p, 
+.terms-of-use p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.privacy-policy a,
+.Windows-guide a,
+.IPTVSmarters-guide a,
+.TiviMate-guide a,
+.FIRESTICK-guide a,
+ .Refund-Policy a, 
+ .terms-of-use a {
+  color: #00796b;
+  text-decoration: underline;
+}
+
+/* === images how to install style === */
+.FIRESTICK-guide img,
+.Windows-guide img,
+.TiviMate-guide img,
+.IPTVSmarters-guide img{
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  margin: 20px auto;
+  object-fit: cover;
+}
+  
+
+
+/* General text improvements */
+.FIRESTICK-guide h3,
+.Windows-guide h3,
+.TiviMate-guide h3,
+.IPTVSmarters-guide h3 {
+  font-size: 1.4rem;
+  color: #00796b;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+
+
+.FIRESTICK-guide ol, 
+.FIRESTICK-guide ul,
+.Windows-guide ol,
+.Windows-guide ul,
+.TiviMate-guide ol,
+.TiviMate-guide ul,
+.IPTVSmarters-guide ol, 
+.IPTVSmarters-guide ul {
+  text-align: left;
+  margin: 20px auto;
+  max-width: 700px;
+  padding-left: 20px;
+}
+
+.FIRESTICK-guide li,
+.Windows-guide li,
+.TiviMate-guide li,
+.IPTVSmarters-guide li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.FIRESTICK-guide strong,
+.Windows-guide strong,
+.TiviMate-guide strong,
+.IPTVSmarters-guide strong {
+  color: #00796b;
+}
+
+.FIRESTICK-guide p.highlight,
+.Windows-guide p.highlight,
+.TiviMate-guide p.highlight,
+.IPTVSmarters-guide p.highlight {
+  background: #e0f7f5;
+  padding: 15px;
+  border-left: 4px solid #00796b;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .install-grid {
+    gap: 20px;
+  }
+
+  .install-card {
+    max-width: 100%;
+  }
+
+  .install-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .install-card p {
+    font-size: 0.9rem;
+  }
+}
+

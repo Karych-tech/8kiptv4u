@@ -1,0 +1,844 @@
+/* ==========================================================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #00a3a3;
+  min-height: 100vh;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  background-size: cover;
+  background-position: top;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   2. TYPOGRAPHY (TITLES)
+   ========================================================================== */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Alfa Slab One", serif;
+  font-size: 2rem; /* Desktop Default */
+  font-weight: 500;
+  font-style: normal;
+  color: #0d3627;
+}
+
+h3{
+  font-family: "Saira Stencil One", sans-serif;
+  font-style: normal;
+  font-size: 1.2em; /* Desktop Default */
+  font-weight: 700;
+  color: #ffd700;
+  background: #1a1f2e;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid #333;
+}
+.logo-hero{
+  font-family: "Saira Stencil One", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background: #1a1f2e;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid #333;
+}
+
+span {
+  font-family: "Saira Stencil One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.icon {
+  margin-bottom: 15px;
+}
+
+
+
+/* ==========================================================================
+   3. HERO SECTION
+   ========================================================================== */
+.hero-section {
+  display: flex;
+  flex-direction: column; /* Mobile First: Stacked */
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px auto 0 auto;
+  border-radius: 24px;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1f372e;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #eee;
+}
+
+.hero-logo-span {
+  width: 120px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.hero-refund-text {
+  margin-top: 1.5rem;
+}
+
+.hero_btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  background: #00bcd4;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero_btn:hover {
+  background: #0eb047;
+  color: rgb(21, 51, 200);
+}
+
+.hero-swiper-container {
+  flex: 1;
+  width: 100%;
+}
+
+.hero-swiper {
+  width: 100%;
+  overflow: visible;
+}
+
+.hero-swiper .swiper-slide {
+  width: 75%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-swiper .swiper-slide-prev,
+.hero-swiper .swiper-slide-next {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+.hero-swiper .swiper-slide-active {
+  transform: scale(1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   4. GENERIC SWIPER STYLES
+   ========================================================================== */
+.swiper {
+  width: 100%;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Unique Slider */
+.unique-slider {
+  width: 100%;
+  margin-top: 60px;
+}
+.unique-slider .swiper-slide img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* ==========================================================================
+   5. STEPS / WHY CHOOSE US
+   ========================================================================== */
+.steps {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.step-card {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px yellow;
+  flex: 1 1 250px;
+  max-width: 300px;
+  padding: 30px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step-card h3 {
+  font-size: 1.3rem;
+  border: none;
+  background: none;
+}
+
+.step-card p {
+  color: white;
+  font-size: 0.95rem;
+}
+
+
+
+/* ==========================================================================
+   6. SPORTS GUIDE
+   ========================================================================== */
+.sports-guide {
+  background: #0d7c7c;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.sports-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.sports-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 35px auto;
+}
+
+.sports-list li {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+   border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+.sports-btn {
+  display: inline-block;
+  background: #ff3f3f;
+  padding: 12px 25px;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sports-btn:hover {
+  background: #ff1e1e;
+  transform: scale(1.05);
+}
+
+
+/* ==========================================================================
+   7. DEVICES SECTION
+   ========================================================================== */
+.devices {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+}
+
+.devices-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.device-group {
+  flex: 1 1 45%;
+  min-width: 300px;
+  text-align: center;
+}
+
+.device-heading {
+  margin-bottom: 20px;
+}
+
+.device-heading-logo {
+  width: 120px;
+  vertical-align: middle;
+}
+
+.devices-cards {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+}
+
+.device-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  flex: 0 1 120px;
+}
+
+.device-card img {
+  width: 60px;
+  height: auto;
+}
+
+.info {
+  color: #4c79f4;
+  font-weight: 700;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+
+
+/* ==========================================================================
+   8. FEATURES SECTION
+   ========================================================================== */
+.features-section {
+  padding: 60px 20px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 25px 20px;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.feature-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.feature-title {
+  background: none;
+  border: none;
+  background: linear-gradient(90deg, #0060ff, #00b7ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.feature-description {
+  color: #555;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+
+
+/* ==========================================================================
+   9. PRICING SECTION
+   ========================================================================== */
+.pricing {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.pricing-prompt {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Switch (Standard/Premium) */
+.pricing-switch {
+  display: flex;
+  justify-content: center;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  padding: 5px;
+  margin: 0 auto 2.5rem auto;
+  max-width: 400px;
+}
+
+.switch-button {
+  width: 50%;
+  padding: 0.75rem 1rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #555;
+}
+
+.switch-button.active {
+  background-color: #ffffff;
+  color: #007bff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-panel {
+  display: none;
+}
+
+.pricing-panel.active {
+  display: block;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Pricing Cards */
+.price-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  flex-basis: 340px;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.price-card.featured {
+  border-color: #007bff;
+  transform: scale(1.05);
+}
+
+.price-card.featured:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.price-card h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.price-card .price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #007bff;
+  margin: 0.5rem 0;
+}
+
+.price-card .price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #777;
+}
+
+.price-card ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 2rem 0;
+}
+
+.price-card li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.75rem;
+}
+
+.price-card li::before {
+  content: '✓';
+  color: #28a745;
+  font-weight: 700;
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* ==========================================================================
+   10. FEEDBACK SECTION
+   ========================================================================== */
+.feedback-section {
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.feedback-swiper {
+  width: 90%;
+  margin: auto;
+}
+
+.feedback-swiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ==========================================================================
+   11. CONTACT SECTION
+   ========================================================================== */
+.contact-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(148, 187, 233, 1), rgba(238, 174, 202, 1));
+  padding: 120px 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  width: 100%;
+  padding: 40px 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-container h2 {
+  color: #00bcd4;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-container label {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  margin-bottom: -15px;
+}
+
+.contact-container input,
+.contact-container textarea {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  color: #333;
+  resize: none;
+}
+
+.contact-container textarea {
+  min-height: 120px;
+}
+
+.contact-container button {
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-container button:hover {
+  background: #0097a7;
+}
+
+#status {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #ffd700; /* Gold color for visibility */
+  font-size: 1.1rem;
+}
+
+
+/* ==========================================================================
+   12. FAQ SECTION
+   ========================================================================== */
+.faq-section {
+  color: white;
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq {
+  max-width: 800px;
+  margin: 10px auto;
+  background: #00a3a3;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+  width: 100%;
+  background: #00b8b8;
+  color: #f1f1f1;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: #00cfcf;
+}
+
+.faq-answer {
+  display: none;
+  background: #009999;
+  padding: 15px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-answer p {
+  margin: 0;
+   color: #403c07;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+
+
+
+/* --- Responsive Typography --- */
+@media (max-width: 768px) { /* Tablet & Mobile */
+  h2 {
+    font-size: 1.6rem; /* Smaller for mobile */
+    margin-bottom: 15px;
+  }
+  
+  h3 {
+    font-size: 1.1em;
+    padding: 8px 12px;
+  }
+}
+
+
+
+/* --- Responsive Hero --- */
+@media (min-width: 700px) { /* Desktop Overrides */
+  .hero-section {
+    flex-direction: row; /* Side by side */
+    align-items: center;
+    padding: 0 4rem;
+    gap: 2rem;
+  }
+
+  .hero-content {
+    text-align: left;
+    padding-right: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-swiper-container {
+    margin-top: 0;
+    max-width: 50%;
+  }
+
+  .hero-swiper .swiper-slide {
+    width: 85%;
+  }
+}
+
+/* --- Responsive Sports --- */
+@media (max-width: 480px) { /* Mobile Phones */
+  .sports-list li {
+    font-size: 1.2rem;
+  }
+}
+
+/* --- Responsive Devices --- */
+@media (max-width: 768px) { /* Tablet */
+  .device-heading {
+    font-size: 1.2em;
+  }
+  .device-card img {
+    width: 50px;
+  }
+  .device-card {
+    flex: 0 1 100px;
+  }
+}
+
+@media (max-width: 480px) { /* Phone */
+  .devices {
+    padding: 40px 10px;
+  }
+  .devices-content {
+    gap: 20px;
+  }
+  .device-card img {
+    width: 45px;
+  }
+  .device-card {
+    flex: 0 1 90px;
+  }
+}
+
+/* --- Responsive Features --- */
+@media (max-width: 480px) {
+  .feature-img {
+    width: 65px;
+    height: 65px;
+  }
+}
+/* --- Responsive Pricing --- */
+@media (max-width: 992px) { /* Tablets */
+  .price-card.featured {
+    transform: scale(1); /* Reset scale on tablet */
+  }
+}
+
+@media (max-width: 768px) { /* Phones */
+  .pricing {
+    padding: 1rem;
+  }
+  .price-card {
+    padding: 1.5rem;
+    flex-basis: 100%; /* Full width on mobile */
+  }
+  .price-card.featured {
+    transform: scale(1.02); /* Slight pop for featured */
+  }
+}
+
+/* --- Responsive Steps --- */
+@media (max-width: 768px) { /* Mobile */
+  .steps-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .step-card {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* --- Responsive Contact --- */
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 30px 20px;
+  }
+  .contact-container h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* --- Responsive FAQ --- */
+@media (max-width: 480px) {
+  .faq-section {
+    padding: 40px 15px;
+  }
+  .faq-section h2 {
+    font-size: 1.6em;
+  }
+}
