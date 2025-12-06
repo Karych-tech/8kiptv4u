@@ -1,0 +1,4 @@
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+Sitemap: https://8kiptv4u.com/sitemap.xml
