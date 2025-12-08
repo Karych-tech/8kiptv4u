@@ -12,7 +12,8 @@ var heroSwiper = new Swiper(".hero-swiper", {
   // Make slides move automatically
   autoplay: {
     delay: 2500, // Time between slide moves (2.5 seconds)
-    disableOnInteraction: false // Keep autoplay running even if user drags
+    disableOnInteraction: false, // Keep autoplay running even if user drags
+    pauseOnMouseEnter: true // Pauses autoplay on hover for better UX
   },
 
   // Make slide movement slower and smoother
@@ -101,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // 5. Show the target panel by finding it by its ID and adding the 'active' class
             document.getElementById(targetPanelId).classList.add('active');
         });
-    });
+});
 
 });
 
