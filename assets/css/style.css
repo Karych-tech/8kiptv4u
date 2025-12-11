@@ -464,24 +464,15 @@ span {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   padding: 2rem;
   border: 3px solid transparent;
-  transition: all 0.3s ease;
   flex-basis: 340px;
   flex-grow: 0;
   flex-shrink: 1;
 }
 
-.price-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
 
 .price-card.featured {
   border-color: #007bff;
-  transform: scale(1.05);
-}
-
-.price-card.featured:hover {
-  transform: scale(1.05) translateY(-5px);
+  
 }
 
 .price-card h3 {
