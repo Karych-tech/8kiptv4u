@@ -32,6 +32,7 @@ header {
 /* logo */
 .navbar-logo img {
   width: 140px;
+  height: 140px;
   cursor: pointer;
 }
 
@@ -234,6 +235,7 @@ header {
   }
   .navbar-logo img {
     width: 110px; /* Smaller logo */
+    height: 110px;
   }
   .navbar-container .navbar-menu li a {
     font-size: 1.4rem;
