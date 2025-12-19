@@ -189,10 +189,10 @@ span {
 /* Unique Slider */
 .unique-slider {
   width: 100%;
-  margin-top: 60px;
 }
 .unique-slider .swiper-slide img {
   height: 300px;
+  width: 100%;
   object-fit: cover;
   border-radius: 15px;
 }

@@ -33,6 +33,8 @@ var heroSwiper = new Swiper(".hero-swiper", {
 });
 
 
+
+// --- CONTINUOUS INFINITE SLIDERS ---
 /**
    * 🔧 Function to create a continuous infinite slider  3 sliders
    * @param {string} selector - CSS class of the swiper container
