@@ -191,9 +191,8 @@ span {
   width: 100%;
 }
 .unique-slider .swiper-slide img {
-  height: 300px;
+  aspect-ratio: 9/16;
   width: 100%;
-  object-fit: cover;
   border-radius: 15px;
 }
 
