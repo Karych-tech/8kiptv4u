@@ -257,9 +257,81 @@ span {
 }
 
 
-/* ==========================================================================
-   7. DEVICES SECTION
-   ========================================================================== */
+/* MOVIES SLIDER */
+.movies-slider {
+    width: 100%;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.movies-slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.movies-slider .swiper-slide img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9/16; /* Movie poster ratio */
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/*. CHANNELS SLIDER 2 and 1 */
+.channels-slider-2,
+.channels-slider-1 {
+    width: 100%;
+    padding: 15px 0;
+    overflow: hidden;
+}
+
+.channels-slider-2 .swiper-slide,
+.channels-slider-1 .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.channels-slider-2 .swiper-slide img ,
+.channels-slider-1 .swiper-slide img{
+    width: 100%;
+    aspect-ratio: 150/100;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/*. FEEDBACK SWIPER */
+.feedback-section {
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.feedback-swiper {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.feedback-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.feedback-swiper .swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 7. DEVICES SECTION */
 .devices {
   background-color: #f4f4f4;
   padding: 60px 20px;
