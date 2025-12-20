@@ -165,39 +165,6 @@ span {
 }
 
 /* ==========================================================================
-   4. GENERIC SWIPER STYLES
-   ========================================================================== */
-.swiper {
-  width: 100%;
-  margin: 40px auto;
-  overflow: hidden;
-}
-
-.swiper .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-/* Unique Slider */
-.unique-slider {
-  width: 100%;
-}
-.unique-slider .swiper-slide img {
-  aspect-ratio: 9/16;
-  width: 100%;
-  border-radius: 15px;
-}
-
-/* ==========================================================================
    5. STEPS / WHY CHOOSE US
    ========================================================================== */
 .steps {
@@ -230,6 +197,11 @@ span {
 .step-card p {
   color: white;
   font-size: 0.95rem;
+}
+.step-card .icon img{
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
 
 
@@ -311,8 +283,10 @@ span {
 }
 
 .device-heading-logo {
-  width: 120px;
+   max-width: 120px;
+  height: auto;
   vertical-align: middle;
+  
 }
 
 .devices-cards {
@@ -533,26 +507,6 @@ span {
 
 .btn:hover {
   background-color: #0056b3;
-}
-
-/* ==========================================================================
-   10. FEEDBACK SECTION
-   ========================================================================== */
-.feedback-section {
-  width: 100%;
-  padding: 40px 0;
-  text-align: center;
-}
-
-.feedback-swiper {
-  width: 90%;
-  margin: auto;
-}
-
-.feedback-swiper .swiper-slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
 }
 
 /* ==========================================================================

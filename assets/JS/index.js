@@ -66,9 +66,9 @@ function createContinuousSwiper(selector, reverse = false, speed = 6000) {
 }
 
 /* ===== Create 3 sliders with opposite directions ===== */
-createContinuousSwiper('.slider-1', false, 6000); // right → left (speed: 6s)
-createContinuousSwiper('.slider-2', true, 6000);  // left → right
-createContinuousSwiper('.slider-3', false, 6000); // right → left
+createContinuousSwiper('.channels-slider-1', false, 6000); // right → left (speed: 6s)
+createContinuousSwiper('.channels-slider-2', true, 6000);  // left → right
+createContinuousSwiper('.movies-slider', false, 6000); // right → left
 
 
 // pricing panels 
