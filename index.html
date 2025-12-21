@@ -64,8 +64,19 @@
  <!-- ✅ Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
-  <!-- ✅ Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+<!-- ✅ Preload Swiper CSS -->
+<link rel="preload"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      as="style"
+      crossorigin
+      onload="this.onload=null;this.rel='stylesheet'">
+
+<!-- Fallback for no-JS -->
+<noscript>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</noscript>
 
   <!-- ✅ Organization Schema -->
   <script type="application/ld+json">
