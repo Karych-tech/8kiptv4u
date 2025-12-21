@@ -137,6 +137,11 @@ span {
 .hero-swiper {
   width: 100%;
   overflow: visible;
+  aspect-ratio: 4/3; /* Reserves height based on 75% slide width (1:1 image) */
+}
+
+.hero-swiper .swiper-wrapper {
+  display: flex; /* Prevents vertical stacking before JS loads */
 }
 
 .hero-swiper .swiper-slide {
@@ -278,6 +283,7 @@ span {
 .channels-slider-2 .swiper-slide img ,
 .channels-slider-1 .swiper-slide img{
     width: 100%;
+    height: auto;
     margin: 5px;
     aspect-ratio: 150/100;
     object-fit: contain;
@@ -648,6 +654,10 @@ span {
   .hero-swiper-container {
     margin-top: 0;
     max-width: 50%;
+  }
+
+  .hero-swiper {
+    aspect-ratio: 100/85; /* Adjust height for 85% slide width */
   }
 
   .hero-swiper .swiper-slide {
