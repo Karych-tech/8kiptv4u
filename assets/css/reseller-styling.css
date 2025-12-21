@@ -269,7 +269,7 @@ h3 {
 
 @media (max-width: 768px) {
     .reseller-hero {
-        
+        background-attachment: scroll;
         background-size: min(500px, 90%);
         padding: 120px 15px 50px;
     }
