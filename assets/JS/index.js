@@ -4,59 +4,56 @@
 
 var heroSwiper = new Swiper(".hero-swiper", {
 
-  // Allow slides to be centered and sized automatically
+  
   slidesPerView: "auto",
   centeredSlides: true,
-  loop: true, // Loop forever
-
-  // Make slides move automatically
+  loop: true, 
   autoplay: {
-    delay: 2500, // Time between slide moves (2.5 seconds)
-    disableOnInteraction: false, // Keep autoplay running even if user drags
-    pauseOnMouseEnter: true // Pauses autoplay on hover for better UX
+    delay: 2500, 
+    disableOnInteraction: false, 
+    pauseOnMouseEnter: true 
   },
 
-  // Make slide movement slower and smoother
-  speed: 1500, // Animation speed (1.5 seconds)
+  
+  speed: 1500,
 
-  // Keep your 3D-like effect
+  
   effect: "coverflow",
   coverflowEffect: {
-    rotate: 0,      // No rotation
-    stretch: 0,     // No stretching
-    depth: 100,     // Depth effect
-    modifier: 2.5,  // Stronger effect
+    rotate: 0,   
+    stretch: 0,     
+    depth: 100,     
+    modifier: 2.5, 
     slideShadows: false
   },
 
-  grabCursor: true // Cursor turns to "grab" on desktop
+  grabCursor: true 
 });
 
 
 
-// --- CONTINUOUS INFINITE SLIDERS ---
+// --- CONTINUOUS INFINITE SLIDERS channles and movie ---
 /**
-   * 🔧 Function to create a continuous infinite slider  3 sliders
-   * @param {string} selector - CSS class of the swiper container
-   * @param {boolean} reverse - true = moves left→right, false = right→left
-   * @param {number} speed - how long (in ms) a full loop takes (higher = slower)
+   * @param {string} selector 
+   * @param {boolean} reverse 
+   * @param {number} speed 
    */
 function createContinuousSwiper(selector, reverse = false, speed = 6000) {
   return new Swiper(selector, {
-    slidesPerView: 5,       // 🔧 Number of images visible at once
-    spaceBetween: 10,       // 🔧 Space between images in pixels
-    loop: true,             // Makes it infinite
-    allowTouchMove: true,   // Allows manual swiping
-    speed: speed,           // 🔧 Control scroll speed (higher = slower)
+    slidesPerView: 5,       
+    spaceBetween: 10,       
+    loop: true,             
+    allowTouchMove: true,   
+    speed: speed,           
     autoplay: {
-      delay: 0,             // 0 = continuous motion (no stops)
+      delay: 0,            
       reverseDirection: reverse,
-      disableOnInteraction: false, // Keep moving after manual swipe
+      disableOnInteraction: false, 
     },
-    freeMode: true,         // Enables continuous scrolling
+    freeMode: true,        
     freeModeMomentum: false,
     grabCursor: true,
-    breakpoints: {          // 🔧 Responsive settings
+    breakpoints: {          
       0: { slidesPerView: 2 },
       480: { slidesPerView: 3 },
       768: { slidesPerView: 4 },
