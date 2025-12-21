@@ -31,9 +31,16 @@ header {
 
 /* logo */
 .navbar-logo img {
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: auto;
   cursor: pointer;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
 }
 
 /* main menu */
@@ -236,7 +243,7 @@ header {
   }
   .navbar-logo img {
     width: 110px; /* Smaller logo */
-    height: 110px;
+    height: auto;
   }
   .navbar-container .navbar-menu li a {
     font-size: 1.4rem;
