@@ -141,7 +141,6 @@ span {
 
 .hero-swiper .swiper-slide {
   width: 75%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -155,13 +154,13 @@ span {
 
 .hero-swiper .swiper-slide-active {
   transform: scale(1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .hero-swiper .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
   object-fit: cover;
 }
 
@@ -257,41 +256,20 @@ span {
   transform: scale(1.05);
 }
 
-
-/* MOVIES SLIDER */
-.movies-slider {
+/*. CHANNELS, MOVIES , feedback */
+.channels-slider-2,
+.channels-slider-1,
+.movies-slider ,
+.feedback-section{
     width: 100%;
     padding: 40px 0;
     overflow: hidden;
 }
 
-.movies-slider .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
-}
-
-.movies-slider .swiper-slide img {
-    width: 100%;
-    height: auto;
-    margin: 6px;
-    aspect-ratio: 9/16; /* Movie poster ratio */
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-/*. CHANNELS SLIDER 2 and 1 */
-.channels-slider-2,
-.channels-slider-1 {
-    width: 100%;
-    padding: 15px 0;
-    overflow: hidden;
-}
-
 .channels-slider-2 .swiper-slide,
-.channels-slider-1 .swiper-slide {
+.channels-slider-1 .swiper-slide,
+.movies-slider .swiper-slide,
+.feedback-swiper .swiper-slide  {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -305,33 +283,28 @@ span {
     object-fit: contain;
     border-radius: 8px;
 }
-
-/*. FEEDBACK SWIPER */
-.feedback-section {
-  width: 100%;
-  padding: 40px 0;
-  text-align: center;
+/* MOVIES SLIDER */
+.movies-slider .swiper-slide img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9/16; /* Movie poster ratio */
+    object-fit: fill;
+    margin: 10px;
+    border-radius: 15px;
 }
 
+/*. FEEDBACK SWIPER */
 .feedback-swiper {
     width: 90%;
     margin: 40px auto;
     padding: 20px 0;
     overflow: hidden;
 }
-
-.feedback-swiper .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-}
-
 .feedback-swiper .swiper-slide img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    aspect-ratio: 1056/487;
 }
 
 /* 7. DEVICES SECTION */
