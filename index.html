@@ -50,6 +50,7 @@
   <!-- ✅ Google Fonts (Optimized) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Jost:ital,wght@0,100..900;1,100..900&family=Saira+Stencil+One&display=swap"
     as="style">
@@ -58,10 +59,13 @@
     rel="stylesheet">
 
   <!-- ✅ CSS -->
+  <link rel="preload" href="assets/css/main.css" as="style">
   <link rel="stylesheet" href="assets/css/main.css"> <!-- Common styles for navbar, footer, etc. -->
+  <link rel="preload" href="assets/css/style.css" as="style">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- ✅ Swiper CSS -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- ✅ Organization Schema -->
@@ -311,6 +315,7 @@
     </div>
   </header>
 
+  <main>
   <!-- ✅ Hero Section -->
   <section class="hero-section" id="home">
     <div class="hero-content">
@@ -916,12 +921,13 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- ✅ Footer -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-about">
-        <video autoplay loop muted playsinline class="footer-logo" aria-label="8kIPTV4U animated logo">
+        <video autoplay loop muted playsinline class="footer-logo" aria-label="8kIPTV4U animated logo" width="400" height="200">
           <source src="assets/images/logo/8kanimated.webm" type="video/webm">
           <img src="assets/images/logo/8klogo.webp" alt="8kIPTV4U Logo" loading="lazy" width="190" height="100">
         </video>
