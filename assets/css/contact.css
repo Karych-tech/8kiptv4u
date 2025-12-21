@@ -1,0 +1,80 @@
+/* ==========================================================================
+   11. CONTACT SECTION
+   ========================================================================== */
+.contact-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(148, 187, 233, 1), rgba(238, 174, 202, 1));
+  padding: 120px 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  width: 100%;
+  padding: 40px 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-container h2 {
+  color: #00bcd4;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-container label {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  margin-bottom: -15px;
+}
+
+.contact-container input,
+.contact-container textarea {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  color: #333;
+  resize: none;
+}
+
+.contact-container textarea {
+  min-height: 120px;
+}
+
+.contact-container button {
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-container button:hover {
+  background: #0097a7;
+}
+
+#status {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #ffd700; /* Gold color for visibility */
+  font-size: 1.1rem;
+}
