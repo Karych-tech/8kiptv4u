@@ -19,22 +19,13 @@ if (navbartoggle && navbarMenu) {
 
 
 // --- HERO SECTION SWIPER ---
-var heroSwiper = new Swiper(".hero-swiper", {
-
-  
+var heroSwiper = new Swiper(".hero-swiper", {  
   slidesPerView: "auto",
   centeredSlides: true,
   loop: true, 
-  autoplay: {
-    delay: 2500, 
-    disableOnInteraction: false, 
-    pauseOnMouseEnter: true 
-  },
+  speed: 800,
 
-  
-  speed: 1500,
 
-  
   effect: "coverflow",
   coverflowEffect: {
     rotate: 0,   
