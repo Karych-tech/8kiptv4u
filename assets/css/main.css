@@ -96,8 +96,6 @@ header {
   background-color: #004d40;
   color: white;
   padding: 40px 20px;
-  content-visibility: auto;
-  contain-intrinsic-size: 400px;
 }
 
 .footer-container {
@@ -137,9 +135,6 @@ header {
   color: #ffd700;
   margin-bottom: 10px;
   font-size: 1.2em;
-  background: transparent;
-  border: none;
-  padding: 0;
 }
 
 .footer-links ul {
