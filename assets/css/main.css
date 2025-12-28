@@ -137,6 +137,9 @@ header {
   color: #ffd700;
   margin-bottom: 10px;
   font-size: 1.2em;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .footer-links ul {
