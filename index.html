@@ -60,9 +60,7 @@
   <!-- ✅ CSS -->
   <link rel="preload" href="assets/css/style.css" as="style">
   <link rel="stylesheet" href="assets/css/style.css">
-  <!-- ✅ Preload Hero Image for LCP -->
-  <link rel="preload" as="image" href="assets/images/hero-images/img1.webp">
-
+  
   <!-- ✅ Swiper JS -->
   <link rel="preload" href="assets/JS/swiper-bundle.min.js" as="script">
   <script src="assets/JS/swiper-bundle.min.js" defer></script>
@@ -361,7 +359,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="assets/images/hero-images/img1.webp" alt="IPTV streaming content showcase slide 1"
-                loading="lazy" width="541" height="541">
+                loading="lazy" fetchpriority="high" width="541" height="541">
             </div>
             <div class="swiper-slide">
               <img src="assets/images/hero-images/img2.webp" alt="IPTV streaming content showcase slide 2"

@@ -96,7 +96,7 @@ h3 {
 }
 
 .intro-content strong {
-    color: #00a3a3;
+    color: #00796b;
     font-weight: 800;
 }
 
@@ -114,10 +114,10 @@ h3 {
 
 .reseller-pricing .sub-heading {
     text-align: center;
-    color: #e0f7fa;
+    color: #ffffff;
     margin-bottom: 40px;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .reseller-pricing .pricing-grid {
@@ -160,7 +160,7 @@ h3 {
 .reseller-pricing .credits {
     font-size: 1.8rem;
     font-family: "Saira Stencil One", sans-serif;
-    color: #00bcd4;
+    color: #00838f;
     margin: 10px 0;
     text-transform: uppercase;
 }
@@ -174,7 +174,7 @@ h3 {
 
 .reseller-pricing .guarantee {
     font-size: 0.85rem;
-    color: #28a745;
+    color: #155724;
     font-weight: 700;
     margin-bottom: 15px;
     text-transform: uppercase;
