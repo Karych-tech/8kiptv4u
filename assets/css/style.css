@@ -175,8 +175,8 @@ header {
 .hero-content p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  color: #f5fefe;
-
+  color: #1f3a5f;
+  line-height: 1.5;
 }
 
 .hero-logo-span {
