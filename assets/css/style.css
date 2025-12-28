@@ -167,7 +167,7 @@ header {
 .hero-content h1 {
   font-size: 2rem;
   font-weight: 800;
-  color: #1f372e;
+  color: #0d3627;
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
@@ -175,7 +175,7 @@ header {
 .hero-content p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  color: #eee;
+  color: #0d3627;
 }
 
 .hero-logo-span {
@@ -195,7 +195,7 @@ header {
   padding: 10px 30px;
   border-radius: 30px;
   background: #00bcd4;
-  color: #fff;
+  color: #000;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -266,6 +266,7 @@ header {
   flex: 1 1 250px;
   max-width: 300px;
   padding: 30px 20px;
+  background: #1a1f2e;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -292,7 +293,7 @@ header {
    6. SPORTS GUIDE
    ========================================================================== */
 .sports-guide {
-  background: #0d7c7c;
+  background: #085e5e;
   padding: 60px 20px;
   text-align: center;
   color: #fff;
@@ -323,7 +324,7 @@ header {
 
 .sports-btn {
   display: inline-block;
-  background: #ff3f3f;
+  background: #d50000;
   padding: 12px 25px;
   border-radius: 8px;
   color: white;
@@ -444,7 +445,7 @@ header {
 }
 
 .info {
-  color: #4c79f4;
+  color: #0056b3;
   font-weight: 700;
   font-size: 0.9em;
   margin-top: 10px;
@@ -586,7 +587,7 @@ header {
 .price-card .price {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #007bff;
+  color: #0056b3;
   margin: 0.5rem 0;
 }
 
@@ -625,7 +626,7 @@ header {
   font-size: 1.1rem;
   font-weight: 600;
   color: #fff;
-  background-color: #007bff;
+  background-color: #0056b3;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -635,7 +636,7 @@ header {
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #004494;
 }
 
 /* ==========================================================================
@@ -662,7 +663,7 @@ header {
 .faq-question {
   width: 100%;
   background: #00b8b8;
-  color: whitesmoke;
+  color: #0d3627;
   text-align: left;
   padding: 15px 20px;
   font-size: 1rem;
@@ -686,7 +687,7 @@ header {
 
 .faq-answer p {
   margin: 0;
-  color: #403c07;
+  color: #000;
   line-height: 1.5;
   font-size: 1.1rem;
   font-weight: 600;
@@ -695,7 +696,7 @@ header {
    14. FOOTER + WHATSAPP
    ========================================================================== */
 .footer {
-  background-color: #0097a7;
+  background-color: #004d40;
   color: white;
   padding: 40px 20px;
 }
