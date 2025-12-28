@@ -196,7 +196,7 @@ header {
   padding: 10px 30px;
   border-radius: 30px;
   background: gold;
-  color: #000;
+  color: rgb(21, 51, 200);
   font-weight: bold;
   transition: 0.3s;
 }
@@ -704,6 +704,8 @@ header {
   background-color: #004d40;
   color: white;
   padding: 40px 20px;
+  content-visibility: auto;
+  contain-intrinsic-size: 400px;
 }
 
 .footer-container {
