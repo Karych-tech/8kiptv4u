@@ -759,6 +759,7 @@ header {
 
 .footer-links ul li a {
   color: white;
+  font-weight: 700;
   text-decoration: none;
   transition: 0.3s;
 }
