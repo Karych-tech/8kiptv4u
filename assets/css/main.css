@@ -93,9 +93,11 @@ header {
    14. FOOTER + WHATSAPP
    ========================================================================== */
 .footer {
-  background-color: #0097a7;
+  background-color: #004d40;
   color: white;
   padding: 40px 20px;
+  content-visibility: auto;
+  contain-intrinsic-size: 400px;
 }
 
 .footer-container {
