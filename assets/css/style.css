@@ -175,7 +175,8 @@ header {
 .hero-content p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  color: #000000;
+  color: #f5fefe;
+
 }
 
 .hero-logo-span {
@@ -516,7 +517,7 @@ header {
 .pricing-prompt {
   text-align: center;
   font-size: 1.1rem;
-  color: #0d3627;
+  color: #000000;
   font-weight: 700;
   margin-bottom: 2rem;
 }
