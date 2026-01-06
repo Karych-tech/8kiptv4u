@@ -352,6 +352,7 @@ header {
     padding: 40px 0;
     overflow: hidden;
 }
+.channels-section{background: #004d40;}
 
 .channels-slider-2 .swiper-slide,
 .channels-slider-1 .swiper-slide,
