@@ -255,16 +255,17 @@ header {
 
 .steps-container {
   display: flex;
-  justify-content: space-around;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .step-card {
   border-radius: 15px;
   box-shadow: 0 4px 10px yellow;
-  flex: 1 1 250px;
-  max-width: 300px;
+  flex: 1 1 280px;
+  max-width: 350px;
+  width: 100%;
   padding: 30px 20px;
   background: #1a1f2e;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -465,8 +466,9 @@ header {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
+  justify-items: center;
 }
 
 .feature-card {
@@ -475,6 +477,8 @@ header {
   text-align: center;
   border-radius: 12px;
   border: 1px solid #ddd;
+  width: 100%;
+  max-width: 350px;
 }
 
 .feature-img {
@@ -981,18 +985,6 @@ header {
   }
 }
 
-/* --- Responsive Steps --- */
-@media (max-width: 768px) { /* Mobile */
-  .steps-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .step-card {
-    max-width: 90%;
-    margin-bottom: 20px;
-  }
-}
-
 
 /* --- Responsive Contact --- */
 @media (max-width: 480px) {
@@ -1011,5 +1003,8 @@ header {
   }
   .faq-section h2 {
     font-size: 1.6em;
+  }
+  .steps, .features-section {
+    padding: 40px 15px;
   }
 }
