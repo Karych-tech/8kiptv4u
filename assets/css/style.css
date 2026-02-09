@@ -986,15 +986,7 @@ header {
 }
 
 
-/* --- Responsive Contact --- */
-@media (max-width: 480px) {
-  .contact-container {
-    padding: 30px 20px;
-  }
-  .contact-container h2 {
-    font-size: 1.6rem;
-  }
-}
+
 
 /* --- Responsive FAQ --- */
 @media (max-width: 480px) {
