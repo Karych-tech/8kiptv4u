@@ -104,7 +104,7 @@ header {
 .navbar-container .navbar-menu {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem; /* Reduced gap for more items */
   list-style: none;
 }
 
@@ -113,18 +113,33 @@ header {
   color: white;
   font-size: 1.2rem;
   font-weight: 500;
-  padding: 6px 18px;
-  border-radius: 20px;
+  padding: 6px 10px; /* Reduced horizontal padding */
   border: 2px solid transparent;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
   white-space: nowrap;
+  position: relative;
+}
+
+.navbar-container .navbar-menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #EF4444, #3B82F6, #FBBF24);
+  transition: width 0.3s ease;
 }
 
 .navbar-container .navbar-menu li a:hover,
 .navbar-container .navbar-menu li a.active {
-  color: #152530;
-  background: rgba(188, 212, 229, 0.8);
-  border: 2px solid white;
+  color: #ffffff;
+  background: transparent;
+}
+
+.navbar-container .navbar-menu li a:hover::after,
+.navbar-container .navbar-menu li a.active::after {
+  width: 100%;
 }
 
 /* hamburger */
@@ -845,6 +860,10 @@ header {
     background: rgba(0, 0, 0, 0.95); /* Darker background for menu */
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
+  }
+
+  .navbar-container .navbar-menu li a {
+    font-size: 1.3rem; /* Larger font for tablet menu */
   }
 
   .navbar-container .navbar-menu.active {
