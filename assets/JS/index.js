@@ -109,10 +109,36 @@ document.addEventListener("DOMContentLoaded", () => {
             // 5. Show the target panel by finding it by its ID and adding the 'active' class
             document.getElementById(targetPanelId).classList.add('active');
         });
-});
+    });
+
+    /* ===== FAQ Accordion ===== */
+    const faqs = document.querySelectorAll('.faq');
+
+    faqs.forEach(faq => {
+        const question = faq.querySelector('.faq-question');
+        const answer = faq.querySelector('.faq-answer');
+
+        question.addEventListener('click', () => {
+            // Close other open FAQs
+            faqs.forEach(item => {
+                if (item !== faq && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                }
+            });
+
+            // Toggle the clicked FAQ
+            faq.classList.toggle('active');
+
+            if (faq.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } else {
+                answer.style.maxHeight = null;
+            }
+        });
+    });
 
 });
-
 
 
 
@@ -130,15 +156,4 @@ var feedbackSwiper = new Swiper(".feedback-swiper", {
     768: { slidesPerView: 2 },
     1024: { slidesPerView: 3 }
   }
-});
-
-
-/* ===== faq-question===== */
-const questions = document.querySelectorAll(".faq-question");
-
-questions.forEach(q => {
-  q.addEventListener("click", () => {
-    const answer = q.nextElementSibling;
-    answer.style.display = (answer.style.display === "block") ? "none" : "block";
-  });
 });

@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #121212;
+   background-color: #00a3a3;
   color: #FFFFFF;
   font-family: "Jost", sans-serif;
   font-weight: 400;
@@ -126,7 +126,6 @@ p {
 }
 
 .channel-item {
-  background: rgba(255, 255, 255, 0.05);
   padding: 20px;
   border-radius: 8px;
   color: white;
@@ -140,6 +139,10 @@ p {
   align-items: center;
   justify-content: center;
   min-height: 150px; /* Ensures consistent height */
+  
+   background: rgba(255, 255, 255, 0.2);
+  border-color: #ffd700;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
 }
 
 .channel-item img.channel-logo {
@@ -147,6 +150,7 @@ p {
   height: auto;
   margin-bottom: 15px;
   object-fit: contain; /* Ensures the logo is scaled correctly */
+  
 }
 
 .channel-item:hover {
