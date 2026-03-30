@@ -74,7 +74,6 @@ header {
   background: rgba(0, 0, 0, 0.4);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
-  position: sticky;
 }
 
 .navbar-container {
@@ -890,7 +889,7 @@ header {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 250px;
     top: 0;
