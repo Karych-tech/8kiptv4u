@@ -6,6 +6,9 @@ header {
   position: fixed;
   z-index: 999;
 }
+main{
+  margin-top: 80px;
+}
 
 .navbar {
   display: flex;
