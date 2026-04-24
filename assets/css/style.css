@@ -733,7 +733,7 @@ header {
 }
 
 .supported-apps-section h2 {
-  color: #0d3627;
+  color: #004d40;
   margin-bottom: 20px;
 }
 
@@ -774,11 +774,6 @@ header {
   margin-bottom: 12px;
 }
 
-.install-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
-}
-
 .install-card h3 {
   background: none;
   border: none;
@@ -789,7 +784,7 @@ header {
 }
 
 .install-card p {
-  color: #555;
+  color: #333;
   margin-bottom: 20px;
   flex-grow: 1;
 }
@@ -797,8 +792,8 @@ header {
 .read-more {
   display: inline-block;
   padding: 12px 25px;
-  background: #00a3a3;
-  color: #fff;
+  background: #009688;
+  color: #000000;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 700;
