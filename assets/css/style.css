@@ -779,7 +779,10 @@ header {
   border: none;
   padding: 0;
   text-align: left;
-  color: #00a3a3;
+  background: linear-gradient(90deg, #0060ff, #00b7ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   margin: 15px 0 10px;
 }
 
