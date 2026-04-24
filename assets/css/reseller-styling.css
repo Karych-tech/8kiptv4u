@@ -28,15 +28,10 @@ h2 {
 }
 
 h3 {
-    font-family: "Saira Stencil One", sans-serif;
-    font-style: normal;
-    font-size: 1.2em;
-    font-weight: 700;
-    color: #ffd700;
-    background: #1a1f2e;
-    padding: 10px 15px;
-    border-radius: 6px;
-    border: 1px solid #333;
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0d3627;
 }
 
 
@@ -44,7 +39,7 @@ h3 {
 .reseller-hero {
     width: 100%;
     padding: 140px 20px 80px;
-    background: linear-gradient(rgba(13, 54, 39, 0.8), rgba(0, 163, 163, 0.7)), url('../images/logo/8k.png');
+    background: linear-gradient(rgba(13, 54, 39, 0.8), rgba(0, 163, 163, 0.7)), url('/assets/images/logo/8k.png');
     background-size: contain;
     background-position: center;
     background-attachment: fixed;
@@ -252,6 +247,7 @@ h3 {
     background: none;
     border: none;
     background: linear-gradient(90deg, #0060ff, #00b7ff);
+    font-family: var(--font-main); /* Ensure feature titles use main font */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

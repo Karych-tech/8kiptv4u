@@ -13,7 +13,7 @@ body {
 }
 
 h2 {
-  color: #FFFFFF;
+  text-align: center;
   font-size: 2.2rem;
   margin-bottom: 40px;
 }
@@ -21,6 +21,8 @@ h2 {
 p {
   color: #f0f0f0;
   font-size: 1.1rem;
+  font-weight: bold;
+  margin: 20px;
 }
 /* ==========================================================================
    15. FOOTBALL / WORLD CUP PAGE STYLES
@@ -51,7 +53,7 @@ p {
   color: #f0f0f0;
   font-size: 1.2rem;
   max-width: 800px;
-  margin: 0 auto 2rem auto;
+  margin: 15px auto 2rem auto;
 }
 
 .countdown-wrapper {
@@ -274,7 +276,9 @@ p {
     border-top: 1px solid #444;
     border-bottom: 1px solid #444;
 }
-
+.schedule-section h2 {
+  color: #FFFFFF; /* Override for this section to keep white text */
+}
 .schedule-section h3 {
     color: #ffd700;
     font-size: 1.5rem;
