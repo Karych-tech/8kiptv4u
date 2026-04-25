@@ -19,9 +19,9 @@ h2 {
 }
 
 p {
-  color: #FFFFFF; /* Improved contrast for general text */
-  font-size: 1.1rem;
+ color: white;
   font-weight: bold;
+  font-size: 1.2rem;
   margin: 20px;
 }
 /* ==========================================================================
