@@ -420,6 +420,7 @@ header {
     width: 100%;
     padding: 40px 0;
     overflow: hidden;
+   
 }
 
 
@@ -453,6 +454,7 @@ header {
     aspect-ratio: 9/16; /* Movie poster ratio */
     object-fit: cover;
     margin: 10px;
+    height: 450px; /* Explicit height for layout stability */
     border-radius: 15px;
 }
 
