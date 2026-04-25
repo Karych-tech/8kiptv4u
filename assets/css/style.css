@@ -1204,8 +1204,6 @@ header {
 }
 
 
-
-
 /* --- Responsive FAQ --- */
 @media (max-width: 480px) {
   .faq-section {
@@ -1216,5 +1214,12 @@ header {
   }
   .steps, .features-section {
     padding: 40px 15px;
+  }
+
+  /* Optimized channel logos for 3-per-view mobile layout */
+  .channels-slider-2 .swiper-slide img,
+  .channels-slider-1 .swiper-slide img {
+    width: 85%;
+    min-height: 80px;
   }
 }

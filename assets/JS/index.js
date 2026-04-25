@@ -70,7 +70,7 @@ function createContinuousSwiper(selector, reverse = false, speed = 6000) {
     freeModeMomentum: false,
     grabCursor: true,
     breakpoints: {          
-      0: { slidesPerView: 2 },
+      0: { slidesPerView: 3 },
       480: { slidesPerView: 3 },
       768: { slidesPerView: 4 },
       1024: { slidesPerView: 5 },
