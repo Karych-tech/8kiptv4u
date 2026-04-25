@@ -213,7 +213,6 @@ header {
 }
 
 .hero_btn {
-
  display: inline-block;
   background: gold;
   padding: 12px 25px;
@@ -466,7 +465,9 @@ header {
 .feedback-swiper .swiper-slide img {
     width: 100%;
     height: auto;
+    border: 3px solid transparent;
     border-radius: 10px;
+    border-color: rgb(0, 123, 255);
     aspect-ratio: 1056/487;
 }
 
@@ -728,12 +729,11 @@ header {
    ========================================================================== */
 .supported-apps-section {
   padding: 80px 20px;
-  background-color: #ffffff;
   text-align: center;
 }
 
 .supported-apps-section h2 {
-  color: #004d40;
+  color: rgb(13, 54, 39);;
   margin-bottom: 20px;
 }
 
@@ -741,7 +741,7 @@ header {
   max-width: 800px;
   margin: 0 auto 40px;
   font-size: 1.1rem;
-  color: #333;
+  color: black;
   font-weight: 500;
 }
 

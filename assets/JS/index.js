@@ -81,7 +81,28 @@ function createContinuousSwiper(selector, reverse = false, speed = 6000) {
 /* ===== Create 3 sliders with opposite directions ===== */
 createContinuousSwiper('.channels-slider-1', false, 6000); // right → left (speed: 6s)
 createContinuousSwiper('.channels-slider-2', true, 6000);  // left → right
-createContinuousSwiper('.movies-slider', false, 6000); // right → left
+// Specific configuration for movies-slider to make images larger on phone devices
+var moviesSwiper = new Swiper('.movies-slider', {
+  slidesPerView: 5,
+  spaceBetween: 10,
+  loop: true,
+  allowTouchMove: true,
+  speed: 6000,
+  autoplay: {
+    delay: 0,
+    reverseDirection: false,
+    disableOnInteraction: false,
+  },
+  freeMode: true,
+  freeModeMomentum: false,
+  grabCursor: true,
+  breakpoints: {
+    0: { slidesPerView: 2 }, // Changed from 3 to 2 for smaller screens
+    480: { slidesPerView: 2 }, // Changed from 3 to 2 for smaller screens
+    768: { slidesPerView: 4 },
+    1024: { slidesPerView: 5 },
+  },
+});
 
 
 // pricing panels 
