@@ -8,7 +8,7 @@
 body {
    background-color: #00a3a3;
   color: #FFFFFF;
-  font-family: "Jost", sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   font-weight: 400;
 }
 
@@ -19,7 +19,7 @@ h2 {
 }
 
 p {
-  color: #f0f0f0;
+  color: #FFFFFF; /* Improved contrast for general text */
   font-size: 1.1rem;
   font-weight: bold;
   margin: 20px;
@@ -91,7 +91,7 @@ p {
 .time-box span {
   font-size: 2rem;
   font-weight: bold;
-  font-family: "Alfa Slab One", serif;
+  font-family: "Arial Black", sans-serif;
   color: #ffd700;
 }
 
@@ -112,11 +112,12 @@ p {
 }
 
 .sports-channels-section p {
-  color: #ddd;
+  color: #FFFFFF; /* High contrast text on teal background */
   margin-bottom: 30px;
 }
 .sports-channels-section img {
-  width: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 .channel-grid {
@@ -142,14 +143,14 @@ p {
   justify-content: center;
   min-height: 150px; /* Ensures consistent height */
   
-   background: rgba(255, 255, 255, 0.2);
+   background: rgba(0, 0, 0, 0.5); /* Darkened background to make white text readable */
   border-color: #ffd700;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
 }
 
 .channel-item img.channel-logo {
-  max-width: 80px;
-  height: auto;
+  width: 80px;
+  height: 80px;
   margin-bottom: 15px;
   object-fit: contain; /* Ensures the logo is scaled correctly */
   
@@ -157,7 +158,7 @@ p {
 
 .channel-item:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.7); /* Darker on hover for better focus */
   border-color: #ffd700;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
 }
@@ -301,7 +302,7 @@ p {
 
 .schedule-list li {
     font-size: 1.1rem;
-    color: #cdd5e0;
+    color: #FFFFFF; /* Max contrast on dark navy sections */
     margin-bottom: 10px;
 }
 
@@ -370,7 +371,7 @@ p {
 }
 
 .feature-description {
-    color: #cdd5e0;
+    color: #FFFFFF; /* Max contrast for readability */
     font-size: 1rem;
     line-height: 1.6;
 }
