@@ -131,7 +131,8 @@ body {
 .IPTVSmarters-guide,
 .FIRESTICK-guide,
  .Refund-Policy,
-  .terms-of-use {
+  .terms-of-use,
+  .guide-content-section {
   padding: 60px 20px;
   background: #fff;
   color: #333;
@@ -144,7 +145,8 @@ body {
 .IPTVSmarters-guide .container,
 .FIRESTICK-guide .container,
  .Refund-Policy .container, 
- .terms-of-use .container {
+ .terms-of-use .container,
+ .guide-detail-container {
   font-weight: 700;
   text-align: center;
   max-width: 900px;
@@ -157,7 +159,8 @@ body {
 .IPTVSmarters-guide h1,
 .FIRESTICK-guide h1,
 .Refund-Policy h1,
- .terms-of-use h1 {
+ .terms-of-use h1,
+ .guide-title-smarters {
   font-size: clamp(1.8rem, 1.36rem + 2.18vw, 3rem); /* Responsive font size */
   color: #00796b;
   margin-bottom: 30px;
@@ -168,6 +171,7 @@ body {
 .Windows-guide h2,
 .IPTVSmarters-guide h2,
 .FIRESTICK-guide h2,
+.guide-content-section h2,
  .Refund-Policy h2, 
  .terms-of-use h2 {
   font-size: 2rem;
@@ -254,6 +258,7 @@ body {
 .FIRESTICK-guide strong,
 .Windows-guide strong,
 .TiviMate-guide strong,
+.guide-content-section strong,
 .IPTVSmarters-guide strong {
   color: #00796b;
 }
@@ -267,6 +272,72 @@ body {
   border-left: 4px solid #00796b;
   border-radius: 8px;
   font-weight: 600;
+}
+.back-link {
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #00796b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.alert-box {
+    background: #e0f7f5;
+    padding: 20px;
+    border-left: 4px solid #00796b;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.activation-steps {
+    list-style: decimal;
+    text-align: left;
+    max-width: 700px;
+    margin: 20px auto;
+    padding-left: 20px;
+}
+
+.activation-steps li {
+    margin-bottom: 30px;
+}
+
+.image-placeholder img {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.setup-option {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+.install-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #009688;
+    color: #000000;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+code {
+    background: #eee;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #d50000;
 }
 
 
@@ -289,4 +360,3 @@ body {
     font-size: 0.9rem;
   }
 }
-
