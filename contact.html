@@ -43,16 +43,28 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "8kIPTV4U",
-      "url": "https://www.8kiptv4u.com",
-      "logo": "https://www.8kiptv4u.com/assets/images/logo/8klogo.webp",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Customer Support",
-        "telephone": "+447898045582",
-        "url": "https://www.8kiptv4u.com/contact"
-      }
+      "@graph": [
+        {
+          "@type": "ContactPage",
+          "@id": "https://www.8kiptv4u.com/contact#webpage",
+          "url": "https://www.8kiptv4u.com/contact",
+          "name": "Contact Us - 8kIPTV4U",
+          "description": "Get in touch with 8kIPTV4U for technical support, trials, or sales inquiries."
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.8kiptv4u.com/#organization",
+          "name": "8kIPTV4U",
+          "url": "https://www.8kiptv4u.com",
+          "logo": "https://www.8kiptv4u.com/assets/images/logo/8klogo.webp",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Support",
+            "telephone": "+447898045582",
+            "url": "https://www.8kiptv4u.com/contact"
+          }
+        }
+      ]
     }
   </script>
 </head>
