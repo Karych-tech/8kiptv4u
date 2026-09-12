@@ -1,12 +1,12 @@
 * {
-   box-sizing: border-box;
+  box-sizing: border-box;
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
 }
 
 body {
-   background-color: #00a3a3;
+  background-color: #00a3a3;
   color: #FFFFFF;
   font-family: system-ui, -apple-system, sans-serif;
   font-weight: 400;
@@ -19,11 +19,12 @@ h2 {
 }
 
 p {
- color: white;
+  color: white;
   font-weight: bold;
   font-size: 1.2rem;
   margin: 20px;
 }
+
 /* ==========================================================================
    15. FOOTBALL / WORLD CUP PAGE STYLES
    ========================================================================== */
@@ -38,7 +39,8 @@ p {
   text-align: center;
   display: flex;
   flex-direction: column;
-  height: 600px; /* Fixed height to prevent shift while loading background */
+  height: 600px;
+  /* Fixed height to prevent shift while loading background */
   align-items: center;
   justify-content: center;
 }
@@ -46,7 +48,7 @@ p {
 .football-hero h1 {
   color: #ffd700;
   font-size: 4rem;
-  text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
   margin-bottom: 1rem;
 }
 
@@ -86,7 +88,7 @@ p {
   align-items: center;
   color: white;
   backdrop-filter: blur(5px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .time-box span {
@@ -104,7 +106,7 @@ p {
 /* Sports Channels Grid */
 .sports-channels-section {
   padding: 60px 20px;
- 
+
   text-align: center;
 }
 
@@ -113,9 +115,11 @@ p {
 }
 
 .sports-channels-section p {
-  color: #FFFFFF; /* High contrast text on teal background */
+  color: #FFFFFF;
+  /* High contrast text on teal background */
   margin-bottom: 30px;
 }
+
 .sports-channels-section img {
   width: 80px;
   height: 80px;
@@ -142,88 +146,94 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 150px; /* Ensures consistent height */
-  
-   background: rgba(0, 0, 0, 0.5); /* Darkened background to make white text readable */
+  min-height: 150px;
+  /* Ensures consistent height */
+
+  background: rgba(0, 0, 0, 0.5);
+  /* Darkened background to make white text readable */
   border-color: #ffd700;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Enhanced hover effect */
 }
 
 .channel-item img.channel-logo {
   width: 80px;
   height: 80px;
   margin-bottom: 15px;
-  object-fit: contain; /* Ensures the logo is scaled correctly */
-  
+  object-fit: contain;
+  /* Ensures the logo is scaled correctly */
+
 }
 
 .channel-item:hover {
   transform: translateY(-5px);
-  background: rgba(0, 0, 0, 0.7); /* Darker on hover for better focus */
+  background: rgba(0, 0, 0, 0.7);
+  /* Darker on hover for better focus */
   border-color: #ffd700;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Enhanced hover effect */
 }
 
 
 /* Host Cities Grid */
 .host-cities-section {
-    padding: 60px 20px;
-    text-align: center;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .cities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .city-card {
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 12px;
-    padding: 30px;
-    border: 1px solid rgba(255, 215, 0, 0.4);
-    backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  padding: 30px;
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  backdrop-filter: blur(5px);
 }
 
 .city-card h4 {
-    color: #ffd700;
-    font-size: 1.5rem;
-    margin: 10px 0;
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin: 10px 0;
 }
 
 .city-card .flag {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 /* WC Pricing Card */
 #wc-pricing {
-    padding: 60px 20px;
-    background-color: #121212;
+  padding: 60px 20px;
+  background-color: #121212;
 }
 
 .pricing-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .price-card.wc-card {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    border: 3px solid #ffd700;
-    max-width: 400px;
-    position: relative;
-    transition: transform 0.3s ease;
-    color: #333;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border: 3px solid #ffd700;
+  max-width: 400px;
+  position: relative;
+  transition: transform 0.3s ease;
+  color: #333;
 }
 
 .price-card.wc-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .wc-badge {
@@ -237,123 +247,129 @@ p {
   border-radius: 20px;
   font-weight: bold;
   font-size: 0.9rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .price-card h3 {
-    font-size: 1.8rem;
-    color: #1a1f2e;
-    text-align: center;
-    margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #1a1f2e;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .price-card .price {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #0056b3;
-    text-align: center;
-    margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0056b3;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .price-card .price span {
-    font-size: 1rem;
-    color: #555;
+  font-size: 1rem;
+  color: #555;
 }
 
 .price-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 30px 0;
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
 }
 
 .price-card ul li {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .price-card ul li::before {
-    content: '✓';
-    color: #28a745;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-right: 10px;
+  content: '✓';
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 10px;
 }
 
 .price-card .btn {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #1a1f2e;
-    background-color: #ffd700;
-    border: none;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1a1f2e;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 
 .price-card .btn:hover {
-    background-color: #ffc400;
+  background-color: #ffc400;
 }
 
 /* Schedule Section */
 .schedule-section {
-    background-color: #1a1f2e;
-    padding: 60px 20px;
-    text-align: center;
-    border-top: 1px solid #444;
-    border-bottom: 1px solid #444;
+  background-color: #1a1f2e;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
 }
+
 .schedule-section h2 {
-  color: #FFFFFF; /* Override for this section to keep white text */
+  color: #FFFFFF;
+  /* Override for this section to keep white text */
 }
+
 .schedule-section h3 {
-    color: #ffd700;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    background: none;
-    border: none;
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background: none;
+  border: none;
 }
 
-.schedule-details, .teams-section {
-    margin-bottom: 40px;
+.schedule-details,
+.teams-section {
+  margin-bottom: 40px;
 }
 
-.schedule-list, .teams-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 800px;
+.schedule-list,
+.teams-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 .schedule-list li {
-    font-size: 1.1rem;
-    color: #FFFFFF; /* Max contrast on dark navy sections */
-    margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  /* Max contrast on dark navy sections */
+  margin-bottom: 10px;
 }
 
 .teams-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
 .teams-list li {
-    background: #2c344b;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    border: 1px solid #444;
+  background: #2c344b;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid #444;
 }
 
 
@@ -365,121 +381,122 @@ p {
 
 .tournament-overview-section,
 .faq-section {
-    padding: 60px 20px;
-    background-color: #071214;
-    color: #fff;
-    text-align: center;
+  padding: 60px 20px;
+  background-color: #071214;
+  color: #fff;
+  text-align: center;
 }
 
 .tournament-overview-section h2,
 .faq-section h2 {
-    margin-bottom: 30px;
-    color: #ffd700;
+  margin-bottom: 30px;
+  color: #ffd700;
 }
 
 .overview-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-    max-width: 1200px;
-    margin: 0 auto 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
 }
 
 .overview-card {
-    padding: 25px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-    text-align: left;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  text-align: left;
 }
 
 .overview-card h3 {
-    color: #ffd700;
-    margin-bottom: 15px;
-    font-size: 1.35rem;
+  color: #ffd700;
+  margin-bottom: 15px;
+  font-size: 1.35rem;
 }
 
 .overview-card p {
-    color: #e8e8e8;
-    font-size: 1rem;
-    line-height: 1.8;
-    margin: 0;
+  color: #e8e8e8;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
 }
 
 .faq-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
 }
 
 .faq-item {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 0, 0.12);
-    border-radius: 16px;
-    padding: 25px;
-    text-align: left;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 0, 0.12);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .faq-item h3 {
-    color: #ffd700;
-    margin-bottom: 15px;
-    font-size: 1.35rem;
+  color: #ffd700;
+  margin-bottom: 15px;
+  font-size: 1.35rem;
 }
 
 .faq-item p {
-    color: #e8e8e8;
-    font-size: 1rem;
-    line-height: 1.8;
-    margin: 0;
+  color: #e8e8e8;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
 }
 
 /* Features Section */
 .features-section {
-    padding: 60px 20px;
-    background-color: #1a1f2e;
+  padding: 60px 20px;
+  background-color: #1a1f2e;
 }
 
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .feature-card {
-    background: #2c344b;
-    border: 1px solid #444;
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #2c344b;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .feature-icon {
-    font-size: 3rem;
-    color: #ffd700;
-    margin-bottom: 20px;
+  font-size: 3rem;
+  color: #ffd700;
+  margin-bottom: 20px;
 }
 
 .feature-title {
-    font-size: 1.3rem;
-    color: #ffd700;
-    margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #ffd700;
+  margin-bottom: 10px;
 }
 
 .feature-description {
-    color: #FFFFFF; /* Max contrast for readability */
-    font-size: 1rem;
-    line-height: 1.6;
+  color: #FFFFFF;
+  /* Max contrast for readability */
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 
@@ -488,7 +505,7 @@ p {
   .football-hero h1 {
     font-size: 2.2rem;
   }
-  
+
   .football-hero {
     padding: 80px 15px;
   }
@@ -504,5 +521,510 @@ p {
 
   .time-box span {
     font-size: 1.5rem;
+  }
+}
+
+
+/* ==========================================================================
+   MODERN REFRESH LAYER — overrides kept in one place, same class names
+   ========================================================================== */
+
+/* Page background: deep dark gradient instead of flat teal */
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(0, 163, 163, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 0% 30%, rgba(255, 215, 0, 0.06), transparent 55%),
+    linear-gradient(180deg, #071214 0%, #0a1416 40%, #071214 100%);
+  background-attachment: fixed;
+}
+
+/* Global paragraph rhythm — softer weight, better line-height */
+p {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Section titles with accent badge underline */
+.accent-title-badge {
+  display: inline-block;
+  position: relative;
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #ffd700, #ffe666);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 14px;
+  margin-bottom: 12px;
+}
+
+.accent-title-badge::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #00a3a3, #ffd700);
+}
+
+/* Center the inline-block titles inside their sections */
+.host-cities-section,
+.sports-channels-section {
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   HERO — cinematic glass panel, gradient overlay, floating CTA
+   -------------------------------------------------------------------------- */
+.football-hero {
+  position: relative;
+  height: auto;
+  min-height: 88vh;
+  padding: 120px 24px 90px;
+  background:
+    linear-gradient(160deg, rgba(4, 10, 12, 0.35) 0%, rgba(7, 18, 20, 0.85) 70%, #071214 100%),
+    url('../images/football/football.webp');
+  background-size: cover;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* soft glow blob behind the hero content */
+.football-hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 620px;
+  height: 620px;
+  max-width: 90vw;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(0, 163, 163, 0.22), transparent 65%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 40px;
+  border-radius: 24px;
+  background: rgba(7, 18, 20, 0.55);
+  border: 1px solid rgba(255, 215, 0, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+  animation: heroRise 0.9s ease-out both;
+}
+
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.football-hero h1 {
+  font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #ffd700 0%, #ffe666 50%, #00d5d5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.football-hero p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 18px auto 28px;
+}
+
+/* Hero CTA button */
+.football-hero .hero_btn {
+  display: inline-block;
+  padding: 16px 42px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #071214;
+  background: linear-gradient(90deg, #ffd700, #ffca28);
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.football-hero .hero_btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(255, 215, 0, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   COMPETITIONS CARDS — glass with hover lift + gold corner glow
+   -------------------------------------------------------------------------- */
+.host-cities-section>p {
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.cities-grid {
+  gap: 22px;
+}
+
+.city-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 215, 0, 0.22);
+  border-radius: 18px;
+  padding: 32px 28px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.city-card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 163, 163, 0.25), transparent 70%);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0.6;
+}
+
+.city-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 215, 0, 0.55);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.city-card:hover::before {
+  transform: scale(1.4);
+  opacity: 1;
+}
+
+.city-card h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+  background: linear-gradient(90deg, #ffd700, #ffe666);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.city-card p {
+  margin: 0;
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* --------------------------------------------------------------------------
+   CHANNEL CARDS — cleaner tiles, logo hover pop
+   -------------------------------------------------------------------------- */
+.sports-channels-section>p {
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.channel-grid {
+  gap: 22px;
+}
+
+.channel-item {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 16px;
+  padding: 24px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.channel-item p {
+  font-weight: 400;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+  margin: 10px 0 0;
+}
+
+.channel-item img.channel-logo {
+  transition: transform 0.3s ease;
+}
+
+.channel-item:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 215, 0, 0.55);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+}
+
+.channel-item:hover img.channel-logo {
+  transform: scale(1.12);
+}
+
+.channel-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+/* --------------------------------------------------------------------------
+   FEATURES — teal gradient icon chips
+   -------------------------------------------------------------------------- */
+.features-section {
+  background: linear-gradient(180deg, #0a1416, #071214);
+}
+
+.features-section h2 {
+  color: #fff;
+  margin-bottom: 46px;
+}
+
+.feature-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 34px 26px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 211, 211, 0.45);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  font-size: 2rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(0, 163, 163, 0.25), rgba(255, 215, 0, 0.15));
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  margin-bottom: 18px;
+}
+
+.feature-title {
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+.feature-description {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   PRICING — modern dark premium card (replaces white card look)
+   -------------------------------------------------------------------------- */
+#wc-pricing {
+  background: linear-gradient(180deg, #071214, #0a1416);
+  padding: 80px 20px;
+}
+
+#wc-pricing h2 {
+  color: #fff;
+  margin-bottom: 46px;
+}
+
+.price-card.wc-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 215, 0, 0.5);
+  border-radius: 22px;
+  padding: 48px 36px 40px;
+  max-width: 420px;
+  color: #fff;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 215, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card.wc-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55), 0 0 40px rgba(255, 215, 0, 0.15);
+}
+
+.wc-badge {
+  top: -16px;
+  padding: 7px 20px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #d50000, #ff1744);
+  border-radius: 999px;
+}
+
+.price-card.wc-card h3 {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.price-card .price {
+  color: #ffd700;
+  font-size: 2.8rem;
+  margin: 14px 0 24px;
+}
+
+.price-card .price span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.price-card ul {
+  text-align: left;
+  margin: 26px 0 30px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.price-card ul li {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.98rem;
+  font-weight: 500;
+  margin-bottom: 13px;
+}
+
+.price-card .btn {
+  color: #071214;
+  background: linear-gradient(90deg, #ffd700, #ffca28);
+  border-radius: 999px;
+  padding: 15px;
+  box-shadow: 0 10px 26px rgba(255, 215, 0, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.price-card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(255, 215, 0, 0.45);
+}
+
+/* --------------------------------------------------------------------------
+   OVERVIEW + FAQ — lighter glass cards, consistent spacing
+   -------------------------------------------------------------------------- */
+.tournament-overview-section {
+  background: linear-gradient(180deg, #0a1416, #071214);
+}
+
+.tournament-overview-section>p {
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.overview-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 28px 26px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.overview-card h3 {
+  font-size: 1.2rem;
+}
+
+.overview-card p,
+.faq-item p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.96rem;
+}
+
+.faq-section {
+  background: linear-gradient(180deg, #071214, #0a1416);
+}
+
+.faq-section h2 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px 28px;
+  transition: border-color 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.faq-item h3 {
+  color: #ffd700;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .football-hero {
+    min-height: auto;
+    padding: 60px 16px 60px;
+  }
+
+  .hero-content {
+    padding: 32px 22px;
+    border-radius: 18px;
+  }
+
+  .hero-content h1,
+  .football-hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .accent-title-badge {
+    font-size: 1.6rem;
+  }
+
+  .football-hero .hero_btn {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+
+  .price-card.wc-card {
+    padding: 40px 24px 32px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-content {
+    animation: none;
+  }
+
+  * {
+    transition: none !important;
   }
 }

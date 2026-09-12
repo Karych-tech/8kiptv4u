@@ -1,0 +1,518 @@
+/* ==========================================================================
+   HOW-TO-INSTALL / GUIDES — MODERN STYLES
+   Shared by: how-to-install-iptv, downloader-guide, iptv-smarters-pro,
+   smarters-player-on-amazon-firestick, tivi-mate, windows
+   Brand language: dark glass + gold (#ffd700) + teal (#00a3a3)
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(0, 163, 163, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 0% 30%, rgba(255, 215, 0, 0.06), transparent 55%),
+    linear-gradient(180deg, #071214 0%, #0a1416 40%, #071214 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Jost", system-ui, sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------------
+   GUIDES HUB — .how-to-install (cards grid)
+   -------------------------------------------------------------------------- */
+.how-to-install {
+  padding: 60px 20px;
+}
+
+.how-to-install h2 {
+  text-align: center;
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #ffd700, #ffe666);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 14px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.how-to-install h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #00a3a3, #ffd700);
+}
+
+.how-to-install .container h1 {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #ffd700 0%, #ffe666 50%, #00d5d5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
+}
+
+.how-to-install .container>p {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 2.5rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.08rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.install-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.install-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  max-width: none;
+  text-align: left;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 215, 0, 0.22);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.install-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 215, 0, 0.55);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.4);
+}
+
+.install-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 14px;
+  transition: transform 0.3s ease;
+}
+
+.install-card:hover img {
+  transform: scale(1.02);
+}
+
+.install-card h2 {
+  -webkit-text-fill-color: #ffd700;
+  background: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 10px 0 8px;
+  padding: 0;
+}
+
+.install-card h2::after {
+  display: none;
+}
+
+.install-card p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.read-more,
+.install-btn {
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-block;
+  padding: 11px 22px;
+  background: linear-gradient(90deg, #ffd700, #ffca28);
+  color: #071214;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 22px rgba(255, 215, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.read-more:hover,
+.read-more:focus,
+.install-btn:hover,
+.install-btn:focus {
+  background: linear-gradient(90deg, #ffd700, #ffca28);
+  color: #071214;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
+  outline: none;
+}
+
+/* --------------------------------------------------------------------------
+   GUIDE DETAIL PAGES — .TiviMate-guide, .IPTVSmarters-guide, etc.
+   -------------------------------------------------------------------------- */
+.TiviMate-guide,
+.Windows-guide,
+.IPTVSmarters-guide,
+.FIRESTICK-guide,
+.guide-content-section {
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.75;
+}
+
+.TiviMate-guide .container,
+.Windows-guide .container,
+.IPTVSmarters-guide .container,
+.FIRESTICK-guide .container,
+.guide-detail-container {
+  font-weight: 400;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.TiviMate-guide h1,
+.Windows-guide h1,
+.IPTVSmarters-guide h1,
+.FIRESTICK-guide h1,
+.guide-title-smarters {
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #ffd700 0%, #ffe666 50%, #00d5d5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.TiviMate-guide h2,
+.Windows-guide h2,
+.IPTVSmarters-guide h2,
+.FIRESTICK-guide h2,
+.guide-content-section h2 {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: #ffd700;
+  margin-top: 44px;
+  margin-bottom: 16px;
+  padding-left: 14px;
+  border-left: 4px solid #00a3a3;
+  border-radius: 2px;
+  text-align: left;
+}
+
+.TiviMate-guide h3,
+.Windows-guide h3,
+.IPTVSmarters-guide h3,
+.FIRESTICK-guide h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffe666;
+  margin-top: 26px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.TiviMate-guide p,
+.Windows-guide p,
+.IPTVSmarters-guide p,
+.FIRESTICK-guide p,
+.guide-content-section p {
+  font-size: 1.02rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.TiviMate-guide a,
+.Windows-guide a,
+.IPTVSmarters-guide a,
+.FIRESTICK-guide a {
+  color: #00d5d5;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 213, 213, 0.5);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.TiviMate-guide a:hover,
+.Windows-guide a:hover,
+.IPTVSmarters-guide a:hover,
+.FIRESTICK-guide a:hover {
+  color: #ffd700;
+  border-color: #ffd700;
+}
+
+/* Images inside guides */
+.FIRESTICK-guide img,
+.Windows-guide img,
+.TiviMate-guide img,
+.IPTVSmarters-guide img {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 24px auto;
+  object-fit: cover;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+}
+
+/* Lists / steps */
+.FIRESTICK-guide ol,
+.FIRESTICK-guide ul,
+.Windows-guide ol,
+.Windows-guide ul,
+.TiviMate-guide ol,
+.TiviMate-guide ul,
+.IPTVSmarters-guide ol,
+.IPTVSmarters-guide ul,
+.guide-content-section ol,
+.guide-content-section ul,
+.activation-steps {
+  text-align: left;
+  margin: 20px auto;
+  max-width: 720px;
+  padding-left: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 20px 20px 20px 44px;
+}
+
+.FIRESTICK-guide li,
+.Windows-guide li,
+.TiviMate-guide li,
+.IPTVSmarters-guide li,
+.guide-content-section li,
+.activation-steps li {
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.TiviMate-guide strong,
+.Windows-guide strong,
+.IPTVSmarters-guide strong,
+.FIRESTICK-guide strong,
+.guide-content-section strong {
+  color: #ffd700;
+  font-weight: 700;
+}
+
+/* Highlight / alert callouts */
+.FIRESTICK-guide p.highlight,
+.Windows-guide p.highlight,
+.TiviMate-guide p.highlight,
+.IPTVSmarters-guide p.highlight,
+.alert-box {
+  background: linear-gradient(135deg, rgba(0, 163, 163, 0.16), rgba(0, 163, 163, 0.06));
+  border-left: 4px solid #00d5d5;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin: 22px 0;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+}
+
+/* Back link */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+  color: #00d5d5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-link:hover {
+  color: #ffd700;
+  transform: translateX(-4px);
+}
+
+/* Setup option boxes / placeholders / code */
+.setup-option {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.setup-option:hover {
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+/* Checklist card ("Before You Install") */
+.checklist-card {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.checklist-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffd700;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.checklist li {
+  position: relative;
+  padding: 14px 14px 14px 40px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.checklist li:hover {
+  border-color: rgba(255, 215, 0, 0.35);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.checklist li::before {
+  content: "\2714";
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  color: #00d5d5;
+  font-weight: 700;
+}
+
+.checklist li strong {
+  color: #ffd700;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .checklist li {
+    padding: 12px 12px 12px 36px;
+    font-size: 0.95rem;
+  }
+
+  .checklist li::before {
+    left: 12px;
+    top: 12px;
+  }
+}
+
+.image-placeholder img {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 14px;
+  margin: 24px auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+}
+
+code {
+  background: rgba(255, 215, 0, 0.12);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  color: #ffe666;
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+  .how-to-install,
+  .TiviMate-guide,
+  .Windows-guide,
+  .IPTVSmarters-guide,
+  .FIRESTICK-guide,
+  .guide-content-section {
+    padding: 44px 16px;
+  }
+
+  .install-grid {
+    gap: 18px;
+  }
+
+  .install-card {
+    padding: 16px;
+  }
+
+  .install-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .install-card p {
+    font-size: 0.9rem;
+  }
+
+  .FIRESTICK-guide ol,
+  .FIRESTICK-guide ul,
+  .Windows-guide ol,
+  .Windows-guide ul,
+  .TiviMate-guide ol,
+  .TiviMate-guide ul,
+  .IPTVSmarters-guide ol,
+  .IPTVSmarters-guide ul,
+  .activation-steps {
+    padding: 16px 16px 16px 36px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto;
+  }
+}

@@ -6,10 +6,15 @@
 }
 
 body {
-    background-color: #00a3a3;
+    background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(0, 163, 163, 0.18), transparent 60%),
+        radial-gradient(900px 500px at 0% 30%, rgba(255, 215, 0, 0.06), transparent 55%),
+        linear-gradient(180deg, #071214 0%, #0a1416 40%, #071214 100%);
+    background-attachment: fixed;
+    color: #FFFFFF;
     min-height: 100vh;
     font-family: "Jost", sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     background-size: cover;
     background-position: top;
     overflow-x: hidden;
@@ -21,17 +26,16 @@ h2 {
     text-align: center;
     margin-bottom: 20px;
     font-family: "Alfa Slab One", serif;
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 4.5vw, 2.6rem);
     font-weight: 500;
     font-style: normal;
-    color: #0d3627;
+    color: #ffd700;
 }
-
 h3 {
     font-family: var(--font-main);
     font-size: 1.5rem;
     font-weight: 600;
-    color: #0d3627;
+    color: #ffd700;
 }
 
 
@@ -39,8 +43,9 @@ h3 {
 .reseller-hero {
     width: 100%;
     padding: 140px 20px 80px;
-    min-height: 450px; /* Reserves vertical space to prevent layout jump */
-    background: linear-gradient(rgba(13, 54, 39, 0.8), rgba(0, 163, 163, 0.7)), url('/assets/images/logo/8k.png');
+    min-height: 450px;
+    position: relative;
+    background: linear-gradient(rgba(7, 18, 20, 0.75), rgba(7, 18, 20, 0.92)), url('/assets/images/logo/8k.png');
     background-size: contain;
     background-position: center;
     background-attachment: fixed;
@@ -48,73 +53,109 @@ h3 {
     color: #fff;
     border-radius: 0 0 24px 24px;
     margin-bottom: 20px;
-    
+    overflow: hidden;
 }
-
+.reseller-hero::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 620px;
+    height: 620px;
+    max-width: 90vw;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(0, 163, 163, 0.22), transparent 65%);
+    pointer-events: none;
+}
 .reseller-hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 900px;
     margin: 0 auto;
+    padding: 48px 40px;
+    border-radius: 24px;
+    background: rgba(7, 18, 20, 0.55);
+    border: 1px solid rgba(255, 215, 0, 0.18);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+    animation: heroRise 0.9s ease-out both;
 }
-
+@keyframes heroRise {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 .reseller-hero h1 {
     font-family: "Alfa Slab One", serif;
-    font-size: 3rem;
-    color: #ffd700;
+    font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+    background: linear-gradient(90deg, #ffd700 0%, #ffe666 50%, #00d5d5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
     letter-spacing: 1px;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: none;
 }
-
 .reseller-hero p {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     margin-bottom: 35px;
-    color: #f1f1f1;
-    font-weight: 500;
-    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.88);
+    font-weight: 400;
+    line-height: 1.7;
+}
+.reseller-hero .hero_btn {
+    display: inline-block;
+    padding: 16px 42px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #071214;
+    background: linear-gradient(90deg, #ffd700, #ffca28);
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.reseller-hero .hero_btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 16px 40px rgba(255, 215, 0, 0.5);
 }
 
 /* === INTRO SECTION === */
 .reseller-intro {
     padding: 60px 20px;
-    background-color: #f9f9f9;
     text-align: center;
-    border-radius: 12px;
     margin: 20px auto;
     max-width: 1200px;
 }
-
 .intro-content {
     max-width: 800px;
     margin: 0 auto;
-    font-size: 1.1rem;
-    color: #333;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.82);
     line-height: 1.8;
-    font-weight: 500;
+    font-weight: 400;
 }
-
 .intro-content strong {
-    color: #00796b;
-    font-weight: 800;
+    color: #ffd700;
+    font-weight: 700;
 }
 
 /* === PRICING SECTION === */
 .reseller-pricing {
-    padding: 60px 20px;
-    background-color: #00a3a3;
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #071214, #0a1416);
     width: 100%;
 }
-
 .reseller-pricing h2 {
-    color: #ffffff;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #ffd700;
+    text-shadow: none;
 }
-
 .reseller-pricing .sub-heading {
     text-align: center;
-    color: #ffffff;
-    margin-bottom: 40px;
-    font-size: 1.2rem;
-    font-weight: 700;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 46px;
+    font-size: 1.1rem;
+    font-weight: 400;
 }
 
 .reseller-pricing .pricing-grid {
@@ -129,75 +170,102 @@ h3 {
 
 .reseller-pricing .price-card {
     position: relative;
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 22px;
+    padding: 40px 30px;
+    color: #fff;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 215, 0, 0.08);
     flex: 1 1 300px;
     max-width: 350px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     overflow: hidden;
 }
 
 .reseller-pricing .price-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(255, 215, 0, 0.6);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55), 0 0 40px rgba(255, 215, 0, 0.15);
 }
 
 .reseller-pricing h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 10px;
     background: none;
     border: none;
-    color: #333;
+    color: #fff;
     padding: 0;
 }
 
 .reseller-pricing .credits {
     font-size: 1.8rem;
     font-family: "Saira Stencil One", sans-serif;
-    color: #00838f;
+    color: #00d5d5;
     margin: 10px 0;
     text-transform: uppercase;
 }
 
 .reseller-pricing .price {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
-    color: #007bff;
+    color: #ffd700;
     margin: 10px 0;
 }
 
 .reseller-pricing .guarantee {
     font-size: 0.85rem;
-    color: #155724;
-    font-weight: 700;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 500;
     margin-bottom: 15px;
     text-transform: uppercase;
 }
 
 .reseller-pricing ul {
     list-style: none;
-    padding: 0;
+    padding: 20px 0;
     margin: 20px 0;
     text-align: left;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .reseller-pricing ul li {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
     padding-left: 25px;
     position: relative;
-    font-size: 0.95rem;
-    color: #555;
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.88);
 }
 
 .reseller-pricing ul li::before {
-    content: '✓';
+    content: '\2713';
     position: absolute;
     left: 0;
-    color: #28a745;
+    color: #00d5d5;
     font-weight: bold;
+}
+
+.reseller-pricing .btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #071214;
+    background: linear-gradient(90deg, #ffd700, #ffca28);
+    border: none;
+    border-radius: 999px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 10px 26px rgba(255, 215, 0, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.reseller-pricing .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(255, 215, 0, 0.45);
 }
 
 .ribbon {
@@ -217,48 +285,59 @@ h3 {
 }
 
 /* === FEATURES SECTION === */
+/* === FEATURES SECTION === */
 .features-section {
-    padding: 60px 20px;
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #0a1416, #071214);
     text-align: center;
 }
-
 .sub-heading {
     margin-bottom: 10px;
 }
-
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
 .feature-card {
-    background: #ffffff;
-    padding: 25px 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 34px 26px;
     text-align: center;
-    border-radius: 12px;
-    border: 1px solid #ddd;
+    border-radius: 18px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 211, 211, 0.45);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
 .icon-header {
-    margin: 0 auto 15px;
-    font-size: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    font-size: 2rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(0, 163, 163, 0.25), rgba(255, 215, 0, 0.15));
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    margin: 0 auto 18px;
 }
-
 .feature-title {
-    background: none;
     border: none;
-    background: linear-gradient(90deg, #0060ff, #00b7ff);
-    font-family: var(--font-main); /* Ensure feature titles use main font */
+    background: linear-gradient(90deg, #ffd700, #ffe666);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    font-size: 1.2rem;
 }
-
 .feature-description {
-    color: #555;
+    color: rgba(255, 255, 255, 0.78);
     font-size: 0.95em;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 

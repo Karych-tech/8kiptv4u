@@ -1,362 +1,164 @@
 * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
+
 body {
-    background-color: #00a3a3;
-    min-height: 100vh;
-    font-family: "Jost", sans-serif;
-    font-weight: 700;
-    background-size: cover;
-    background-position: top;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(0, 163, 163, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 0% 30%, rgba(255, 215, 0, 0.06), transparent 55%),
+    linear-gradient(180deg, #071214 0%, #0a1416 40%, #071214 100%);
+  background-attachment: fixed;
+  color: #FFFFFF;
+  min-height: 100vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  background-size: cover;
+  background-position: top;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* === how to install === */
-.how-to-install {
-  padding: 40px 20px;
-  background: #fff;
-}
-
-.how-to-install h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-/* Center page heading and intro paragraph */
-.how-to-install .container h1 {
-  text-align: center;
-  font-size: 2rem;
-  color: #004d40;
-  font-weight: 700;
-  margin: 0 0 0.75rem;
-  line-height: 1.15;
-}
-
-.how-to-install .container > p {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto 2rem;
-  color: #333;
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-
-.install-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
-
-.install-card {
-  flex: 1 1 300px;
-  max-width: 320px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-  background: #fafafa;
-  background: #fff;
-  border-radius: 8px;
-  padding: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  max-width: 320px;
-  width: 100%;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.install-card:hover {
-  transform: translateY(-5px);
-}
-
-.install-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  display: block;
-  margin-bottom: 12px;
-}
-
-/* Headings / copy inside cards */
-.install-card h2 {
-  font-size: 1.15rem;
-  margin: 10px 0 8px;
-  color: #00796b;
-  font-weight: 600;
-}
-
-.install-card p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 14px;
-  line-height: 1.5;
-}
-
-/* Read more button */
-.read-more {
-  margin-top: auto;
-  display: inline-block;
-  padding: 10px 18px;
-  background: #009688;
-  color:  #000000;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-}
-
-.read-more:hover,
-.read-more:focus {
-  background: #00796b;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
-  outline: none;
-}
-
-/* === privacy policy .FIRESTICK-guide,.Refund-Policy,.terms-of-use  === */
+/* === privacy policy .Refund-Policy,.terms-of-use === */
 .privacy-policy,
-.TiviMate-guide,
-.Windows-guide,
-.IPTVSmarters-guide,
-.FIRESTICK-guide,
- .Refund-Policy,
-  .terms-of-use,
-  .guide-content-section {
-  padding: 60px 20px;
-  background: #fff;
-  color: #333;
-  line-height: 1.7;
+.Refund-Policy,
+.terms-of-use,
+.guide-content-section {
+  padding: 72px 24px 96px;
+  color: #FFFFFF;
+  line-height: 1.8;
 }
 
 .privacy-policy .container,
-.Windows-guide .container,
-.TiviMate-guide .container,
-.IPTVSmarters-guide .container,
-.FIRESTICK-guide .container,
- .Refund-Policy .container, 
- .terms-of-use .container,
- .guide-detail-container {
-  font-weight: 700;
-  text-align: center;
-  max-width: 900px;
+.Refund-Policy .container,
+.terms-of-use .container,
+.guide-detail-container {
+  max-width: 860px;
   margin: 0 auto;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 215, 0, 0.22);
+  border-radius: 24px;
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(255, 215, 0, 0.06);
+  padding: clamp(28px, 5vw, 64px);
+  text-align: left;
 }
 
+/* Page title (hero) */
 .privacy-policy h1,
-.Windows-guide h1,
-.TiviMate-guide h1,
-.IPTVSmarters-guide h1,
-.FIRESTICK-guide h1,
 .Refund-Policy h1,
- .terms-of-use h1,
- .guide-title-smarters {
-  font-size: clamp(1.8rem, 1.36rem + 2.18vw, 3rem); /* Responsive font size */
-  color: #00796b;
-  margin-bottom: 30px;
+.terms-of-use h1,
+.guide-title-smarters {
+  font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  text-transform: capitalize;
+  text-align: center;
+  background: linear-gradient(90deg, #ffd700 0%, #ffe666 50%, #00d5d5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 18px;
 }
 
-.privacy-policy h2,
-.TiviMate-guide h2,
-.Windows-guide h2,
-.IPTVSmarters-guide h2,
-.FIRESTICK-guide h2,
-.guide-content-section h2,
- .Refund-Policy h2, 
- .terms-of-use h2 {
-  font-size: 2rem;
-  margin-top: 40px;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.privacy-policy p, 
-.Windows-guide p,
-.TiviMate-guide p,
-.IPTVSmarters-guide p,
-.FIRESTICK-guide p,
-.Refund-Policy p, 
-.terms-of-use p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.privacy-policy a,
-.Windows-guide a,
-.IPTVSmarters-guide a,
-.TiviMate-guide a,
-.FIRESTICK-guide a,
- .Refund-Policy a, 
- .terms-of-use a {
-  color: #00796b;
-  text-decoration: underline;
-}
-
-/* === images how to install style === */
-.FIRESTICK-guide img,
-.Windows-guide img,
-.TiviMate-guide img,
-.IPTVSmarters-guide img{
-  display: block;
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 12px;
-  margin: 20px auto;
-  object-fit: cover;
-}
+.privacy-policy h1::after,
+.Refund-Policy h1::after,
+.terms-of-use h1::after,
+.guide-title-smarters::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 84px;
+  height: 5px;
+  border-radius: 999px;
   
+}
 
+/* Section headings */
+.privacy-policy h2,
+.guide-content-section h2,
+.Refund-Policy h2,
+.terms-of-use h2 {
+  font-size: clamp(1.35rem, 1.2rem + 0.6vw, 1.6rem);
+  font-weight: 700;
+  margin-top: 44px;
+  margin-bottom: 14px;
+  color: #ffd700;
+  line-height: 1.35;
+}
+
+/* Body copy */
+.privacy-policy p,
+.Refund-Policy p,
+.terms-of-use p,
+.guide-content-section p {
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+}
+
+/* Links */
+.privacy-policy a,
+.Refund-Policy a,
+.terms-of-use a,
+.guide-content-section a {
+  color: #ffd700;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(255, 215, 0, 0.35);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.privacy-policy a:hover,
+.Refund-Policy a:hover,
+.terms-of-use a:hover,
+.guide-content-section a:hover {
+  color: #ffe666;
+  border-bottom-color: #ffe666;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.35);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .privacy-policy,
+  .Refund-Policy,
+  .terms-of-use,
+  .guide-content-section {
+    padding: 40px 14px 64px;
+  }
+
+  .privacy-policy .container,
+  .Refund-Policy .container,
+  .terms-of-use .container,
+  .guide-detail-container {
+    border-radius: 18px;
+  }
+}
 
 /* General text improvements */
-.FIRESTICK-guide h3,
-.Windows-guide h3,
-.TiviMate-guide h3,
-.IPTVSmarters-guide h3 {
-  font-size: 1.4rem;
-  color: #00796b;
-  margin-top: 25px;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-
-
-.FIRESTICK-guide ol, 
-.FIRESTICK-guide ul,
-.Windows-guide ol,
-.Windows-guide ul,
-.TiviMate-guide ol,
-.TiviMate-guide ul,
-.IPTVSmarters-guide ol, 
-.IPTVSmarters-guide ul {
-  text-align: left;
-  margin: 20px auto;
-  max-width: 700px;
-  padding-left: 20px;
-}
-
-.FIRESTICK-guide li,
-.Windows-guide li,
-.TiviMate-guide li,
-.IPTVSmarters-guide li {
-  margin-bottom: 10px;
-  font-weight: 500;
-  line-height: 1.6;
-}
-
-.FIRESTICK-guide strong,
-.Windows-guide strong,
-.TiviMate-guide strong,
-.guide-content-section strong,
-.IPTVSmarters-guide strong {
-  color: #00796b;
-}
-
-.FIRESTICK-guide p.highlight,
-.Windows-guide p.highlight,
-.TiviMate-guide p.highlight,
-.IPTVSmarters-guide p.highlight {
-  background: #e0f7f5;
-  padding: 15px;
-  border-left: 4px solid #00796b;
-  border-radius: 8px;
-  font-weight: 600;
-}
-.back-link {
-    display: block;
-    text-align: left;
-    margin-bottom: 20px;
-    color: #00796b;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.alert-box {
-    background: #e0f7f5;
-    padding: 20px;
-    border-left: 4px solid #00796b;
-    border-radius: 8px;
-    margin: 20px 0;
-    text-align: left;
-}
-
-.activation-steps {
-    list-style: decimal;
-    text-align: left;
-    max-width: 700px;
-    margin: 20px auto;
-    padding-left: 20px;
-}
-
-.activation-steps li {
-    margin-bottom: 30px;
-}
-
-.image-placeholder img {
-    display: block;
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 12px;
-    margin: 20px auto;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.setup-option {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #eee;
-    text-align: left;
-}
-
-.install-btn {
-    display: inline-block;
-    padding: 10px 18px;
-    background: #009688;
-    color: #000000;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-}
 
 code {
-    background: #eee;
-    padding: 2px 5px;
-    border-radius: 4px;
-    font-weight: bold;
-    color: #d50000;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #ffd700;
 }
 
-
-
-/* Responsive adjustment for mobile */
-@media (max-width: 768px) {
-  .install-grid {
-    gap: 20px;
-  }
-
-  .install-card {
-    max-width: 100%;
-  }
-
-  .install-card h2 {
-    font-size: 1.1rem;
-  }
-
-  .install-card p {
-    font-size: 0.9rem;
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
   }
 }
