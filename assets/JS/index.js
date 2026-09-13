@@ -27,28 +27,99 @@ if (navbartoggle && navbarMenu) {
 
 
 // --- HERO SECTION SWIPER ---
-var heroSwiper = new Swiper(".hero-swiper", {  
+// Premium 3D card transition using Swiper's built-in "creative" effect.
+// Coming in  -> slides in from the right, rotated + scaled down + faded,
+//               then settles to translateX(0) scale(1) rotate(0) opacity(1).
+// Leaving    -> follows the swipe, rotates, scales down and fades out.
+// Works for both swipe directions automatically (prev/next are mirrored).
+// Respect the user's reduced-motion preference: no animated transition.
+var heroSwiper = new Swiper(".hero-swiper", {
   slidesPerView: "auto",
   centeredSlides: true,
-  loop: true, 
-  speed: 800,
+  loop: true,
 
-
-  effect: "coverflow",
-  coverflowEffect: {
-    rotate: 0,   
-    stretch: 0,     
-    depth: 100,     
-    modifier: 2.5, 
-    slideShadows: false
+  effect: "creative",
+  creativeEffect: {
+    // Flat 2D card feel (no perspective depth) — matches the requested look
+    perspective: false,
+    limitProgress: 1,
+    prev: {
+      // Slide that is leaving to the LEFT / arriving from the left
+      translate: ["-110%", 0, 0],
+      rotate: [0, 0, -6],
+      scale: 0.9,
+      opacity: 0
+    },
+    next: {
+      // Slide that is leaving to the RIGHT / arriving from the right
+      translate: ["110%", 0, 0],
+      rotate: [0, 0, 6],
+      scale: 0.9,
+      opacity: 0
+    }
   },
 
-  grabCursor: true 
-});
+  grabCursor: true,
 
+  // Smooth, premium feel when the user swipes
+  speed: 650,
+  resistanceRatio: 0, // no edge resistance — dragging stays 1:1 with the finger
+  followFinger: true, // slide tracks the pointer/finger in real time
+  threshold: 5, // small threshold so a quick flick registers reliably
+  longSwipesRatio: 0.25,
+  longSwipesMs: 200,
+  shortSwipes: true, // fast flicks advance a slide
+  touchStartPreventDefault: false, // let vertical page scroll still work
+  touchReleaseOnEdges: true, // release control on vertical scroll at edges
 
+  // Autoplay — continues after manual swipes
+  autoplay: {
+    delay: 4500,
+    speed: 650,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true
+  },
 
-// --- CONTINUOUS INFINITE SLIDERS channles and movie ---
+  // Accessible keyboard navigation (left / right arrows when focused)
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".hero-swiper-next",
+    prevEl: ".hero-swiper-prev"
+  },
+
+    // Pagination dots
+    pagination: {
+      el: ".hero-swiper-pagination",
+      clickable: true,
+      dynamicBullets: false
+    }
+  });
+
+  // If the visitor prefers reduced motion, remove the animated transition
+  // (the carousel still changes slides, just instantly — no movement).
+  if (typeof window !== "undefined" && window.matchMedia) {
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    var applyReducedMotion = function () {
+      if (!heroSwiper || !heroSwiper.params) return;
+      var instant = reduceMotion.matches;
+      heroSwiper.params.speed = instant ? 0 : 650;
+      if (heroSwiper.params.autoplay) {
+        heroSwiper.params.autoplay.speed = instant ? 0 : 650;
+      }
+    };
+
+    applyReducedMotion();
+    if (reduceMotion.addEventListener) {
+      reduceMotion.addEventListener("change", applyReducedMotion);
+    }
+  }
+
+  // --- CONTINUOUS INFINITE SLIDERS channles and movie ---
 /**
    * @param {string} selector 
    * @param {boolean} reverse 
