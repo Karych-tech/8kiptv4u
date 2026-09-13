@@ -35,6 +35,7 @@ if (navbartoggle && navbarMenu) {
 // Respect the user's reduced-motion preference: no animated transition.
 var heroSwiper = new Swiper(".hero-swiper", {
   slidesPerView: "auto",
+  autoHeight: true,
   centeredSlides: true,
   loop: true,
 

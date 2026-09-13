@@ -2079,17 +2079,41 @@ h3,
    Scoped additions only. Layout of the hero text / section stays untouched.
    -------------------------------------------------------------------------- */
 
-/* Mobile & tablet: keep the card inside the viewport (≈88% width),
-   give it breathing room and keep arrows clear of the artwork. */
-@media (max-width: 699px) {
+/* Mobile: let the square artwork define the carousel height. */
+@media (max-width: 768px) {
+  .hero-swiper-container {
+    height: auto;
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .hero-swiper {
-    aspect-ratio: 1 / 1;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
     margin: 0 auto;
     max-width: 100%;
   }
 
+  .hero-swiper .swiper-wrapper {
+    height: auto;
+    min-height: 0;
+  }
+
   .hero-swiper .swiper-slide {
-    width: 88%;
+    width: 92%;
+    height: auto;
+    min-height: 0;
+  }
+
+  .hero-swiper .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
   }
 
   .hero-swiper-prev,
