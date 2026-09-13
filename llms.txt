@@ -1,0 +1,30 @@
+# 8kIPTV4U
+
+> 8kIPTV4U provides IPTV subscription information, live TV and sports streaming information, movies and series/VOD details, supported-device information, and IPTV installation guides.
+
+## Main pages
+
+- [Home](https://www.8kiptv4u.com/): IPTV plans, live TV, sports, movies, series/VOD, features, supported devices, and subscription information.
+- [Football IPTV](https://www.8kiptv4u.com/football): Information about watching live football in HD and 4K, including major football leagues and supported devices.
+- [Contact](https://www.8kiptv4u.com/contact): Contact and support options for questions, assistance, and trial enquiries.
+- [IPTV Reseller Program](https://www.8kiptv4u.com/pages/reseller): Reseller program information, pricing and business support details.
+
+## Installation guides
+
+- [IPTV Installation Guide](https://www.8kiptv4u.com/pages/how-to-install-iptv): Overview of IPTV installation guides for supported devices and applications.
+- [IPTV Smarters Player Pro](https://www.8kiptv4u.com/pages/how-to-install-iptv/iptv-smarters-pro): Steps for using IPTV Smarters Player with 8kIPTV4U.
+- [IPTV Smarters on Amazon Firestick](https://www.8kiptv4u.com/pages/how-to-install-iptv/smarters-player-on-amazon-firestick): Step-by-step Firestick installation and setup instructions.
+- [TiviMate](https://www.8kiptv4u.com/pages/how-to-install-iptv/tivi-mate): TiviMate setup using the Xtream Codes API, with guidance for catch-up, recording, and subtitles.
+- [IPTV Smarters on Windows](https://www.8kiptv4u.com/pages/how-to-install-iptv/windows): Download and installation instructions for IPTV Smarters on Windows PC.
+- [Downloader Guide](https://www.8kiptv4u.com/pages/how-to-install-iptv/downloader-guide): Instructions for using Downloader during IPTV app setup.
+
+## Policies
+
+- [Privacy Policy](https://www.8kiptv4u.com/pages/privacy-policy): Privacy and data-handling policy.
+- [Refund Policy](https://www.8kiptv4u.com/pages/refund-policy): Refund terms and conditions.
+- [Terms of Use](https://www.8kiptv4u.com/pages/terms-of-use): Terms governing use of the website and services.
+
+## Related resources
+
+- [XML Sitemap](https://www.8kiptv4u.com/sitemap.xml): Full list of canonical public URLs.
+- [Robots.txt](https://www.8kiptv4u.com/robots.txt): Crawler access rules and sitemap reference.
