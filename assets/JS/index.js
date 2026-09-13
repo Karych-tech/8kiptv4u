@@ -72,14 +72,6 @@ var heroSwiper = new Swiper(".hero-swiper", {
   touchStartPreventDefault: false, // let vertical page scroll still work
   touchReleaseOnEdges: true, // release control on vertical scroll at edges
 
-  // Autoplay — continues after manual swipes
-  autoplay: {
-    delay: 4500,
-    speed: 650,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true
-  },
-
   // Accessible keyboard navigation (left / right arrows when focused)
   keyboard: {
     enabled: true,
