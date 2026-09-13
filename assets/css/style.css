@@ -2093,7 +2093,7 @@ h3,
   .hero-swiper {
     height: auto;
     min-height: 0;
-    aspect-ratio: auto;
+    aspect-ratio: 100 / 92;
     margin: 0 auto;
     max-width: 100%;
   }
