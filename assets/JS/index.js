@@ -148,18 +148,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const answer = faq.querySelector('.faq-answer');
 
         question.addEventListener('click', () => {
+            const isOpen = faq.classList.contains('active');
+
             // Close other open FAQs
             faqs.forEach(item => {
                 if (item !== faq && item.classList.contains('active')) {
                     item.classList.remove('active');
                     item.querySelector('.faq-answer').style.maxHeight = null;
+                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
                 }
             });
 
             // Toggle the clicked FAQ
-            faq.classList.toggle('active');
+            faq.classList.toggle('active', !isOpen);
+            question.setAttribute('aria-expanded', String(!isOpen));
 
-            if (faq.classList.contains('active')) {
+            if (!isOpen) {
                 answer.style.maxHeight = answer.scrollHeight + "px";
             } else {
                 answer.style.maxHeight = null;

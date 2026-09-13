@@ -215,7 +215,8 @@ header {
 .hero_btn {
  display: inline-block;
   background: gold;
-  padding: 12px 25px;
+  padding: 12px 15px;
+  margin:0.6rem;
   border-radius: 8px;
   color: black;
   font-size: 1rem;
@@ -897,28 +898,40 @@ header {
    14. FOOTER + WHATSAPP
    ========================================================================== */
 .footer {
-  background-color: #1a1f2e;
+  background:
+    radial-gradient(700px 300px at 85% 0%, rgba(0, 163, 163, 0.12), transparent 60%),
+    linear-gradient(180deg, #0d1418 0%, #071214 100%);
+  border-top: 1px solid rgba(255, 215, 0, 0.18);
   color: white;
-  padding: 40px 20px;
+  padding: 60px 20px 0;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-about {
-  max-width: 250px;
+  max-width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
+.footer-about p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
 .footer-logo {
-  width: 90%;
+  
   display: block;
   margin: 0 auto;
   animation: legWalk 2s ease-in-out infinite;
@@ -937,8 +950,11 @@ header {
 .footer-links h3,
 .footer-payments h3 {
   color: #ffd700;
-  margin-bottom: 10px;
-  font-size: 1.2em;
+  margin-bottom: 16px;
+  font-size: 1.05em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .footer-links ul {
@@ -947,37 +963,62 @@ header {
 }
 
 .footer-links ul li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .footer-links ul li a {
-  color: white;
-  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  font-size: 0.95rem;
   text-decoration: none;
-  transition: 0.3s;
+  position: relative;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links ul li a::before {
+  content: "\203A";
+  position: absolute;
+  left: -14px;
+  opacity: 0;
+  color: #ffd700;
+  transition: opacity 0.3s ease;
 }
 
 .footer-links ul li a:hover {
   color: #ffd700;
+  padding-left: 14px;
+}
+
+.footer-links ul li a:hover::before {
+  opacity: 1;
 }
 
 .payment-icon img {
-  width: 300px;
+  width: 260px;
   height: auto;
-  margin-right: 10px;
-  transition: transform 0.3s;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.payment-icon img:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 215, 0, 0.4);
 }
 
 .footer-bottom {
   text-align: center;
-  margin-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-top: 10px;
-  font-size: 0.9em;
+  margin-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  font-size: 0.88em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-bottom a {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -1000,9 +1041,9 @@ header {
   border-radius: 50%;
   transition: transform 0.2s;
   animation: pulse-border 1.5s infinite;
-  
+
   fill: white;
-  
+
 }
 
 @keyframes pulse-border {
@@ -1080,7 +1121,7 @@ header {
     font-size: 1.6rem; /* Smaller for mobile */
     margin-bottom: 15px;
   }
-  
+
   h3 {
     font-size: 1.1em;
     padding: 8px 12px;
@@ -1119,7 +1160,7 @@ header {
   .hero-swiper .swiper-slide {
     width: 85%;
   }
-  
+
 }
 
 /* --- Responsive Sports --- */
@@ -1690,14 +1731,6 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   FOOTER — darker, cleaner
-   -------------------------------------------------------------------------- */
-.footer {
-  background: #05100f;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* --------------------------------------------------------------------------
    RESPONSIVE
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
@@ -1835,4 +1868,112 @@ h3,
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.03em;
+}
+/* --------------------------------------------------------------------------
+   IPTV INFORMATION & RESOURCES — glass info cards on the dark theme
+   -------------------------------------------------------------------------- */
+.information-section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #0a1416, #071214);
+}
+
+.information-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.information-section h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.information-grid article {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 32px 28px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.information-grid article:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 215, 0, 0.45);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.5);
+}
+
+.information-grid h3 {
+  background: linear-gradient(90deg, #ffd700, #ffe666);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+}
+
+.information-grid p {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   FINAL CTA — bold closing call-to-action band
+   -------------------------------------------------------------------------- */
+.final-cta {
+  padding: 90px 20px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 215, 0, 0.12), transparent 60%),
+    linear-gradient(180deg, #071214, #05100f);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.final-cta h2 {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.final-cta p {
+  max-width: 640px;
+  margin: 0 auto 36px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+}
+
+.final-cta .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   IPTV INFORMATION & FINAL CTA — responsive tweaks
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .information-section,
+  .final-cta {
+    padding: 60px 16px;
+  }
+
+  .information-section h2 {
+    margin-bottom: 32px;
+  }
+
+  .information-grid {
+    gap: 18px;
+  }
+
+  .information-grid article {
+    padding: 26px 22px;
+  }
 }
