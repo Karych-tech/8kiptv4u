@@ -5,13 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Explore the 8kIPTV4U entertainment collection, featuring movies, TV series, animation and more. Browse titles and discover something to watch next.">
+    content="Explore movies, TV series and animation in the 8kIPTV4U entertainment collection. Browse available titles, supported devices and IPTV viewing options.">
   <meta name="author" content="8kIPTV4U">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#071214">
-  <title>Movies &amp; Series Entertainment | 8kIPTV4U</title>
+  <title>Movies &amp; TV Series IPTV | 8kIPTV4U</title>
   <link rel="canonical" href="https://www.8kiptv4u.com/movies-Entertainment">
-  <link rel="alternate" href="https://www.8kiptv4u.com/movies-Entertainment" hreflang="en">
 
   <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
@@ -21,7 +20,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap"
+    as="style">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="preload" href="/assets/css/main.css" as="style">
@@ -30,16 +30,18 @@
   <link rel="stylesheet" href="/assets/css/Entertainment.css">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Movies &amp; Series Entertainment | 8kIPTV4U">
-  <meta property="og:description" content="Browse movies, series and animation in the 8kIPTV4U entertainment collection.">
+  <meta property="og:title" content="Movies &amp; TV Series IPTV | 8kIPTV4U">
+  <meta property="og:description"
+    content="Explore movies, TV series and animation in the 8kIPTV4U entertainment collection. Browse available titles, supported devices and IPTV viewing options.">
   <meta property="og:url" content="https://www.8kiptv4u.com/movies-Entertainment">
   <meta property="og:site_name" content="8kIPTV4U">
   <meta property="og:image" content="https://www.8kiptv4u.com/assets/images/movies/Avatar.webp">
-  <meta property="og:image:alt" content="Avatar movie poster in the 8kIPTV4U entertainment collection">
+  <meta property="og:image:alt" content="Avatar artwork featured in the 8kIPTV4U entertainment collection">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Movies &amp; Series Entertainment | 8kIPTV4U">
-  <meta name="twitter:description" content="Browse movies, series and animation in the 8kIPTV4U entertainment collection.">
+  <meta name="twitter:title" content="Movies &amp; TV Series IPTV | 8kIPTV4U">
+  <meta name="twitter:description"
+    content="Explore movies, TV series and animation in the 8kIPTV4U entertainment collection. Browse available titles, supported devices and IPTV viewing options.">
   <meta name="twitter:image" content="https://www.8kiptv4u.com/assets/images/movies/Avatar.webp">
   <meta name="twitter:site" content="@8kIPTV4U">
 
@@ -48,22 +50,66 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Organization",
+        "@id": "https://www.8kiptv4u.com/#organization",
+        "name": "8kIPTV4U",
+        "url": "https://www.8kiptv4u.com/",
+        "logo": "https://www.8kiptv4u.com/assets/images/logo/8klogo.webp"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.8kiptv4u.com/#website",
+        "url": "https://www.8kiptv4u.com/",
+        "name": "8kIPTV4U",
+        "publisher": { "@id": "https://www.8kiptv4u.com/#organization" }
+      },
+      {
         "@type": "CollectionPage",
         "@id": "https://www.8kiptv4u.com/movies-Entertainment#webpage",
         "url": "https://www.8kiptv4u.com/movies-Entertainment",
-        "name": "Movies and Series Entertainment | 8kIPTV4U",
-        "description": "Browse the 8kIPTV4U entertainment collection of movies, TV series and animation.",
-        "isPartOf": { "@type": "WebSite", "name": "8kIPTV4U", "url": "https://www.8kiptv4u.com/" },
-        "publisher": {
-          "@type": "Organization",
-          "name": "8kIPTV4U",
-          "url": "https://www.8kiptv4u.com/",
-          "logo": "https://www.8kiptv4u.com/assets/images/logo/8klogo.webp"
-        },
-        "mainEntity": { "@type": "ItemList", "name": "Featured movies and series", "numberOfItems": 25 }
+        "name": "Movies & TV Series IPTV | 8kIPTV4U",
+        "description": "Explore movies, TV series and animation in the 8kIPTV4U entertainment collection.",
+        "isPartOf": { "@id": "https://www.8kiptv4u.com/#website" },
+        "publisher": { "@id": "https://www.8kiptv4u.com/#organization" },
+        "breadcrumb": { "@id": "https://www.8kiptv4u.com/movies-Entertainment#breadcrumb" },
+        "mainEntity": { "@id": "https://www.8kiptv4u.com/movies-Entertainment#featured-titles" }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://www.8kiptv4u.com/movies-Entertainment#featured-titles",
+        "name": "Featured movies and TV series",
+        "numberOfItems": 25,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Adventure Time" },
+          { "@type": "ListItem", "position": 2, "name": "Avatar" },
+          { "@type": "ListItem", "position": 3, "name": "The Beekeeper" },
+          { "@type": "ListItem", "position": 4, "name": "Better Call Saul" },
+          { "@type": "ListItem", "position": 5, "name": "Breaking Bad" },
+          { "@type": "ListItem", "position": 6, "name": "Crime 101" },
+          { "@type": "ListItem", "position": 7, "name": "Elemental" },
+          { "@type": "ListItem", "position": 8, "name": "Fall" },
+          { "@type": "ListItem", "position": 9, "name": "Fall 2: Deadpoint" },
+          { "@type": "ListItem", "position": 10, "name": "Fallout" },
+          { "@type": "ListItem", "position": 11, "name": "From" },
+          { "@type": "ListItem", "position": 12, "name": "Gravity Falls" },
+          { "@type": "ListItem", "position": 13, "name": "Lost" },
+          { "@type": "ListItem", "position": 14, "name": "Luca" },
+          { "@type": "ListItem", "position": 15, "name": "Moana: Animation" },
+          { "@type": "ListItem", "position": 16, "name": "Moana" },
+          { "@type": "ListItem", "position": 17, "name": "Nobody" },
+          { "@type": "ListItem", "position": 18, "name": "Nobody 2" },
+          { "@type": "ListItem", "position": 19, "name": "Peaky Blinders" },
+          { "@type": "ListItem", "position": 20, "name": "The Odyssey" },
+          { "@type": "ListItem", "position": 21, "name": "The 100" },
+          { "@type": "ListItem", "position": 22, "name": "The Bad Guys" },
+          { "@type": "ListItem", "position": 23, "name": "The Last of Us" },
+          { "@type": "ListItem", "position": 24, "name": "Vikings" },
+          { "@type": "ListItem", "position": 25, "name": "The Walking Dead" }
+        ]
       },
       {
         "@type": "BreadcrumbList",
+        "@id": "https://www.8kiptv4u.com/movies-Entertainment#breadcrumb",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.8kiptv4u.com/" },
           { "@type": "ListItem", "position": 2, "name": "Movies & Series", "item": "https://www.8kiptv4u.com/movies-Entertainment" }
@@ -80,7 +126,7 @@
   <header class="navbar">
     <div class="navbar-container">
       <a href="/" class="navbar-logo" aria-label="8kIPTV4U Home">
-        <img src="/assets/images/logo/8klogo.webp" alt="8kIPTV4U" fetchpriority="high" width="190" height="100">
+        <img src="/assets/images/logo/8klogo.webp" alt="8kIPTV4U" width="190" height="100">
       </a>
       <nav aria-label="Main navigation">
         <ul class="navbar-menu" id="main-navigation">
@@ -110,120 +156,537 @@
       </div>
       <div class="entertainment-hero__content">
         <p class="entertainment-eyebrow"><span></span> The 8kIPTV4U entertainment collection</p>
-        <h1 id="entertainment-title">Your next great story <em>starts here.</em></h1>
-        <p class="entertainment-hero__intro">Explore movies, series and animation in a premium entertainment collection designed for every kind of night.</p>
+        <h1 id="entertainment-title">Movies &amp; TV Series <em>on 8kIPTV4U</em></h1>
+        <p class="entertainment-hero__intro">Browse the 8kIPTV4U entertainment collection of movies, TV series and
+          animation. Explore listed titles and review supported viewing options and compatible devices.</p>
         <div class="entertainment-actions">
-          <a class="button button--light" href="#collections">Explore Collection <span aria-hidden="true">&#8595;</span></a>
+          <a class="button button--light" href="#collections">Explore Collection <span
+              aria-hidden="true">&#8595;</span></a>
           <a class="button button--outline" href="/#pricing">View Plans <span aria-hidden="true">&#8599;</span></a>
         </div>
       </div>
-      <div class="entertainment-hero__signature" aria-hidden="true"><span>8K</span><span>STORIES IN EVERY DIRECTION</span></div>
+      <div class="entertainment-hero__signature" aria-hidden="true"><span>8K</span><span>STORIES IN EVERY
+          DIRECTION</span></div>
       <p class="entertainment-hero__side-note" aria-hidden="true">01 <span>/</span> ENTERTAINMENT</p>
     </section>
 
     <section class="ent-section collections-section" id="collections" aria-labelledby="collections-title">
       <div class="section-heading">
-        <div><p class="entertainment-eyebrow">Featured collections</p><h2 id="collections-title">Curated picks for <em>every mood</em></h2></div>
+        <div>
+          <p class="entertainment-eyebrow">Featured collections</p>
+          <h2 id="collections-title">Featured Movies &amp; TV Series <em>Collections</em></h2>
+        </div>
         <p class="section-heading__note">A little inspiration for whatever kind of night you have in mind.</p>
       </div>
       <div class="collection-grid">
-        <a class="collection-card collection-card--wide" href="#catalog"><img src="/assets/images/movies/nobody-2.webp" alt="Nobody 2 movie artwork" width="400" height="600" loading="lazy"><span class="collection-card__shade"></span><span class="collection-card__content"><span class="collection-card__tag">01 / THE LATEST</span><strong>Fresh Favorites</strong><span>Discover new arrivals and viewer favorites.</span><span class="collection-card__arrow" aria-hidden="true">&#8599;</span></span></a>
-        <a class="collection-card" href="#catalog"><img src="/assets/images/movies/beekeeper.webp" alt="The Beekeeper movie artwork" width="400" height="600" loading="lazy"><span class="collection-card__shade"></span><span class="collection-card__content"><span class="collection-card__tag">02 / HIGH ENERGY</span><strong>Action Hits</strong><span>Fast-paced stories, bold heroes and unforgettable moments.</span><span class="collection-card__arrow" aria-hidden="true">&#8599;</span></span></a>
-        <a class="collection-card" href="#catalog"><img src="/assets/images/movies/from.webp" alt="From series artwork" width="400" height="600" loading="lazy"><span class="collection-card__shade"></span><span class="collection-card__content"><span class="collection-card__tag">03 / AFTER DARK</span><strong>Horror &amp; Thriller</strong><span>Suspense, mystery and late-night chills.</span><span class="collection-card__arrow" aria-hidden="true">&#8599;</span></span></a>
-        <a class="collection-card" href="#catalog"><img src="/assets/images/movies/elemental.webp" alt="Elemental movie artwork" width="400" height="600" loading="lazy"><span class="collection-card__shade"></span><span class="collection-card__content"><span class="collection-card__tag">04 / FOR EVERYONE</span><strong>Family Favorites</strong><span>Bright, entertaining stories for everyone.</span><span class="collection-card__arrow" aria-hidden="true">&#8599;</span></span></a>
-        <a class="collection-card" href="#catalog"><img src="/assets/images/movies/adventure-time.webp" alt="Adventure Time series artwork" width="400" height="600" loading="lazy"><span class="collection-card__shade"></span><span class="collection-card__content"><span class="collection-card__tag">05 / IMAGINATION</span><strong>Animation</strong><span>Adventure, imagination and animated favorites.</span><span class="collection-card__arrow" aria-hidden="true">&#8599;</span></span></a>
-        <a class="collection-card collection-card--wide" href="#catalog"><img src="/assets/images/movies/breaking-bad.webp" alt="Breaking Bad series artwork" width="400" height="600" loading="lazy"><span class="collection-card__shade"></span><span class="collection-card__content"><span class="collection-card__tag">06 / ONE MORE EPISODE</span><strong>Series to Binge</strong><span>Long-form stories made for your next marathon.</span><span class="collection-card__arrow" aria-hidden="true">&#8599;</span></span></a>
+        <a class="collection-card collection-card--wide" href="#catalog"><img src="/assets/images/movies/nobody-2.webp"
+            alt="Nobody 2 movie artwork" width="400" height="600" loading="lazy"><span
+            class="collection-card__shade"></span><span class="collection-card__content"><span
+              class="collection-card__tag">01 / THE LATEST</span><strong>Fresh Favorites</strong><span>Discover new
+              arrivals and viewer favorites.</span><span class="collection-card__arrow"
+              aria-hidden="true">&#8599;</span></span></a>
+        <a class="collection-card" href="#catalog"><img src="/assets/images/movies/beekeeper.webp"
+            alt="The Beekeeper movie artwork" width="400" height="600" loading="lazy"><span
+            class="collection-card__shade"></span><span class="collection-card__content"><span
+              class="collection-card__tag">02 / HIGH ENERGY</span><strong>Action Hits</strong><span>Fast-paced stories,
+              bold heroes and unforgettable moments.</span><span class="collection-card__arrow"
+              aria-hidden="true">&#8599;</span></span></a>
+        <a class="collection-card" href="#catalog"><img src="/assets/images/movies/from.webp" alt="From series artwork"
+            width="400" height="600" loading="lazy"><span class="collection-card__shade"></span><span
+            class="collection-card__content"><span class="collection-card__tag">03 / AFTER DARK</span><strong>Horror
+              &amp; Thriller</strong><span>Suspense, mystery and late-night chills.</span><span
+              class="collection-card__arrow" aria-hidden="true">&#8599;</span></span></a>
+        <a class="collection-card" href="#catalog"><img src="/assets/images/movies/elemental.webp"
+            alt="Elemental movie artwork" width="400" height="600" loading="lazy"><span
+            class="collection-card__shade"></span><span class="collection-card__content"><span
+              class="collection-card__tag">04 / FOR EVERYONE</span><strong>Family Favorites</strong><span>Bright,
+              entertaining stories for everyone.</span><span class="collection-card__arrow"
+              aria-hidden="true">&#8599;</span></span></a>
+        <a class="collection-card" href="#catalog"><img src="/assets/images/movies/adventure-time.webp"
+            alt="Adventure Time series artwork" width="400" height="600" loading="lazy"><span
+            class="collection-card__shade"></span><span class="collection-card__content"><span
+              class="collection-card__tag">05 / IMAGINATION</span><strong>Animation</strong><span>Adventure, imagination
+              and animated favorites.</span><span class="collection-card__arrow"
+              aria-hidden="true">&#8599;</span></span></a>
+        <a class="collection-card collection-card--wide" href="#catalog"><img
+            src="/assets/images/movies/breaking-bad.webp" alt="Breaking Bad series artwork" width="400" height="600"
+            loading="lazy"><span class="collection-card__shade"></span><span class="collection-card__content"><span
+              class="collection-card__tag">06 / ONE MORE EPISODE</span><strong>Series to Binge</strong><span>Long-form
+              stories made for your next marathon.</span><span class="collection-card__arrow"
+              aria-hidden="true">&#8599;</span></span></a>
       </div>
     </section>
 
     <section class="genre-section" aria-labelledby="genres-title">
       <div class="ent-section genre-section__inner">
-        <div class="section-heading section-heading--compact"><div><p class="entertainment-eyebrow">Popular genres</p><h2 id="genres-title">Browse by <em>mood</em></h2></div></div>
-        <div class="genre-list" aria-label="Browse entertainment genres">
-          <a href="#catalog">Action <span>&#8599;</span></a><a href="#catalog">Comedy <span>&#8599;</span></a><a href="#catalog">Drama <span>&#8599;</span></a><a href="#catalog">Horror <span>&#8599;</span></a><a href="#catalog">Sci-Fi <span>&#8599;</span></a><a href="#catalog">Romance <span>&#8599;</span></a><a href="#catalog">Animation <span>&#8599;</span></a><a href="#catalog">Crime <span>&#8599;</span></a><a href="#catalog">Fantasy <span>&#8599;</span></a><a href="#catalog">Thriller <span>&#8599;</span></a><a href="#catalog">Adventure <span>&#8599;</span></a><a href="#catalog">Family <span>&#8599;</span></a>
+        <div class="section-heading section-heading--compact">
+          <div>
+            <p class="entertainment-eyebrow">Popular genres</p>
+            <h2 id="genres-title">Browse Movies &amp; Series <em>by Genre</em></h2>
+          </div>
+        </div>
+        <div class="genre-list">
+          <a href="#catalog">Action <span aria-hidden="true">&#8599;</span></a><a href="#catalog">Comedy <span
+              aria-hidden="true">&#8599;</span></a><a href="#catalog">Drama <span
+              aria-hidden="true">&#8599;</span></a><a href="#catalog">Horror <span
+              aria-hidden="true">&#8599;</span></a><a href="#catalog">Sci-Fi <span
+              aria-hidden="true">&#8599;</span></a><a href="#catalog">Romance <span
+              aria-hidden="true">&#8599;</span></a><a href="#catalog">Animation <span
+              aria-hidden="true">&#8599;</span></a><a href="#catalog">Crime <span
+              aria-hidden="true">&#8599;</span></a><a href="#catalog">Fantasy <span
+              aria-hidden="true">&#8599;</span></a><a href="#catalog">Thriller <span
+              aria-hidden="true">&#8599;</span></a><a href="#catalog">Adventure <span
+              aria-hidden="true">&#8599;</span></a><a href="#catalog">Family <span aria-hidden="true">&#8599;</span></a>
         </div>
       </div>
     </section>
 
     <section class="ent-section catalog-section" id="catalog" aria-labelledby="catalog-title">
       <div class="section-heading">
-        <div><p class="entertainment-eyebrow">Made for your watchlist</p><h2 id="catalog-title">Featured movies <em>&amp; series</em></h2><p class="section-heading__description">A selection of movies and series ready for your next watch.</p></div>
+        <div>
+          <p class="entertainment-eyebrow">Made for your watchlist</p>
+          <h2 id="catalog-title">Featured Movies <em>&amp; TV Series</em></h2>
+          <p class="section-heading__description">Browse the featured movie and series collection and find a title for
+            your next watch.</p>
+        </div>
         <div class="catalog-filters" role="group" aria-label="Filter titles">
-          <button type="button" class="catalog-filter is-active" data-filter="all" aria-pressed="true">All titles</button><button type="button" class="catalog-filter" data-filter="movie" aria-pressed="false">Movies</button><button type="button" class="catalog-filter" data-filter="series" aria-pressed="false">Series</button>
+          <button type="button" class="catalog-filter is-active" data-filter="all" aria-pressed="true">All
+            titles</button><button type="button" class="catalog-filter" data-filter="movie"
+            aria-pressed="false">Movies</button><button type="button" class="catalog-filter" data-filter="series"
+            aria-pressed="false">Series</button>
         </div>
       </div>
-      <p class="catalog-count" id="catalog-count" aria-live="polite">25 titles</p>
+      <p class="catalog-count" id="catalog-count" aria-live="polite"></p>
       <div class="title-grid">
-        <article class="title-card" data-kind="series"><div class="title-card__poster"><img src="/assets/images/movies/adventure-time.webp" alt="Adventure Time series poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Adventure Time</h3><span>Series</span></div></article>
-        <article class="title-card" data-kind="movie"><div class="title-card__poster"><img src="/assets/images/movies/Avatar.webp" alt="Avatar movie poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Avatar</h3><span>Movie</span></div></article>
-        <article class="title-card" data-kind="movie"><div class="title-card__poster"><img src="/assets/images/movies/beekeeper.webp" alt="The Beekeeper movie poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>The Beekeeper</h3><span>Movie</span></div></article>
-        <article class="title-card" data-kind="series"><div class="title-card__poster"><img src="/assets/images/movies/better-call-saul.webp" alt="Better Call Saul series poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Better Call Saul</h3><span>Series</span></div></article>
-        <article class="title-card" data-kind="series"><div class="title-card__poster"><img src="/assets/images/movies/breaking-bad.webp" alt="Breaking Bad series poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Breaking Bad</h3><span>Series</span></div></article>
-        <article class="title-card" data-kind="movie"><div class="title-card__poster"><img src="/assets/images/movies/crime101.webp" alt="Crime 101 movie poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Crime 101</h3><span>Movie</span></div></article>
-        <article class="title-card" data-kind="movie"><div class="title-card__poster"><img src="/assets/images/movies/elemental.webp" alt="Elemental movie poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Elemental</h3><span>Movie</span></div></article>
-        <article class="title-card" data-kind="movie"><div class="title-card__poster"><img src="/assets/images/movies/fall.webp" alt="Fall movie poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Fall</h3><span>Movie</span></div></article>
-        <article class="title-card" data-kind="movie"><div class="title-card__poster"><img src="/assets/images/movies/fall-2-deadpoint.webp" alt="Fall 2: Deadpoint movie poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Fall 2: Deadpoint</h3><span>Movie</span></div></article>
-        <article class="title-card" data-kind="series"><div class="title-card__poster"><img src="/assets/images/movies/fallout.webp" alt="Fallout series poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Fallout</h3><span>Series</span></div></article>
-        <article class="title-card" data-kind="series"><div class="title-card__poster"><img src="/assets/images/movies/from.webp" alt="From series poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>From</h3><span>Series</span></div></article>
-        <article class="title-card" data-kind="series"><div class="title-card__poster"><img src="/assets/images/movies/gravity-falls.webp" alt="Gravity Falls series poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Gravity Falls</h3><span>Series</span></div></article>
-        <article class="title-card" data-kind="series"><div class="title-card__poster"><img src="/assets/images/movies/lost.webp" alt="Lost series poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Lost</h3><span>Series</span></div></article>
-        <article class="title-card" data-kind="movie"><div class="title-card__poster"><img src="/assets/images/movies/luca.webp" alt="Luca movie poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Luca</h3><span>Movie</span></div></article>
-        <article class="title-card" data-kind="movie"><div class="title-card__poster"><img src="/assets/images/movies/moana-cartoon.webp" alt="Moana animated movie poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Moana: Animation</h3><span>Movie</span></div></article>
-        <article class="title-card" data-kind="movie"><div class="title-card__poster"><img src="/assets/images/movies/moana-movie.webp" alt="Moana movie poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Moana</h3><span>Movie</span></div></article>
-        <article class="title-card" data-kind="movie"><div class="title-card__poster"><img src="/assets/images/movies/nobody.webp" alt="Nobody movie poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Nobody</h3><span>Movie</span></div></article>
-        <article class="title-card" data-kind="movie"><div class="title-card__poster"><img src="/assets/images/movies/nobody-2.webp" alt="Nobody 2 movie poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Nobody 2</h3><span>Movie</span></div></article>
-        <article class="title-card" data-kind="series"><div class="title-card__poster"><img src="/assets/images/movies/peaky-blinders.webp" alt="Peaky Blinders series poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Peaky Blinders</h3><span>Series</span></div></article>
-        <article class="title-card" data-kind="movie"><div class="title-card__poster"><img src="/assets/images/movies/the%20odyssey.webp" alt="The Odyssey movie poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>The Odyssey</h3><span>Movie</span></div></article>
-        <article class="title-card" data-kind="series"><div class="title-card__poster"><img src="/assets/images/movies/the-100.webp" alt="The 100 series poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>The 100</h3><span>Series</span></div></article>
-        <article class="title-card" data-kind="movie"><div class="title-card__poster"><img src="/assets/images/movies/the-bad-guys.webp" alt="The Bad Guys movie poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>The Bad Guys</h3><span>Movie</span></div></article>
-        <article class="title-card" data-kind="series"><div class="title-card__poster"><img src="/assets/images/movies/the-last-of-us.webp" alt="The Last of Us series poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>The Last of Us</h3><span>Series</span></div></article>
-        <article class="title-card" data-kind="series"><div class="title-card__poster"><img src="/assets/images/movies/vikings.webp" alt="Vikings series poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>Vikings</h3><span>Series</span></div></article>
-        <article class="title-card" data-kind="series"><div class="title-card__poster"><img src="/assets/images/movies/walking-dead.webp" alt="The Walking Dead series poster" width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div><div class="title-card__caption"><h3>The Walking Dead</h3><span>Series</span></div></article>
+        <article class="title-card" data-kind="series">
+          <div class="title-card__poster"><img src="/assets/images/movies/adventure-time.webp"
+              alt="Adventure Time series poster" width="400" height="600" loading="lazy"><span
+              class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Adventure Time</h3><span>Series</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="movie">
+          <div class="title-card__poster"><img src="/assets/images/movies/Avatar.webp" alt="Avatar movie poster"
+              width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span
+                aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Avatar</h3><span>Movie</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="movie">
+          <div class="title-card__poster"><img src="/assets/images/movies/beekeeper.webp"
+              alt="The Beekeeper movie poster" width="400" height="600" loading="lazy"><span
+              class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>The Beekeeper</h3><span>Movie</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="series">
+          <div class="title-card__poster"><img src="/assets/images/movies/better-call-saul.webp"
+              alt="Better Call Saul series poster" width="400" height="600" loading="lazy"><span
+              class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Better Call Saul</h3><span>Series</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="series">
+          <div class="title-card__poster"><img src="/assets/images/movies/breaking-bad.webp"
+              alt="Breaking Bad series poster" width="400" height="600" loading="lazy"><span
+              class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Breaking Bad</h3><span>Series</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="movie">
+          <div class="title-card__poster"><img src="/assets/images/movies/crime101.webp" alt="Crime 101 movie poster"
+              width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span
+                aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Crime 101</h3><span>Movie</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="movie">
+          <div class="title-card__poster"><img src="/assets/images/movies/elemental.webp" alt="Elemental movie poster"
+              width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span
+                aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Elemental</h3><span>Movie</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="movie">
+          <div class="title-card__poster"><img src="/assets/images/movies/fall.webp" alt="Fall movie poster" width="400"
+              height="600" loading="lazy"><span class="title-card__explore">Explore <span
+                aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Fall</h3><span>Movie</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="movie">
+          <div class="title-card__poster"><img src="/assets/images/movies/fall-2-deadpoint.webp"
+              alt="Fall 2: Deadpoint movie poster" width="400" height="600" loading="lazy"><span
+              class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Fall 2: Deadpoint</h3><span>Movie</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="series">
+          <div class="title-card__poster"><img src="/assets/images/movies/fallout.webp" alt="Fallout series poster"
+              width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span
+                aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Fallout</h3><span>Series</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="series">
+          <div class="title-card__poster"><img src="/assets/images/movies/from.webp" alt="From series poster"
+              width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span
+                aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>From</h3><span>Series</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="series">
+          <div class="title-card__poster"><img src="/assets/images/movies/gravity-falls.webp"
+              alt="Gravity Falls series poster" width="400" height="600" loading="lazy"><span
+              class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Gravity Falls</h3><span>Series</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="series">
+          <div class="title-card__poster"><img src="/assets/images/movies/lost.webp" alt="Lost series poster"
+              width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span
+                aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Lost</h3><span>Series</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="movie">
+          <div class="title-card__poster"><img src="/assets/images/movies/luca.webp" alt="Luca movie poster" width="400"
+              height="600" loading="lazy"><span class="title-card__explore">Explore <span
+                aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Luca</h3><span>Movie</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="movie">
+          <div class="title-card__poster"><img src="/assets/images/movies/moana-cartoon.webp"
+              alt="Moana animated movie poster" width="400" height="600" loading="lazy"><span
+              class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Moana: Animation</h3><span>Movie</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="movie">
+          <div class="title-card__poster"><img src="/assets/images/movies/moana-movie.webp" alt="Moana movie poster"
+              width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span
+                aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Moana</h3><span>Movie</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="movie">
+          <div class="title-card__poster"><img src="/assets/images/movies/nobody.webp" alt="Nobody movie poster"
+              width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span
+                aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Nobody</h3><span>Movie</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="movie">
+          <div class="title-card__poster"><img src="/assets/images/movies/nobody-2.webp" alt="Nobody 2 movie poster"
+              width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span
+                aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Nobody 2</h3><span>Movie</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="series">
+          <div class="title-card__poster"><img src="/assets/images/movies/peaky-blinders.webp"
+              alt="Peaky Blinders series poster" width="400" height="600" loading="lazy"><span
+              class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Peaky Blinders</h3><span>Series</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="movie">
+          <div class="title-card__poster"><img src="/assets/images/movies/the%20odyssey.webp"
+              alt="The Odyssey movie poster" width="400" height="600" loading="lazy"><span
+              class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>The Odyssey</h3><span>Movie</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="series">
+          <div class="title-card__poster"><img src="/assets/images/movies/the-100.webp" alt="The 100 series poster"
+              width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span
+                aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>The 100</h3><span>Series</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="movie">
+          <div class="title-card__poster"><img src="/assets/images/movies/the-bad-guys.webp"
+              alt="The Bad Guys movie poster" width="400" height="600" loading="lazy"><span
+              class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>The Bad Guys</h3><span>Movie</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="series">
+          <div class="title-card__poster"><img src="/assets/images/movies/the-last-of-us.webp"
+              alt="The Last of Us series poster" width="400" height="600" loading="lazy"><span
+              class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>The Last of Us</h3><span>Series</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="series">
+          <div class="title-card__poster"><img src="/assets/images/movies/vikings.webp" alt="Vikings series poster"
+              width="400" height="600" loading="lazy"><span class="title-card__explore">Explore <span
+                aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>Vikings</h3><span>Series</span>
+          </div>
+        </article>
+        <article class="title-card" data-kind="series">
+          <div class="title-card__poster"><img src="/assets/images/movies/walking-dead.webp"
+              alt="The Walking Dead series poster" width="400" height="600" loading="lazy"><span
+              class="title-card__explore">Explore <span aria-hidden="true">&#8599;</span></span></div>
+          <div class="title-card__caption">
+            <h3>The Walking Dead</h3><span>Series</span>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="picks-section" aria-labelledby="picks-title">
       <div class="ent-section picks-layout">
-        <div class="picks-intro"><p class="entertainment-eyebrow">Editor's picks</p><h2 id="picks-title">Stories worth adding to your <em>watchlist.</em></h2><p>A handpicked mix of memorable movies and series from the collection.</p><a class="text-link" href="#catalog">See the full collection <span aria-hidden="true">&#8594;</span></a></div>
+        <div class="picks-intro">
+          <p class="entertainment-eyebrow">Editor's picks</p>
+          <h2 id="picks-title">Featured Picks from the <em>Movie &amp; Series Collection</em></h2>
+          <p>A handpicked mix of movies and TV series from the collection.</p><a class="text-link"
+            href="#catalog">Browse all featured titles <span aria-hidden="true">&#8594;</span></a>
+        </div>
         <ol class="picks-list">
-          <li><span class="pick-rank">01</span><span class="pick-title">Breaking Bad</span><span class="kind-badge">Series</span></li><li><span class="pick-rank">02</span><span class="pick-title">Avatar</span><span class="kind-badge">Movie</span></li><li><span class="pick-rank">03</span><span class="pick-title">The Last of Us</span><span class="kind-badge">Series</span></li><li><span class="pick-rank">04</span><span class="pick-title">Peaky Blinders</span><span class="kind-badge">Series</span></li><li><span class="pick-rank">05</span><span class="pick-title">Fallout</span><span class="kind-badge">Series</span></li><li><span class="pick-rank">06</span><span class="pick-title">Better Call Saul</span><span class="kind-badge">Series</span></li><li><span class="pick-rank">07</span><span class="pick-title">Nobody</span><span class="kind-badge">Movie</span></li><li><span class="pick-rank">08</span><span class="pick-title">Vikings</span><span class="kind-badge">Series</span></li><li><span class="pick-rank">09</span><span class="pick-title">The 100</span><span class="kind-badge">Series</span></li><li><span class="pick-rank">10</span><span class="pick-title">Elemental</span><span class="kind-badge">Movie</span></li>
+          <li><span class="pick-rank">01</span><span class="pick-title">Breaking Bad</span><span
+              class="kind-badge">Series</span></li>
+          <li><span class="pick-rank">02</span><span class="pick-title">Avatar</span><span
+              class="kind-badge">Movie</span></li>
+          <li><span class="pick-rank">03</span><span class="pick-title">The Last of Us</span><span
+              class="kind-badge">Series</span></li>
+          <li><span class="pick-rank">04</span><span class="pick-title">Peaky Blinders</span><span
+              class="kind-badge">Series</span></li>
+          <li><span class="pick-rank">05</span><span class="pick-title">Fallout</span><span
+              class="kind-badge">Series</span></li>
+          <li><span class="pick-rank">06</span><span class="pick-title">Better Call Saul</span><span
+              class="kind-badge">Series</span></li>
+          <li><span class="pick-rank">07</span><span class="pick-title">Nobody</span><span
+              class="kind-badge">Movie</span></li>
+          <li><span class="pick-rank">08</span><span class="pick-title">Vikings</span><span
+              class="kind-badge">Series</span></li>
+          <li><span class="pick-rank">09</span><span class="pick-title">The 100</span><span
+              class="kind-badge">Series</span></li>
+          <li><span class="pick-rank">10</span><span class="pick-title">Elemental</span><span
+              class="kind-badge">Movie</span></li>
         </ol>
       </div>
     </section>
 
     <section class="ent-section highlights-section" aria-labelledby="highlights-title">
-      <div class="section-heading"><div><p class="entertainment-eyebrow">Entertainment highlights</p><h2 id="highlights-title">A closer look at <em>what's inside</em></h2></div><p class="section-heading__note">Distinct worlds. Different moods. One place to explore.</p></div>
+      <div class="section-heading">
+        <div>
+          <p class="entertainment-eyebrow">Entertainment highlights</p>
+          <h2 id="highlights-title">Entertainment <em>Highlights</em></h2>
+        </div>
+        <p class="section-heading__note">Explore selected movies and series from the collection.</p>
+      </div>
       <div class="highlight-grid">
-        <article class="highlight-card highlight-card--feature"><img src="/assets/images/movies/Avatar.webp" alt="Avatar movie artwork" width="600" height="900" loading="lazy"><div class="highlight-card__copy"><span class="collection-card__tag">FEATURED MOVIE</span><h3>Avatar</h3><p>Step into a richly imagined cinematic world.</p><a href="#catalog" aria-label="Explore Avatar in the collection">Explore title <span aria-hidden="true">&#8599;</span></a></div></article>
-        <article class="highlight-card"><img src="/assets/images/movies/the%20odyssey.webp" alt="The Odyssey movie artwork" width="600" height="900" loading="lazy"><div class="highlight-card__copy"><span class="collection-card__tag">FEATURED MOVIE</span><h3>The Odyssey</h3><p>An epic-scale story for a night at the movies.</p><a href="#catalog" aria-label="Explore The Odyssey in the collection">Explore title <span aria-hidden="true">&#8599;</span></a></div></article>
-        <article class="highlight-card"><img src="/assets/images/movies/the-last-of-us.webp" alt="The Last of Us series artwork" width="600" height="900" loading="lazy"><div class="highlight-card__copy"><span class="collection-card__tag">FEATURED SERIES</span><h3>The Last of Us</h3><p>A series built around character and atmosphere.</p><a href="#catalog" aria-label="Explore The Last of Us in the collection">Explore title <span aria-hidden="true">&#8599;</span></a></div></article>
+        <article class="highlight-card highlight-card--feature"><img src="/assets/images/movies/Avatar.webp"
+            alt="Avatar movie artwork" width="600" height="900" loading="lazy">
+          <div class="highlight-card__copy"><span class="collection-card__tag">FEATURED MOVIE</span>
+            <h3>Avatar</h3>
+            <p>Step into a richly imagined cinematic world.</p><a href="#catalog"
+              aria-label="Explore Avatar in the collection">Explore title <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </article>
+        <article class="highlight-card"><img src="/assets/images/movies/the%20odyssey.webp"
+            alt="The Odyssey movie artwork" width="600" height="900" loading="lazy">
+          <div class="highlight-card__copy"><span class="collection-card__tag">FEATURED MOVIE</span>
+            <h3>The Odyssey</h3>
+            <p>An epic-scale story for a night at the movies.</p><a href="#catalog"
+              aria-label="Explore The Odyssey in the collection">Explore title <span
+                aria-hidden="true">&#8599;</span></a>
+          </div>
+        </article>
+        <article class="highlight-card"><img src="/assets/images/movies/the-last-of-us.webp"
+            alt="The Last of Us series artwork" width="600" height="900" loading="lazy">
+          <div class="highlight-card__copy"><span class="collection-card__tag">FEATURED SERIES</span>
+            <h3>The Last of Us</h3>
+            <p>A series built around character and atmosphere.</p><a href="#catalog"
+              aria-label="Explore The Last of Us in the collection">Explore title <span
+                aria-hidden="true">&#8599;</span></a>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="why-section" aria-labelledby="why-title">
-      <div class="ent-section"><div class="section-heading"><div><p class="entertainment-eyebrow">Why 8kIPTV4U</p><h2 id="why-title">A better way to explore <em>entertainment</em></h2></div><p class="section-heading__note">Thoughtful features for an easy, flexible viewing experience.</p></div>
+      <div class="ent-section">
+        <div class="section-heading">
+          <div>
+            <p class="entertainment-eyebrow">Why 8kIPTV4U</p>
+            <h2 id="why-title">Why <em>8kIPTV4U</em></h2>
+          </div>
+          <p class="section-heading__note">Explore entertainment and supported viewing options in one place.</p>
+        </div>
         <div class="feature-grid">
-          <article class="feature-card"><span class="feature-number">01</span><span class="feature-mark" aria-hidden="true">&#9672;</span><h3>Large Entertainment Collection</h3><p>Explore a broad selection of movies, series and animation.</p></article><article class="feature-card"><span class="feature-number">02</span><span class="feature-mark" aria-hidden="true">&#9711;</span><h3>HD &amp; 4K Ready</h3><p>Enjoy supported titles in high-quality formats.</p></article><article class="feature-card"><span class="feature-number">03</span><span class="feature-mark" aria-hidden="true">&#8635;</span><h3>Regularly Updated</h3><p>Keep discovering new entertainment and fresh additions.</p></article><article class="feature-card"><span class="feature-number">04</span><span class="feature-mark" aria-hidden="true">&#9638;</span><h3>Multi-Device Experience</h3><p>Enjoy your entertainment across supported devices.</p></article>
+          <article class="feature-card"><span class="feature-number">01</span><span class="feature-mark"
+              aria-hidden="true">&#9672;</span>
+            <h3>Large Entertainment Collection</h3>
+            <p>Explore a broad selection of movies, series and animation.</p>
+          </article>
+          <article class="feature-card"><span class="feature-number">02</span><span class="feature-mark"
+              aria-hidden="true">&#9711;</span>
+            <h3>HD &amp; 4K Ready</h3>
+            <p>Enjoy supported titles in high-quality formats.</p>
+          </article>
+          <article class="feature-card"><span class="feature-number">03</span><span class="feature-mark"
+              aria-hidden="true">&#8635;</span>
+            <h3>Regularly Updated</h3>
+            <p>Keep discovering new entertainment and fresh additions.</p>
+          </article>
+          <article class="feature-card"><span class="feature-number">04</span><span class="feature-mark"
+              aria-hidden="true">&#9638;</span>
+            <h3>Multi-Device Experience</h3>
+            <p>Enjoy your entertainment across supported devices.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="ent-section devices-section" aria-labelledby="devices-title">
-      <div class="section-heading"><div><p class="entertainment-eyebrow">Made to fit your setup</p><h2 id="devices-title">Watch across <em>your devices</em></h2></div><a class="text-link" href="/pages/how-to-install-iptv">Setup guides <span aria-hidden="true">&#8599;</span></a></div>
+      <div class="section-heading">
+        <div>
+          <p class="entertainment-eyebrow">Made to fit your setup</p>
+          <h2 id="devices-title">Watch Across <em>Your Devices</em></h2>
+        </div><a class="text-link" href="/pages/how-to-install-iptv">Browse installation guides <span
+            aria-hidden="true">&#8599;</span></a>
+      </div>
       <div class="device-grid">
-        <article class="device-card"><img src="/assets/images/supported-devices/smart-tv.webp" alt="" width="72" height="72" loading="lazy"><h3>Smart TV</h3><span>Supported</span></article><article class="device-card"><img src="/assets/images/supported-devices/android.webp" alt="" width="72" height="72" loading="lazy"><h3>Android TV</h3><span>Supported</span></article><article class="device-card"><img src="/assets/images/supported-devices/android.webp" alt="" width="72" height="72" loading="lazy"><h3>Fire TV</h3><span>Supported</span></article><article class="device-card"><img src="/assets/images/supported-devices/android.webp" alt="" width="72" height="72" loading="lazy"><h3>Android</h3><span>Supported</span></article><article class="device-card"><img src="/assets/images/supported-devices/apple.webp" alt="" width="72" height="72" loading="lazy"><h3>iPhone &amp; iPad</h3><span>Supported</span></article><article class="device-card"><img src="/assets/images/supported-devices/windows.webp" alt="" width="72" height="72" loading="lazy"><h3>Windows</h3><span>Supported</span></article><article class="device-card"><img src="/assets/images/supported-devices/apple.webp" alt="" width="72" height="72" loading="lazy"><h3>macOS</h3><span>Supported</span></article><article class="device-card"><img src="/assets/images/supported-devices/laptop.webp" alt="" width="72" height="72" loading="lazy"><h3>Web Browser</h3><span>Supported</span></article>
+        <article class="device-card"><img src="/assets/images/supported-devices/smart-tv.webp" alt="" width="72"
+            height="72" loading="lazy">
+          <h3>Smart TV</h3><span>Supported</span>
+        </article>
+        <article class="device-card"><img src="/assets/images/supported-devices/android.webp" alt="" width="72"
+            height="72" loading="lazy">
+          <h3>Android TV</h3><span>Supported</span>
+        </article>
+        <article class="device-card"><img src="/assets/images/supported-devices/android.webp" alt="" width="72"
+            height="72" loading="lazy">
+          <h3>Fire TV</h3><span>Supported</span>
+        </article>
+        <article class="device-card"><img src="/assets/images/supported-devices/android.webp" alt="" width="72"
+            height="72" loading="lazy">
+          <h3>Android</h3><span>Supported</span>
+        </article>
+        <article class="device-card"><img src="/assets/images/supported-devices/apple.webp" alt="" width="72"
+            height="72" loading="lazy">
+          <h3>iPhone &amp; iPad</h3><span>Supported</span>
+        </article>
+        <article class="device-card"><img src="/assets/images/supported-devices/windows.webp" alt="" width="72"
+            height="72" loading="lazy">
+          <h3>Windows</h3><span>Supported</span>
+        </article>
+        <article class="device-card"><img src="/assets/images/supported-devices/apple.webp" alt="" width="72"
+            height="72" loading="lazy">
+          <h3>macOS</h3><span>Supported</span>
+        </article>
+        <article class="device-card"><img src="/assets/images/supported-devices/laptop.webp" alt="" width="72"
+            height="72" loading="lazy">
+          <h3>Web Browser</h3><span>Supported</span>
+        </article>
       </div>
     </section>
 
-    <section class="quality-section" aria-labelledby="quality-title"><div class="ent-section quality-layout"><div class="quality-intro"><p class="entertainment-eyebrow">Streaming quality</p><h2 id="quality-title">Built for a better <em>viewing experience</em></h2><p>Available quality can vary by title, source and device.</p></div><div class="quality-list"><div><span>01</span><strong>HD</strong><span class="quality-note">For supported titles</span></div><div><span>02</span><strong>Full HD</strong><span class="quality-note">For supported titles</span></div><div><span>03</span><strong>4K</strong><span class="quality-note">For supported titles</span></div><div><span>04</span><strong>High-quality Audio</strong><span class="quality-note">Device and title dependent</span></div></div></div></section>
+    <section class="quality-section" aria-labelledby="quality-title">
+      <div class="ent-section quality-layout">
+        <div class="quality-intro">
+          <p class="entertainment-eyebrow">Streaming experience</p>
+          <h2 id="quality-title">Streaming <em>Quality</em></h2>
+          <p>HD, Full HD, 4K and audio quality depend on the title, source and compatible device.</p>
+        </div>
+        <div class="quality-list">
+          <div><span>01</span><strong>HD</strong><span class="quality-note">For supported titles</span></div>
+          <div><span>02</span><strong>Full HD</strong><span class="quality-note">For supported titles</span></div>
+          <div><span>03</span><strong>4K</strong><span class="quality-note">For supported titles</span></div>
+          <div><span>04</span><strong>High-quality Audio</strong><span class="quality-note">Device and title
+              dependent</span></div>
+        </div>
+      </div>
+    </section>
 
-    <section class="collection-stats" aria-label="Explore the entertainment collection"><div class="ent-section collection-stats__inner"><p>One collection.<br><em>Many ways to watch.</em></p><div><span>Movies</span><span>Series</span><span>Animation</span><span>Supported devices</span></div></div></section>
+    <section class="collection-stats" aria-label="Explore the entertainment collection">
+      <div class="ent-section collection-stats__inner">
+        <p>One collection.<br><em>Many ways to watch.</em></p>
+        <div><span>Movies</span><span>Series</span><span>Animation</span><span>Supported devices</span></div>
+      </div>
+    </section>
 
-    <section class="ent-section faq-section" aria-labelledby="faq-title"><div class="section-heading"><div><p class="entertainment-eyebrow">Good to know</p><h2 id="faq-title">A few helpful <em>answers</em></h2></div><p class="section-heading__note">Need help beyond these questions? Our team is here for you.</p></div><div class="faq-list">
-      <details><summary>How often is the entertainment collection updated?<span aria-hidden="true">+</span></summary><p>The collection is updated regularly with fresh additions.</p></details><details><summary>Which devices can I use?<span aria-hidden="true">+</span></summary><p>Supported options include Smart TVs, Android and Apple devices, Fire TV, Windows, macOS and web browsers. Compatibility can depend on your app and setup.</p></details><details><summary>Are movies and series available in HD?<span aria-hidden="true">+</span></summary><p>Many titles are available in HD formats. The quality available can vary by title and source.</p></details><details><summary>Is 4K available for supported titles?<span aria-hidden="true">+</span></summary><p>4K is available for supported titles when your device and setup are compatible.</p></details><details><summary>Can I use the service on multiple devices?<span aria-hidden="true">+</span></summary><p>Available device use depends on your selected plan. Check the plan details or contact us for help choosing.</p></details><details><summary>Where can I get help with setup?<span aria-hidden="true">+</span></summary><p>Visit our <a href="/pages/how-to-install-iptv">installation guides</a> or <a href="/contact">contact our support team</a>.</p></details>
-    </div></section>
+    <section class="ent-section faq-section" aria-labelledby="faq-title">
+      <div class="section-heading">
+        <div>
+          <p class="entertainment-eyebrow">Good to know</p>
+          <h2 id="faq-title">Frequently Asked <em>Questions</em></h2>
+        </div>
+        <p class="section-heading__note">Find answers about the movie collection, compatible devices and setup.</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>How often is the movies and series collection updated?<span aria-hidden="true">+</span></summary>
+          <p>The entertainment collection is updated regularly. Browse the titles currently listed on this page.</p>
+        </details>
+        <details>
+          <summary>Which devices can I use to watch?<span aria-hidden="true">+</span></summary>
+          <p>Supported options include Smart TVs, Android TV, Fire TV, Android and Apple devices, Windows, macOS and web
+            browsers. Compatibility can depend on your app and setup.</p>
+        </details>
+        <details>
+          <summary>Are movies and TV series available in HD or Full HD?<span aria-hidden="true">+</span></summary>
+          <p>HD and Full HD are available for supported titles. Actual playback quality can vary by title, source,
+            device and connection.</p>
+        </details>
+        <details>
+          <summary>Is 4K available for every title?<span aria-hidden="true">+</span></summary>
+          <p>No. 4K depends on the title and requires a compatible device and setup. Not every title is available in
+            every quality.</p>
+        </details>
+        <details>
+          <summary>Can I use multiple devices at once?<span aria-hidden="true">+</span></summary>
+          <p>Device use and simultaneous connections depend on your selected plan. Check the plan details or contact
+            support for guidance.</p>
+        </details>
+        <details>
+          <summary>Where can I get installation or setup help?<span aria-hidden="true">+</span></summary>
+          <p>Read our <a href="/pages/how-to-install-iptv">IPTV installation guides</a> or <a href="/contact">contact
+              our support team</a>.</p>
+        </details>
+      </div>
+    </section>
 
-    <section class="final-cta" aria-labelledby="cta-title"><div class="final-cta__image" aria-hidden="true"><img src="/assets/images/movies/Avatar.webp" alt="" width="600" height="900" loading="lazy"></div><div class="final-cta__content"><p class="entertainment-eyebrow">Ready for your next watch?</p><h2 id="cta-title">Make tonight <em>story night.</em></h2><p>Explore the entertainment collection and find something worth watching tonight.</p><div class="entertainment-actions"><a class="button button--light" href="#catalog">Explore Movies &amp; Series <span aria-hidden="true">&#8595;</span></a><a class="button button--outline" href="/contact">Contact Us <span aria-hidden="true">&#8599;</span></a></div></div></section>
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="final-cta__image" aria-hidden="true"><img src="/assets/images/movies/Avatar.webp" alt="" width="600"
+          height="900" loading="lazy"></div>
+      <div class="final-cta__content">
+        <p class="entertainment-eyebrow">Ready for your next watch?</p>
+        <h2 id="cta-title">Explore Movies &amp; <em>TV Series</em></h2>
+        <p>Browse the 8kIPTV4U entertainment collection and find a movie, series or animation to watch.</p>
+        <div class="entertainment-actions"><a class="button button--light" href="#catalog">Explore Movies &amp; TV
+            Series <span aria-hidden="true">&#8595;</span></a><a class="button button--outline" href="/contact">Contact
+            Us <span aria-hidden="true">&#8599;</span></a></div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -260,7 +723,8 @@
       <div class="footer-payments">
         <h3>Secure Payments</h3>
         <div class="payment-icon">
-          <img src="/assets/images/payment/1.webp" alt="Accepted payment methods" loading="lazy" width="300" height="50">
+          <img src="/assets/images/payment/1.webp" alt="Accepted payment methods" loading="lazy" width="300"
+            height="50">
         </div>
       </div>
     </div>
@@ -269,16 +733,35 @@
     </div>
   </footer>
 
+  <!-- WhatsApp -->
+  <a href="https://wa.me/447898045582" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+    aria-label="Contact 8kIPTV4U on WhatsApp" title="Contact us on WhatsApp">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true" height="60" width="60">
+
+      <path fill="#1eae13"
+        d="M188.1 318.6C188.1 343.5 195.1 367.8 208.3 388.7L211.4 393.7L198.1 442.3L248 429.2L252.8 432.1C273 444.1 296.2 450.5 319.9 450.5L320 450.5C392.6 450.5 453.3 391.4 453.3 318.7C453.3 283.5 438.1 250.4 413.2 225.5C388.2 200.5 355.2 186.8 320 186.8C247.3 186.8 188.2 245.9 188.1 318.6zM370.8 394C358.2 395.9 348.4 394.9 323.3 384.1C286.5 368.2 261.5 332.6 256.4 325.4C256 324.8 255.7 324.5 255.6 324.3C253.6 321.7 239.4 302.8 239.4 283.3C239.4 264.9 248.4 255.4 252.6 251C252.9 250.7 253.1 250.5 253.3 250.2C256.9 246.2 261.2 245.2 263.9 245.2C266.5 245.2 269.2 245.2 271.5 245.3L272.3 245.3C274.6 245.3 277.5 245.3 280.4 252.1C281.6 255 283.4 259.4 285.3 263.9C288.6 271.9 292 280.2 292.6 281.5C293.6 283.5 294.3 285.8 292.9 288.4C289.5 295.2 286 298.8 283.6 301.4C280.5 304.6 279.1 306.1 281.3 310C296.6 336.3 311.9 345.4 335.2 357.1C339.2 359.1 341.5 358.8 343.8 356.1C346.1 353.5 353.7 344.5 356.3 340.6C358.9 336.6 361.6 337.3 365.2 338.6C368.8 339.9 388.3 349.5 392.3 351.5C393.1 351.9 393.8 352.2 394.4 352.5C397.2 353.9 399.1 354.8 399.9 356.1C400.8 358 400.8 366 397.5 375.2C394.2 384.5 378.4 392.9 370.8 394zM544 160C544 124.7 515.3 96 480 96L160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160zM244.1 457.9L160 480L182.5 397.8C168.6 373.8 161.3 346.5 161.3 318.5C161.4 231.1 232.5 160 319.9 160C362.3 160 402.1 176.5 432.1 206.5C462 236.5 480 276.3 480 318.7C480 406.1 407.3 477.2 319.9 477.2C293.3 477.2 267.2 470.5 244.1 457.9z" />
+
+    </svg>
+
+  </a>
+
   <script src="/assets/JS/navbar.js" defer></script>
   <script>
     const catalogFilters = document.querySelectorAll('.catalog-filter');
-    const titleCards = document.querySelectorAll('.title-card');
+    const titleCards = Array.from(document.querySelectorAll('.title-card'));
     const catalogCount = document.querySelector('#catalog-count');
+
+    const updateCatalogCount = () => {
+      const visibleCount = titleCards.filter((card) => !card.hidden).length;
+      catalogCount.textContent = `${visibleCount} ${visibleCount === 1 ? 'title' : 'titles'}`;
+    };
+
+    updateCatalogCount();
 
     catalogFilters.forEach((filterButton) => {
       filterButton.addEventListener('click', () => {
         const selectedFilter = filterButton.dataset.filter;
-        let visibleCount = 0;
 
         catalogFilters.forEach((button) => {
           const isSelected = button === filterButton;
@@ -289,12 +772,26 @@
         titleCards.forEach((card) => {
           const isVisible = selectedFilter === 'all' || card.dataset.kind === selectedFilter;
           card.hidden = !isVisible;
-          if (isVisible) visibleCount += 1;
         });
 
-        catalogCount.textContent = `${visibleCount} ${visibleCount === 1 ? 'title' : 'titles'}`;
+        updateCatalogCount();
       });
     });
+
+    const navToggle = document.querySelector('.navbar-toggle');
+    const mainNavigation = document.querySelector('#main-navigation');
+
+    if (navToggle && mainNavigation) {
+      const syncNavigationState = () => {
+        const isExpanded = mainNavigation.classList.contains('active');
+        navToggle.setAttribute('aria-expanded', String(isExpanded));
+        navToggle.setAttribute('aria-label', isExpanded ? 'Close navigation menu' : 'Open navigation menu');
+      };
+
+      const navigationObserver = new MutationObserver(syncNavigationState);
+      navigationObserver.observe(mainNavigation, { attributes: true, attributeFilter: ['class'] });
+      syncNavigationState();
+    }
   </script>
 </body>
 
