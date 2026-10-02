@@ -203,36 +203,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* ===== FAQ Accordion ===== */
-    const faqs = document.querySelectorAll('.faq');
+      const faqItems = document.querySelectorAll('#faq .faq');
 
-    faqs.forEach(faq => {
+      faqItems.forEach(faq => {
         const question = faq.querySelector('.faq-question');
         const answer = faq.querySelector('.faq-answer');
 
         question.addEventListener('click', () => {
-            const isOpen = faq.classList.contains('active');
+          const isOpen = faq.classList.contains('active');
 
-            // Close other open FAQs
-            faqs.forEach(item => {
-                if (item !== faq && item.classList.contains('active')) {
-                    item.classList.remove('active');
-                    item.querySelector('.faq-answer').style.maxHeight = null;
-                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-                }
-            });
+          faqItems.forEach(item => {
+            item.classList.remove('active');
+            item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            item.querySelector('.faq-answer').style.maxHeight = null;
+          });
 
-            // Toggle the clicked FAQ
-            faq.classList.toggle('active', !isOpen);
-            question.setAttribute('aria-expanded', String(!isOpen));
-
-            if (!isOpen) {
-                answer.style.maxHeight = answer.scrollHeight + "px";
-            } else {
-                answer.style.maxHeight = null;
-            }
+          if (!isOpen) {
+            faq.classList.add('active');
+            question.setAttribute('aria-expanded', 'true');
+            answer.style.maxHeight = `${answer.scrollHeight}px`;
+          }
         });
-    });
+      });
 
 });
 

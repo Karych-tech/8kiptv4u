@@ -1788,57 +1788,217 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   FAQ — glass accordion items
+   HOMEPAGE FAQ — native disclosure rows
    -------------------------------------------------------------------------- */
-.faq-section {
-  padding: 80px 20px;
+.home-faq-section {
+  padding: 94px 20px 100px;
   background: linear-gradient(180deg, #071214, #0a1416);
 }
 
-.faq-section h2 {
-  color: #fff;
-  margin-bottom: 40px;
+.home-faq-heading {
+  max-width: 1000px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  margin: 0 auto 38px;
+}
+
+.home-faq-eyebrow {
+  margin: 0 0 12px;
+  color: #39c9bd;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.home-faq-heading h2 {
+  margin: 0;
+  color: #f4f3ed;
+  text-align: left;
   text-shadow: none;
 }
 
-.faq {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+.home-faq-heading h2 em {
+  color: #ffd166;
+  font-style: normal;
 }
 
-.faq.active {
-  border-color: rgba(255, 215, 0, 0.4);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+.home-faq-note {
+  max-width: 390px;
+  margin: 0 0 4px;
+  color: #a7b2ad;
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 
-.faq-question {
+.home-faq-section .faq-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(243, 244, 237, 0.16);
+}
+
+.home-faq-section .faq-list details {
+  border-bottom: 1px solid rgba(243, 244, 237, 0.16);
+}
+
+.home-faq-section .faq-list summary {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  color: #f4f3ed;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+}
+
+.home-faq-section .faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-faq-section .faq-list summary span {
+  flex: 0 0 auto;
+  color: #39c9bd;
+  font-size: 1.35rem;
+  transition: transform 180ms ease;
+}
+
+.home-faq-section .faq-list details[open] summary span {
+  transform: rotate(45deg);
+}
+
+.home-faq-section .faq-list details p {
+  max-width: 760px;
+  margin: -2px 40px 22px 0;
+  color: #a7b2ad;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.home-faq-section .faq-list details p a {
+  color: #39c9bd;
+}
+
+/* Homepage FAQ styled to match the entertainment page's divider list. */
+#faq.faq-section {
+  padding: 94px 20px 100px;
+  background: linear-gradient(180deg, #071214, #0a1416);
+}
+
+#faq.faq-section h2 {
+  max-width: 1000px;
+  margin: 0 auto 34px;
+  color: #f4f3ed;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.08;
+  text-align: left;
+  text-shadow: none;
+}
+
+#faq .faq {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 0;
+  border-bottom: 1px solid rgba(243, 244, 237, 0.16);
+  border-radius: 0;
   background: transparent;
-  color: #fff;
-  font-size: 1.05rem;
+  box-shadow: none;
+  overflow: hidden;
 }
 
-.faq-question:hover {
-  background: rgba(255, 255, 255, 0.05);
-  color: #ffd700;
+#faq .faq:first-of-type {
+  border-top: 1px solid rgba(243, 244, 237, 0.16);
 }
 
-.faq-question::after {
-  color: #ffd700;
+#faq .faq.active {
+  transform: none;
+  box-shadow: none;
 }
 
-.faq.active .faq-question {
-  background: rgba(255, 215, 0, 0.08);
-  color: #ffd700;
+#faq .faq-question {
+  min-height: 68px;
+  padding: 0;
+  background: transparent;
+  color: #f4f3ed;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-.faq-answer {
+#faq .faq-question:hover,
+#faq .faq.active .faq-question {
+  background: transparent;
+  color: #f4f3ed;
+}
+
+#faq .faq-question::after {
+  color: #39c9bd;
+  font-size: 1.35rem;
+}
+
+#faq .faq-answer {
   background: transparent;
 }
 
-.faq-answer p {
-  color: rgba(255, 255, 255, 0.78);
+#faq .faq-answer p {
+  max-width: 760px;
+  padding: 0 40px 22px 0;
+  color: #a7b2ad;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+#faq .faq-answer p a {
+  color: #39c9bd;
+}
+
+@media (max-width: 768px) {
+  .home-faq-section {
+    padding: 62px 16px 68px;
+  }
+
+  .home-faq-heading {
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  .home-faq-note {
+    margin-top: 14px;
+  }
+
+  .home-faq-section .faq-list summary {
+    min-height: 64px;
+    gap: 14px;
+    font-size: 0.9rem;
+  }
+
+  .home-faq-section .faq-list details p {
+    margin-right: 25px;
+    font-size: 0.84rem;
+  }
+
+  #faq.faq-section {
+    padding: 62px 16px 68px;
+  }
+
+  #faq.faq-section h2 {
+    margin-bottom: 28px;
+    font-size: 1.6rem;
+  }
+
+  #faq .faq-question {
+    min-height: 64px;
+    gap: 14px;
+    font-size: 0.9rem;
+  }
+
+  #faq .faq-answer p {
+    padding-right: 25px;
+    font-size: 0.84rem;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -2177,5 +2337,651 @@ h3,
   .hero-swiper-prev:hover,
   .hero-swiper-next:hover {
     transform: translateY(-50%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   HOMEPAGE VISUAL SYSTEM — aligned with Entertainment.css
+   -------------------------------------------------------------------------- */
+.home-page {
+  --home-ink: #071214;
+  --home-panel: #101d20;
+  --home-text: #f4f3ed;
+  --home-muted: #a7b2ad;
+  --home-teal: #39c9bd;
+  --home-gold: #ffd166;
+  background: var(--home-ink);
+  color: var(--home-text);
+}
+
+.home-page main {
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.home-page main > section {
+  box-sizing: border-box;
+  border-top: 1px solid rgba(244, 243, 237, 0.08);
+}
+
+.home-page .hero-section {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  max-width: none;
+  min-height: 650px;
+  margin: 0 auto;
+  padding: 72px max(24px, calc((100vw - 1300px) / 2));
+  border: 0;
+  border-bottom: 1px solid rgba(255, 209, 102, 0.2);
+  border-radius: 0;
+  background:
+    radial-gradient(ellipse at 82% 35%, rgba(57, 201, 189, 0.13), transparent 42%),
+    linear-gradient(115deg, #071214 12%, #0c191a 62%, #18201d 100%);
+}
+
+.home-page .hero-section::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  opacity: 0.15;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 100% 72px;
+  mask-image: linear-gradient(90deg, #000, transparent 88%);
+}
+
+.home-page .hero-content {
+  max-width: 680px;
+  padding: 0;
+  text-align: left;
+  animation: home-arrive 700ms ease both;
+}
+
+.home-page .eyebrow {
+  margin: 0 0 22px;
+  color: var(--home-teal);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.home-page .hero-content h1 {
+  max-width: 720px;
+  margin: 0;
+  color: var(--home-text);
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.02;
+  text-shadow: none;
+}
+
+.home-page .hero-content > p:not(.eyebrow):not(.hero-refund-text) {
+  max-width: 520px;
+  margin: 24px 0 28px;
+  color: var(--home-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-shadow: none;
+}
+
+.home-page .hero-logo-span {
+  max-width: 110px;
+  margin: 0 0 10px;
+  box-shadow: none;
+}
+
+.home-page .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.home-page .hero_btn,
+.home-page .sports-btn,
+.home-page .read-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 18px;
+  border: 1px solid var(--home-gold);
+  border-radius: 2px;
+  background: var(--home-gold);
+  color: var(--home-ink);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: none;
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.home-page .hero_btn:hover,
+.home-page .sports-btn:hover,
+.home-page .read-more:hover {
+  transform: translateY(-2px);
+  border-color: #ffe19a;
+  background: #ffe19a;
+  color: var(--home-ink);
+  box-shadow: none;
+}
+
+.home-page .hero_btn.secondary {
+  border-color: rgba(57, 201, 189, 0.65);
+  background: transparent;
+  color: var(--home-text);
+}
+
+.home-page .hero_btn.secondary:hover {
+  border-color: var(--home-teal);
+  background: rgba(57, 201, 189, 0.12);
+  color: var(--home-text);
+}
+
+.home-page .hero-refund-text,
+.home-page .hero-refund-text strong {
+  color: var(--home-gold);
+  text-shadow: none;
+}
+
+.home-page .hero-swiper-container {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.home-page .hero-swiper .swiper-slide {
+  border-radius: 2px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.42);
+}
+
+.home-page .hero-swiper .swiper-slide-active {
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.48), 0 0 0 1px rgba(57, 201, 189, 0.4);
+}
+
+.home-page .hero-swiper .swiper-slide img {
+  border-radius: 2px;
+}
+
+.home-page .hero-swiper-prev,
+.home-page .hero-swiper-next {
+  color: var(--home-gold);
+}
+
+.home-page .hero-swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--home-gold);
+}
+
+.home-page main > section:not(.hero-section) {
+  position: relative;
+}
+
+.home-page .steps,
+.home-page .sports-guide,
+.home-page .channels-section,
+.home-page .devices,
+.home-page .features-section,
+.home-page .pricing,
+.home-page .supported-apps-section,
+.home-page .information-section,
+.home-page .feedback-section,
+.home-page #faq {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 88px max(24px, calc((100vw - 1300px) / 2));
+}
+
+.home-page .steps,
+.home-page .devices,
+.home-page .pricing,
+.home-page .information-section,
+.home-page #faq {
+  background: var(--home-ink);
+}
+
+.home-page #how-it-works,
+.home-page .sports-guide,
+.home-page .channels-section,
+.home-page .features-section,
+.home-page .supported-apps-section,
+.home-page .feedback-section {
+  background: #0a1416;
+}
+
+.home-page main > section h2:not(.visually-hidden) {
+  max-width: 920px;
+  margin: 0 0 36px;
+  color: var(--home-text);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-align: left;
+  text-shadow: none;
+}
+
+.home-page main h1 em,
+.home-page main h2 em {
+  color: var(--home-gold);
+  font-style: normal;
+  -webkit-text-fill-color: currentColor;
+}
+
+.home-page .accent-title-badge {
+  padding: 0 0 14px;
+  border: 0;
+  background: none;
+  color: var(--home-text);
+  -webkit-text-fill-color: currentColor;
+  text-align: left;
+}
+
+.home-page .accent-title-badge::after {
+  left: 0;
+  width: 52px;
+  height: 2px;
+  transform: none;
+  border-radius: 0;
+  background: linear-gradient(90deg, var(--home-teal), var(--home-gold));
+}
+
+.home-page .steps-container,
+.home-page .sports-container,
+.home-page .devices-content,
+.home-page .features-grid,
+.home-page .install-grid,
+.home-page .information-section .container {
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.home-page .steps-container {
+  gap: 14px;
+}
+
+.home-page .step-card,
+.home-page .feature-card,
+.home-page .price-card,
+.home-page .install-card,
+.home-page .information-grid article {
+  border: 1px solid rgba(244, 243, 237, 0.12);
+  border-radius: 4px;
+  background: var(--home-panel);
+  box-shadow: none;
+  color: var(--home-text);
+}
+
+.home-page .step-card,
+.home-page .feature-card,
+.home-page .install-card,
+.home-page .information-grid article {
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.home-page .step-card:hover,
+.home-page .feature-card:hover,
+.home-page .install-card:hover,
+.home-page .information-grid article:hover {
+  transform: translateY(-3px);
+  border-color: rgba(57, 201, 189, 0.55);
+  background: #132326;
+  box-shadow: none;
+}
+
+.home-page .step-card h3,
+.home-page .device-heading,
+.home-page .information-grid h3 {
+  color: var(--home-gold);
+}
+
+.home-page .step-card p,
+.home-page .feature-description,
+.home-page .install-card p,
+.home-page .information-grid p,
+.home-page .section-intro {
+  color: var(--home-muted);
+}
+
+.home-page .sports-guide h2 {
+  margin-right: 0;
+  background: none;
+  color: var(--home-text);
+  -webkit-text-fill-color: currentColor;
+}
+
+.home-page .sports-list li {
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(244, 243, 237, 0.13);
+  color: var(--home-text);
+}
+
+.home-page .sports-image img {
+  filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.4));
+}
+
+.home-page .channels-section h3.accent-title-badge {
+  margin-bottom: 20px;
+}
+
+.home-page .channels-slider-1 .swiper-slide img,
+.home-page .channels-slider-2 .swiper-slide img {
+  border-color: rgba(57, 201, 189, 0.28);
+  border-radius: 3px;
+  background: rgba(244, 243, 237, 0.035);
+  box-shadow: none;
+}
+
+.home-page .channels-slider-1 .swiper-slide img:hover,
+.home-page .channels-slider-2 .swiper-slide img:hover {
+  border-color: var(--home-gold);
+}
+
+.home-page .movies-slider {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+.home-page .movies-slider .swiper-slide img,
+.home-page .feedback-swiper .swiper-slide img {
+  border: 1px solid rgba(244, 243, 237, 0.14);
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.home-page .devices-content {
+  gap: 28px;
+}
+
+.home-page .device-group {
+  padding-top: 24px;
+  border-top: 1px solid rgba(244, 243, 237, 0.14);
+}
+
+.home-page .device-card {
+  flex-basis: 130px;
+}
+
+.home-page .info {
+  color: var(--home-muted);
+}
+
+.home-page .features-grid {
+  gap: 14px;
+}
+
+.home-page .feature-title {
+  background: none;
+  color: var(--home-gold);
+  -webkit-text-fill-color: currentColor;
+}
+
+.home-page .feature-img {
+  filter: drop-shadow(0 8px 16px rgba(57, 201, 189, 0.2));
+}
+
+.home-page .pricing {
+  max-width: none;
+}
+
+.home-page .pricing > h2,
+.home-page .pricing-prompt {
+  text-align: center;
+}
+
+.home-page .pricing > h2 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.home-page .pricing-prompt {
+  color: var(--home-muted);
+}
+
+.home-page .pricing-switch {
+  border: 1px solid rgba(57, 201, 189, 0.28);
+  border-radius: 3px;
+  background: var(--home-panel);
+}
+
+.home-page .switch-button {
+  border-radius: 2px;
+  color: var(--home-muted);
+}
+
+.home-page .switch-button.active {
+  background: var(--home-gold);
+  color: var(--home-ink);
+  box-shadow: none;
+}
+
+.home-page .panels-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.home-page .price-card {
+  flex-basis: 340px;
+  padding: 32px 28px;
+}
+
+.home-page .price-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(57, 201, 189, 0.55);
+  box-shadow: none;
+}
+
+.home-page .price-card.featured {
+  border: 1px solid rgba(255, 209, 102, 0.7);
+  box-shadow: inset 0 3px 0 var(--home-gold);
+}
+
+.home-page .price-card h3,
+.home-page .price-card .price {
+  color: var(--home-gold);
+}
+
+.home-page .price-card .price span {
+  color: var(--home-muted);
+}
+
+.home-page .price-card li {
+  color: var(--home-text);
+}
+
+.home-page .price-card li::before {
+  color: var(--home-teal);
+}
+
+.home-page .btn {
+  border-radius: 2px;
+  background: var(--home-gold);
+  color: var(--home-ink);
+  box-shadow: none;
+}
+
+.home-page .btn:hover {
+  transform: translateY(-2px);
+  background: #ffe19a;
+  box-shadow: none;
+}
+
+.home-page .supported-apps-section .container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.home-page .install-card h3 {
+  background: none;
+  color: var(--home-gold);
+  -webkit-text-fill-color: currentColor;
+}
+
+.home-page .install-card img {
+  border-radius: 2px;
+}
+
+.home-page .information-grid {
+  gap: 14px;
+}
+
+.home-page .information-grid article {
+  padding: 26px 24px;
+}
+
+.home-page .information-grid h3 {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+.home-page .feedback-section > h2 {
+  max-width: 1300px;
+  margin: 0 auto 30px;
+}
+
+.home-page .feedback-swiper {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.home-page .faq-question:focus-visible,
+.home-page .hero_btn:focus-visible,
+.home-page .sports-btn:focus-visible,
+.home-page .read-more:focus-visible,
+.home-page .btn:focus-visible,
+.home-page .switch-button:focus-visible {
+  outline: 2px solid var(--home-teal);
+  outline-offset: 3px;
+}
+
+.home-page .final-cta {
+  padding: 88px max(24px, calc((100vw - 1300px) / 2));
+  border-top: 1px solid rgba(255, 209, 102, 0.2);
+  background: linear-gradient(115deg, #071214, #101d20 72%, #18201d);
+  text-align: left;
+}
+
+.home-page .final-cta h2 {
+  margin-bottom: 16px;
+}
+
+.home-page .final-cta p {
+  max-width: 640px;
+  margin: 0 0 28px;
+  color: var(--home-muted);
+}
+
+.home-page .final-cta .hero-actions {
+  justify-content: flex-start;
+}
+
+@keyframes home-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .home-page .hero-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+    min-height: 0;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .home-page .hero-content {
+    max-width: 720px;
+  }
+
+  .home-page .hero-swiper-container {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page .steps,
+  .home-page .sports-guide,
+  .home-page .channels-section,
+  .home-page .devices,
+  .home-page .features-section,
+  .home-page .pricing,
+  .home-page .supported-apps-section,
+  .home-page .information-section,
+  .home-page .feedback-section,
+  .home-page #faq,
+  .home-page .final-cta {
+    padding: 64px 20px;
+  }
+
+  .home-page main > section h2:not(.visually-hidden) {
+    margin-bottom: 28px;
+    font-size: 2rem;
+  }
+
+  .home-page .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-page .hero-content > p:not(.eyebrow):not(.hero-refund-text) {
+    margin-top: 18px;
+    font-size: 0.98rem;
+  }
+
+  .home-page .steps-container {
+    gap: 12px;
+  }
+
+  .home-page .price-card {
+    flex-basis: 100%;
+  }
+
+  .home-page .price-card.featured {
+    transform: none;
+  }
+
+  .home-page .feedback-section > h2 {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page .hero-section {
+    padding: 48px 18px;
+  }
+
+  .home-page .hero-content h1 {
+    font-size: 2.15rem;
+  }
+
+  .home-page .hero-actions {
+    align-items: stretch;
+  }
+
+  .home-page .hero_btn {
+    flex: 1 1 100%;
+    margin: 0;
+  }
+
+  .home-page .information-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .hero-content {
+    animation: none;
   }
 }
