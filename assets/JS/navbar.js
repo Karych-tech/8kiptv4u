@@ -24,3 +24,38 @@ if (navbartoggle && navbarMenu) {
       }
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const faqSections = document.querySelectorAll('.faq-section');
+
+  faqSections.forEach((section) => {
+    const faqItems = section.querySelectorAll('.faq, .faq-item');
+
+    faqItems.forEach((faq) => {
+      const question = faq.querySelector('.faq-question');
+      const answer = faq.querySelector('.faq-answer');
+
+      if (!question || !answer) return;
+
+      question.addEventListener('click', () => {
+        const isOpen = faq.classList.contains('active');
+
+        faqItems.forEach((item) => {
+          const itemQuestion = item.querySelector('.faq-question');
+          const itemAnswer = item.querySelector('.faq-answer');
+          if (!itemQuestion || !itemAnswer) return;
+
+          item.classList.remove('active');
+          itemQuestion.setAttribute('aria-expanded', 'false');
+          itemAnswer.style.maxHeight = null;
+        });
+
+        if (!isOpen) {
+          faq.classList.add('active');
+          question.setAttribute('aria-expanded', 'true');
+          answer.style.maxHeight = `${answer.scrollHeight}px`;
+        }
+      });
+    });
+  });
+});

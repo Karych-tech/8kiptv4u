@@ -517,7 +517,7 @@ code {
   }
 }
 /* --------------------------------------------------------------------------
-   FAQ — same look & motion as movies-entertainment.html FAQ list
+   FAQ ï¿½ same look & motion as movies-entertainment.html FAQ list
    -------------------------------------------------------------------------- */
 .faq-list {
   max-width: 1000px;
@@ -580,7 +580,7 @@ code {
 }
 
 /* --------------------------------------------------------------------------
-   FAQ SECTION HEADING — same layout as movies-entertainment.html
+   FAQ SECTION HEADING ï¿½ same layout as movies-entertainment.html
    -------------------------------------------------------------------------- */
 .faq-section {
   padding-top: 40px;
@@ -632,5 +632,71 @@ code {
     align-items: flex-start;
     flex-direction: column;
     gap: 14px;
+  }
+}
+
+.Windows-guide .faq-list .faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.Windows-guide .faq-list .faq-question {
+  display: flex;
+  width: 100%;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.Windows-guide .faq-list .faq-question::after {
+  content: none;
+}
+
+.Windows-guide .faq-list .faq-question span {
+  flex: 0 0 auto;
+  color: #00a3a3;
+  font-size: 1.35rem;
+  transition: transform 180ms ease;
+}
+
+.Windows-guide .faq-list .faq-item.active .faq-question span {
+  transform: rotate(45deg);
+}
+
+.Windows-guide .faq-list .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.Windows-guide .faq-list .faq-answer p {
+  max-width: 760px;
+  margin: -2px 40px 22px 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.Windows-guide .faq-list .faq-question:focus-visible {
+  outline: 2px solid #00a3a3;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .Windows-guide .faq-list .faq-question {
+    min-height: 64px;
+  }
+
+  .Windows-guide .faq-list .faq-answer p {
+    margin-right: 25px;
   }
 }

@@ -1074,3 +1074,160 @@ p {
     transition: none !important;
   }
 }
+
+.football-faq-section {
+  padding: 94px 20px 100px;
+  background: linear-gradient(180deg, #071214, #0a1416);
+  color: #f4f3ed;
+  text-align: left;
+}
+
+.football-faq-section .faq-container {
+  display: block;
+  max-width: 1470px;
+  margin: 0 auto;
+}
+
+.football-faq-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 36px;
+  margin: 0 auto 34px;
+}
+
+.football-faq-eyebrow {
+  margin: 0 0 12px;
+  color: #39c9bd;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.football-faq-heading h2 {
+  margin: 0;
+  color: #f4f3ed;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.08;
+  text-align: left;
+}
+
+.football-faq-heading h2 em {
+  color: #ffd166;
+  font-style: normal;
+}
+
+.football-faq-note {
+  max-width: 360px;
+  margin: 0 0 4px;
+  color: #a7b2ad;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.football-faq-section .faq-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(243, 244, 237, 0.16);
+}
+
+.football-faq-section .faq-item {
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(243, 244, 237, 0.16);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+  transition: none;
+}
+
+.football-faq-section .faq-item:hover,
+.football-faq-section .faq-item.active {
+  transform: none;
+  border-color: rgba(243, 244, 237, 0.16);
+  box-shadow: none;
+}
+
+.football-faq-section .faq-question {
+  width: 100%;
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f4f3ed;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+}
+
+.football-faq-section .faq-question::after {
+  content: none;
+}
+
+.football-faq-section .faq-question span {
+  flex: 0 0 auto;
+  color: #39c9bd;
+  font-size: 1.35rem;
+  transition: transform 180ms ease;
+}
+
+.football-faq-section .faq-item.active .faq-question span {
+  transform: rotate(45deg);
+}
+
+.football-faq-section .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.football-faq-section .faq-answer p {
+  max-width: 760px;
+  margin: -2px 40px 22px 0;
+  color: #a7b2ad;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.football-faq-section .faq-question:focus-visible {
+  outline: 2px solid #39c9bd;
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .football-faq-section {
+    padding: 62px 16px 68px;
+  }
+
+  .football-faq-heading {
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  .football-faq-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .football-faq-note {
+    margin-top: 14px;
+  }
+
+  .football-faq-section .faq-question {
+    min-height: 64px;
+    gap: 14px;
+    font-size: 0.9rem;
+  }
+
+  .football-faq-section .faq-answer p {
+    margin-right: 25px;
+    font-size: 0.84rem;
+  }
+}

@@ -970,35 +970,30 @@
         <p class="section-heading__note">Find answers about the movie collection, compatible devices and setup.</p>
       </div>
       <div class="faq-list">
-        <details>
-          <summary>How often is the movies and series collection updated?<span aria-hidden="true">+</span></summary>
-          <p>The entertainment collection is updated regularly. Browse the titles currently listed on this page.</p>
-        </details>
-        <details>
-          <summary>Which devices can I use to watch?<span aria-hidden="true">+</span></summary>
-          <p>Supported options include Smart TVs, Android TV, Fire TV, Android and Apple devices, Windows, macOS and web
-            browsers. Compatibility can depend on your app and setup.</p>
-        </details>
-        <details>
-          <summary>Are movies and TV series available in HD or Full HD?<span aria-hidden="true">+</span></summary>
-          <p>HD and Full HD are available for supported titles. Actual playback quality can vary by title, source,
-            device and connection.</p>
-        </details>
-        <details>
-          <summary>Is 4K available for every title?<span aria-hidden="true">+</span></summary>
-          <p>No. 4K depends on the title and requires a compatible device and setup. Not every title is available in
-            every quality.</p>
-        </details>
-        <details>
-          <summary>Can I use multiple devices at once?<span aria-hidden="true">+</span></summary>
-          <p>Device use and simultaneous connections depend on your selected plan. Check the plan details or contact
-            support for guidance.</p>
-        </details>
-        <details>
-          <summary>Where can I get installation or setup help?<span aria-hidden="true">+</span></summary>
-          <p>Read our <a href="/pages/how-to-install-iptv">IPTV installation guides</a> or <a href="/contact">contact
-              our support team</a>.</p>
-        </details>
+        <div class="faq">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="movies-faq-answer-1">How often is the movies and series collection updated?<span aria-hidden="true">+</span></button>
+          <div class="faq-answer" id="movies-faq-answer-1"><p>The entertainment collection is updated regularly. Browse the titles currently listed on this page.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="movies-faq-answer-2">Which devices can I use to watch?<span aria-hidden="true">+</span></button>
+          <div class="faq-answer" id="movies-faq-answer-2"><p>Supported options include Smart TVs, Android TV, Fire TV, Android and Apple devices, Windows, macOS and web browsers. Compatibility can depend on your app and setup.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="movies-faq-answer-3">Are movies and TV series available in HD or Full HD?<span aria-hidden="true">+</span></button>
+          <div class="faq-answer" id="movies-faq-answer-3"><p>HD and Full HD are available for supported titles. Actual playback quality can vary by title, source, device and connection.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="movies-faq-answer-4">Is 4K available for every title?<span aria-hidden="true">+</span></button>
+          <div class="faq-answer" id="movies-faq-answer-4"><p>No. 4K depends on the title and requires a compatible device and setup. Not every title is available in every quality.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="movies-faq-answer-5">Can I use multiple devices at once?<span aria-hidden="true">+</span></button>
+          <div class="faq-answer" id="movies-faq-answer-5"><p>Device use and simultaneous connections depend on your selected plan. Check the plan details or contact support for guidance.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="movies-faq-answer-6">Where can I get installation or setup help?<span aria-hidden="true">+</span></button>
+          <div class="faq-answer" id="movies-faq-answer-6"><p>Read our <a href="/pages/how-to-install-iptv">IPTV installation guides</a> or <a href="/contact">contact our support team</a>.</p></div>
+        </div>
       </div>
     </section>
 
@@ -1073,7 +1068,7 @@
 
   </a>
 
-  <script src="/assets/JS/navbar.js" defer></script>
+ 
   <script>
     const catalogFilters = document.querySelectorAll('.catalog-filter');
     const titleCards = Array.from(document.querySelectorAll('.title-card'));
@@ -1102,6 +1097,29 @@
         });
 
         updateCatalogCount();
+      });
+    });
+
+    const faqItems = document.querySelectorAll('.faq-list .faq');
+
+    faqItems.forEach((faq) => {
+      const question = faq.querySelector('.faq-question');
+      const answer = faq.querySelector('.faq-answer');
+
+      question.addEventListener('click', () => {
+        const isOpen = faq.classList.contains('active');
+
+        faqItems.forEach((item) => {
+          item.classList.remove('active');
+          item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          item.querySelector('.faq-answer').style.maxHeight = null;
+        });
+
+        if (!isOpen) {
+          faq.classList.add('active');
+          question.setAttribute('aria-expanded', 'true');
+          answer.style.maxHeight = `${answer.scrollHeight}px`;
+        }
       });
     });
 
