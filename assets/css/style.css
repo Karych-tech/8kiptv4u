@@ -11,7 +11,7 @@
 body {
   background-color: #00a3a3;
   min-height: 100vh;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Jost", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
@@ -28,7 +28,7 @@ body {
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  font-family: "Arial Black", "Arial Bold", sans-serif;
+  font-family: "Jost", "Arial Black", "Arial Bold", sans-serif;
   font-size: 2.2rem; /* Desktop Default */
   font-weight: 700;
   font-style: normal;
@@ -37,7 +37,7 @@ h2 {
 
 h3{
   text-align: center;
-  font-family: Impact, "Arial Narrow", sans-serif;
+  font-family: "Jost", Impact, "Arial Narrow", sans-serif;
   font-style: normal;
   font-size: 1.4em; /* Desktop Default */
   font-weight: 700;
@@ -187,7 +187,7 @@ header {
 }
 
 .hero-content p {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Jost", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1rem;
   margin-bottom: 1.5rem;
   color: #000000;
@@ -426,7 +426,7 @@ header {
 
 .sports-guide h2 {
   text-align: center;
-  font-family: Impact, sans-serif;
+  font-family: "Jost", Impact, sans-serif;
   font-style: normal;
   font-size: 1.2em; /* Desktop Default */
   font-weight: 700;
@@ -594,7 +594,7 @@ header {
    max-width: 120px;
   height: auto;
   vertical-align: middle;
-  
+
 }
 
 .devices-cards {
@@ -621,7 +621,7 @@ header {
 }
 
 .info {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Jost", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #0056b3;
   font-weight: 700;
   font-size: 0.9em;
@@ -757,7 +757,7 @@ header {
 
 .price-card.featured {
   border-color: #007bff;
-  
+
 }
 
 .price-card h3 {
@@ -1027,7 +1027,7 @@ header {
 }
 
 .footer-logo {
-  
+
   display: block;
   margin: 0 auto;
   animation: legWalk 2s ease-in-out infinite;
@@ -1401,7 +1401,7 @@ p {
 /* Section titles */
 h2 {
   color: #fff;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   font-weight: 800;
   letter-spacing: -0.5px;
 }
@@ -1410,7 +1410,7 @@ h3 {
   background: none;
   border: none;
   color: #ffd700;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 /* Section titles with accent badge underline (matches football.html) */
@@ -1894,18 +1894,17 @@ h3 {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
 }
 /* --------------------------------------------------------------------------
-   MODERN TYPOGRAPHY — system fonts only
-   No external fonts, no @font-face downloads, no CDN requests. These are
-   fonts already installed on the visitor's OS, so there is zero network
-   cost and no layout shift. Falls back gracefully on every platform.
+   MODERN TYPOGRAPHY — self-hosted fonts (Jost variable)
+   Loaded via /assets/fonts/fonts.css which is preloaded on every page.
+   System stacks kept as fallbacks so text renders even if fonts fail.
    -------------------------------------------------------------------------- */
 :root {
   /* Latin "Inter-like" system stack: Sonoma/Sequoia, Windows 11, Android, Linux */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+  --font-sans: "Jost", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI Variable Text", "Segoe UI", Roboto, "Helvetica Neue", Arial,
     "Noto Sans", sans-serif;
   /* Display stack for headings — slightly tighter, heavier personality */
-  --font-display: ui-sans-serif, system-ui, -apple-system,
+  --font-display: "Jost", ui-sans-serif, system-ui, -apple-system,
     "Segoe UI Variable Display", "Segoe UI Semibold", "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   /* Monospace, for prices / numeric values that should align cleanly */
