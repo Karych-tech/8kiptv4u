@@ -700,3 +700,145 @@ code {
     margin-right: 25px;
   }
 }
+
+/* ============================================================
+   SEO Update: Downloader Code Callout + Step/Shortcut Lists
+   ============================================================ */
+
+/* Above-the-fold high-contrast callout box */
+.code-callout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 20px;
+  margin: 28px auto;
+  padding: 20px 28px;
+  background: linear-gradient(135deg, #0f3d0f, #1a6b1a);
+  color: #ffffff;
+  border: 2px solid #7fff7f;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.code-callout-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffe97a;
+  letter-spacing: 0.3px;
+}
+
+.code-callout-code {
+  font-family: "Courier New", monospace;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: 0.35em;
+  color: #ffffff;
+  background: #000000;
+  padding: 8px 20px;
+  border-radius: 10px;
+  border: 2px solid #7fff7f;
+  user-select: all;
+  cursor: pointer;
+}
+
+.code-callout-cta {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.code-callout-cta:hover {
+  color: #ffe97a;
+}
+
+/* Inline variant for the mid-article keyword section */
+.code-callout-inline {
+  flex-direction: column;
+  gap: 8px;
+  max-width: 420px;
+}
+
+/* Clean ordered step list (replaces loose <h3> steps) */
+.step-list {
+  padding-left: 24px;
+  margin: 20px 0;
+}
+
+.step-list > li {
+  margin-bottom: 32px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.step-list > li > strong {
+  display: block;
+  font-size: 1.15rem;
+  color: #ffd24a;
+  margin-bottom: 6px;
+}
+
+.step-list img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 12px 0 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Quick 3-step shortcut list */
+.quick-shortcut {
+  padding-left: 24px;
+  margin: 16px 0;
+}
+
+.quick-shortcut li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.code-inline {
+  font-family: "Courier New", monospace;
+  font-weight: 800;
+  background: #000;
+  color: #7fff7f;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid #7fff7f;
+  letter-spacing: 0.2em;
+}
+
+/* Troubleshooting list */
+.troubleshoot-list {
+  padding-left: 0;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.troubleshoot-list > li {
+  background: #1f1f1f;
+  border-left: 4px solid #ff9f43;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 18px;
+}
+
+.troubleshoot-list > li > strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #ff9f43;
+  margin-bottom: 8px;
+}
+
+.troubleshoot-list ul {
+  margin: 8px 0 0;
+  padding-left: 22px;
+}
+
+.troubleshoot-list ul li {
+  margin-bottom: 6px;
+  line-height: 1.55;
+}
