@@ -356,18 +356,40 @@ header {
 }
 
 .hero-swiper-pagination .swiper-pagination-bullet {
+  position: relative;
+  display: block;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  margin: 0 !important;
+  border-radius: 50%;
+  background: transparent;
+  opacity: 1;
+}
+
+.hero-swiper-pagination .swiper-pagination-bullet::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 8px;
   height: 8px;
-  margin: 0 !important;
+  margin: 0 auto;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.4);
-  opacity: 1;
+  content: "";
+  pointer-events: none;
   transition: width 0.3s ease, background-color 0.3s ease;
 }
 
-.hero-swiper-pagination .swiper-pagination-bullet-active {
+.hero-swiper-pagination .swiper-pagination-bullet-active::before {
   width: 22px;
   background: #ffd700;
+}
+
+.hero-swiper-pagination .swiper-pagination-bullet:focus-visible {
+  outline: 2px solid #ffd166;
+  outline-offset: 1px;
 }
 
 /* ==========================================================================
@@ -2317,11 +2339,16 @@ h3,
   }
 
   .hero-swiper-pagination .swiper-pagination-bullet {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hero-swiper-pagination .swiper-pagination-bullet::before {
     width: 7px;
     height: 7px;
   }
 
-  .hero-swiper-pagination .swiper-pagination-bullet-active {
+  .hero-swiper-pagination .swiper-pagination-bullet-active::before {
     width: 18px;
   }
 }
@@ -2514,7 +2541,33 @@ h3,
 }
 
 .home-page .hero-swiper-pagination .swiper-pagination-bullet-active {
+  background: transparent;
+}
+
+.home-page .hero-swiper-pagination .swiper-pagination-bullet-active::before {
   background: var(--home-gold);
+}
+
+.home-page .skip-link {
+  position: fixed;
+  z-index: 1001;
+  top: -100px;
+  left: 12px;
+  padding: 10px 14px;
+  border: 2px solid var(--home-ink);
+  border-radius: 2px;
+  background: var(--home-gold);
+  color: var(--home-ink);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.home-page .skip-link:focus {
+  top: 12px;
+  outline: 2px solid var(--home-text);
+  outline-offset: 2px;
 }
 
 .home-page main > section:not(.hero-section) {
