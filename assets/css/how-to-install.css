@@ -433,6 +433,29 @@ body {
   font-weight: 700;
 }
 
+/* Numbered variant used by the "How to Get Started With IPTV" steps list */
+.checklist-steps {
+  counter-reset: step;
+}
+
+.checklist-steps li {
+  counter-increment: step;
+}
+
+.checklist-steps li::before {
+  content: counter(step);
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 163, 163, 0.2);
+  color: #00d5d5;
+  font-size: 0.85rem;
+  top: 16px;
+}
+
 @media (max-width: 768px) {
   .checklist li {
     padding: 12px 12px 12px 36px;
@@ -463,6 +486,73 @@ code {
   padding: 2px 7px;
   border-radius: 6px;
   font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   CONTINUE READING — related guides block (dark glass + gold + teal)
+   -------------------------------------------------------------------------- */
+.continue-reading {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 215, 0, 0.22);
+  border-radius: 18px;
+  padding: 28px;
+  margin-top: 44px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.continue-reading h2 {
+  margin-top: 0;
+  padding-left: 0;
+  border-left: none;
+  background: linear-gradient(90deg, #ffd700, #ffe666);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.continue-reading h3 {
+  margin-top: 0;
+  color: #ffd700;
+}
+
+.continue-reading ul.continue-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  text-align: left;
+}
+
+.continue-reading ul.continue-links li {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 13px 16px;
+  margin-bottom: 10px;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.continue-reading ul.continue-links li:hover {
+  border-color: rgba(255, 215, 0, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.continue-reading p a,
+.continue-reading ul.continue-links a {
+  color: #00d5d5;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 213, 213, 0.5);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.continue-reading p a:hover,
+.continue-reading ul.continue-links a:hover {
+  color: #ffd700;
+  border-color: #ffd700;
 }
 
 /* --------------------------------------------------------------------------
