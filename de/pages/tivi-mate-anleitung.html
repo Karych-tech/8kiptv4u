@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Metadata -->
+  <meta name="description" content="Erfahren Sie Schritt für Schritt, wie Sie IPTV mit der Xtream-Codes-API in TiviMate einrichten. Mit Bildern, EPG, Aufnahmen, Catch-up TV und Untertiteln.">
+  <meta name="keywords" content="TiviMate IPTV Player, IPTV auf TiviMate installieren, Xtream Codes API, IPTV einrichten, 8kIPTV4U, TiviMate Anleitung">
+  <meta name="author" content="8kIPTV4U">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>IPTV auf TiviMate installieren | 8kIPTV4U Anleitung</title>
+
+  <!-- Font Preloading -->
+  <link rel="preload" href="/assets/fonts/fonts.css" as="style">
+  <link rel="preload" href="/assets/fonts/jost-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/jost-latin-ext-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+
+  <!-- Canonical URL and Hreflang -->
+  <link rel="canonical" href="https://www.8kiptv4u.com/de/pages/tivi-mate-anleitung">
+
+  <link rel="alternate" hreflang="de" href="https://www.8kiptv4u.com/de/pages/tivi-mate-anleitung">
+  <link rel="alternate" hreflang="en" href="https://www.8kiptv4u.com/pages/how-to-install-iptv/tivi-mate">
+  <link rel="alternate" hreflang="fr" href="https://www.8kiptv4u.com/fr/pages/guide-tivi-mate">
+  <link rel="alternate" hreflang="es" href="https://www.8kiptv4u.com/es/pages/guia-tivi-mate">
+  <link rel="alternate" hreflang="x-default" href="https://www.8kiptv4u.com/pages/how-to-install-iptv/tivi-mate">
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/assets/images/favicon/favicon.svg" color="#1a1a1a">
+  <meta name="msapplication-TileColor" content="#1a1a1a">
+  <meta name="msapplication-TileImage" content="/assets/images/logo/8klogo.webp">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/how-to-install.css">
+  <link rel="stylesheet" href="/assets/css/language-selector.css">
+
+  <!-- Open Graph: Facebook and WhatsApp -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="IPTV auf TiviMate installieren | 8kIPTV4U Anleitung">
+  <meta property="og:description" content="Schritt-für-Schritt-Anleitung zur Einrichtung von IPTV in TiviMate mit der Xtream-Codes-API. Lernen Sie die Einrichtung und wichtigsten Funktionen kennen.">
+  <meta property="og:image" content="https://www.8kiptv4u.com/assets/images/tivi-mate/tivi1.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Startbildschirm des TiviMate IPTV Players">
+  <meta property="og:url" content="https://www.8kiptv4u.com/de/pages/tivi-mate-anleitung">
+  <meta property="og:site_name" content="8kIPTV4U">
+  <meta property="og:locale" content="de_DE">
+  <meta property="article:published_time" content="2025-11-09T00:00:00Z">
+  <meta property="article:modified_time" content="2026-04-24T00:00:00Z">
+  <meta property="article:author" content="8kIPTV4U">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IPTV auf TiviMate installieren | 8kIPTV4U Anleitung">
+  <meta name="twitter:description" content="Erfahren Sie in dieser Schritt-für-Schritt-Anleitung, wie Sie TiviMate mit der Xtream-Codes-API einrichten.">
+  <meta name="twitter:image" content="https://www.8kiptv4u.com/assets/images/tivi-mate/tivi1.webp">
+  <meta name="twitter:site" content="@8kIPTV4U">
+  <meta name="twitter:creator" content="@8kIPTV4U">
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "IPTV auf TiviMate installieren | 8kIPTV4U Anleitung",
+    "description": "Ausführliche Anleitung zur Einrichtung von TiviMate mit der Xtream-Codes-API und bebilderten Schritt-für-Schritt-Anweisungen.",
+    "image": [
+      "https://www.8kiptv4u.com/assets/images/tivi-mate/tivi1.webp",
+      "https://www.8kiptv4u.com/assets/images/tivi-mate/tivi2.webp",
+      "https://www.8kiptv4u.com/assets/images/tivi-mate/tivi3.webp",
+      "https://www.8kiptv4u.com/assets/images/tivi-mate/tivi4.webp",
+      "https://www.8kiptv4u.com/assets/images/tivi-mate/tivi7.webp"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "8kIPTV4U",
+      "url": "https://www.8kiptv4u.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "8kIPTV4U",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.8kiptv4u.com/assets/images/logo/8klogo.webp",
+        "width": 140,
+        "height": 140
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.8kiptv4u.com/de/pages/tivi-mate-anleitung"
+    },
+    "datePublished": "2025-11-09T00:00:00Z",
+    "dateModified": "2026-04-24T00:00:00Z"
+  }
+  </script>
+
+  <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "IPTV auf TiviMate IPTV Player installieren",
+    "description": "Schritt-für-Schritt-Anleitung zur Einrichtung von TiviMate mit 8kIPTV4U über die Xtream-Codes-API.",
+    "image": "https://www.8kiptv4u.com/assets/images/tivi-mate/tivi1.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "8kIPTV4U",
+      "url": "https://www.8kiptv4u.com"
+    },
+    "estimatedDuration": "PT10M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "TiviMate herunterladen",
+        "text": "Laden Sie die App TiviMate IPTV Player aus dem Google Play Store oder dem App Store Ihres Geräts herunter.",
+        "image": "https://www.8kiptv4u.com/assets/images/tivi-mate/tivi1.webp"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Playlist hinzufügen",
+        "text": "Öffnen Sie die App und wählen Sie die Schaltfläche „Playlist hinzufügen“, um mit der Einrichtung zu beginnen.",
+        "image": "https://www.8kiptv4u.com/assets/images/tivi-mate/tivi2.webp"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Xtream-Codes-Anmeldung auswählen",
+        "text": "Wählen Sie „Xtream Codes Login“ und anschließend „Next“, um mit der Eingabe Ihrer API-Zugangsdaten fortzufahren.",
+        "image": "https://www.8kiptv4u.com/assets/images/tivi-mate/tivi3.webp"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Zugangsdaten eingeben",
+        "text": "Geben Sie die von 8kIPTV4U bereitgestellte Server-URL, Ihren Benutzernamen und Ihr Passwort ein.",
+        "image": "https://www.8kiptv4u.com/assets/images/tivi-mate/tivi4.webp"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "VOD einbeziehen (optional)",
+        "text": "Aktivieren Sie „Include VOD“, wenn Sie auf Video-on-Demand-Inhalte Ihres Abonnements zugreifen möchten.",
+        "image": "https://www.8kiptv4u.com/assets/images/tivi-mate/tivi4.webp"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Wiedergabe starten",
+        "text": "Wählen Sie „Finish“, um die Einrichtung abzuschließen. Anschließend stehen Ihre Sender in der App zur Verfügung.",
+        "image": "https://www.8kiptv4u.com/assets/images/tivi-mate/tivi7.webp"
+      }
+    ]
+  }
+  </script>
+
+ 
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Startseite",
+        "item": "https://www.8kiptv4u.com/de/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "IPTV installieren",
+        "item": "https://www.8kiptv4u.com/de/pages/iptv-installieren"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "TiviMate IPTV Player einrichten",
+        "item": "https://www.8kiptv4u.com/de/pages/tivi-mate-anleitung"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "8kIPTV4U",
+    "url": "https://www.8kiptv4u.com",
+    "logo": "https://www.8kiptv4u.com/assets/images/logo/8klogo.webp",
+    "sameAs": [
+      "https://www.facebook.com/8kiptv4u",
+      "https://twitter.com/8kiptv4u",
+      "https://www.instagram.com/8kiptv4u"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Kundenservice",
+      "url": "https://www.8kiptv4u.com/de/kontakt"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="/de/" class="navbar-logo">
+        <img
+          src="/assets/images/logo/8klogo.webp"
+          alt="8kIPTV4U – IPTV-Streaming-Service"
+          fetchpriority="high"
+          width="190"
+          height="100">
+      </a>
+
+      <ul class="navbar-menu">
+        <li><a href="/de/">Startseite</a></li>
+        <li><a href="/de/#FEATURES">Funktionen</a></li>
+        <li><a href="/de/#pricing">Preise</a></li>
+        <li><a href="/de/fussball">Fußball</a></li>
+        <li><a href="/de/filme-und-unterhaltung">Filme &amp; Serien</a></li>
+        <li><a href="/de/pages/iptv-installieren" class="active">IPTV installieren</a></li>
+        <li><a href="/de/kontakt">Kontakt</a></li>
+        <li><a href="/de/pages/wiederverkaeufer">Wiederverkäufer</a></li>
+      </ul>
+
+      <button class="navbar-toggle"
+        aria-label="Navigationsmenü öffnen"
+        aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="TiviMate-guide">
+      <div class="container">
+
+        <h1>IPTV auf TiviMate IPTV Player installieren</h1>
+
+        <p>TiviMate IPTV Player ist eine leistungsstarke Android-App zum Streamen von IPTV-Kanälen mit professionellen Funktionen. Sie unterstützt sowohl <strong>Remote Playlists</strong> als auch die <strong>Xtream-Codes-API</strong> und ist bei Firestick- und Android-TV-Nutzern wegen ihrer vielseitigen Funktionen und einfachen Bedienung beliebt.</p>
+
+        <img
+          src="/assets/images/tivi-mate/tivi1.webp"
+          alt="Startbildschirm des TiviMate IPTV Players mit Senderliste"
+          fetchpriority="high"
+          width="800"
+          height="600">
+
+        <p>In dieser ausführlichen Anleitung zeigen wir Ihnen, wie Sie IPTV-Kanäle in TiviMate mithilfe der <strong>Xtream-Codes-API</strong> hinzufügen. Außerdem lernen Sie wichtige Funktionen wie <strong>Catch-up TV</strong>, <strong>Aufnahmen</strong>, den <strong>EPG (elektronischen Programmführer)</strong> und <strong>Untertitel</strong> kennen.</p>
+
+        <h2>So richten Sie TiviMate IPTV Player über die Xtream-Codes-API ein</h2>
+
+        <ol>
+          <li>
+            <strong>Schritt 1:</strong> Laden Sie die App <strong>TiviMate</strong> aus dem Google Play Store oder dem App Store Ihres Geräts herunter.
+          </li>
+
+          <li>
+            <strong>Schritt 2:</strong> Öffnen Sie die App und wählen Sie die Schaltfläche <strong>„Add Playlist“ (Playlist hinzufügen)</strong>.
+
+            <img
+              src="/assets/images/tivi-mate/tivi2.webp"
+              alt="Position der Schaltfläche zum Hinzufügen einer Playlist in TiviMate"
+              loading="lazy"
+              width="800"
+              height="600">
+          </li>
+
+          <li>
+            <strong>Schritt 3:</strong> Wählen Sie <strong>„Xtream Codes Login“</strong> und klicken Sie anschließend auf <strong>„Next“ (Weiter)</strong>.
+
+            <img
+              src="/assets/images/tivi-mate/tivi3.webp"
+              alt="Auswahlbildschirm für die Xtream-Codes-API-Anmeldung in TiviMate"
+              loading="lazy"
+              width="800"
+              height="600">
+          </li>
+
+          <li>
+            <strong>Schritt 4:</strong> Geben Sie Ihre Zugangsdaten ein:
+
+            <ul style="margin-top: 10px;">
+              <li><strong>Server-URL:</strong> Ihre IPTV-Serveradresse, die Sie von 8kIPTV4U erhalten haben.</li>
+              <li><strong>Benutzername:</strong> Ihr 8kIPTV4U-Benutzername.</li>
+              <li><strong>Passwort:</strong> Ihr 8kIPTV4U-Passwort.</li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Schritt 5:</strong> Aktivieren Sie optional <strong>„Include VOD“</strong>, wenn Sie auf Video-on-Demand-Inhalte zugreifen möchten.
+          </li>
+        </ol>
+
+        <img
+          src="/assets/images/tivi-mate/tivi4.webp"
+          alt="TiviMate-Einrichtungsformular für die Xtream-Codes-API mit Server-URL, Benutzername und Passwort"
+          loading="lazy"
+          width="800"
+          height="600">
+
+        <h2>Die wichtigsten Funktionen von TiviMate IPTV Player</h2>
+
+        <ul>
+          <li><strong>Moderne Benutzeroberfläche:</strong> Für große Bildschirme optimiert und mit einfacher Navigation auf unterstützten Geräten.</li>
+          <li><strong>EPG-Unterstützung:</strong> Elektronischer Programmführer mit automatischem Laden der verfügbaren Sendezeiten.</li>
+          <li><strong>Automatischer Start:</strong> TiviMate kann beim Einschalten des Geräts automatisch gestartet werden.</li>
+          <li><strong>Favoritenkanäle:</strong> Markieren und organisieren Sie Ihre bevorzugten Sender für einen schnellen Zugriff.</li>
+          <li><strong>Bild-in-Bild-Modus:</strong> Sehen Sie ein Video weiter an, während Sie gleichzeitig durch Menüs navigieren, sofern Ihr Gerät diese Funktion unterstützt.</li>
+          <li><strong>Catch-up TV:</strong> Sehen Sie bereits ausgestrahlte Sendungen innerhalb des verfügbaren Catch-up-Zeitraums.</li>
+          <li><strong>Aufnahmefunktion:</strong> Zeichnen Sie Live-TV auf, um Sendungen später anzusehen. Diese Funktion ist von der Premium-Version und den jeweiligen Voraussetzungen abhängig.</li>
+          <li><strong>Unterstützung für Untertitel:</strong> Nutzen Sie verfügbare Untertitel in verschiedenen Sprachen.</li>
+          <li><strong>Mehrere Playlists:</strong> Verwalten Sie mehrere IPTV-Playlisten gleichzeitig.</li>
+        </ul>
+
+        <h2>So nutzen Sie die erweiterten Funktionen</h2>
+
+        <p>Wenn Sie einen Sender öffnen, können Sie den <strong>TV-Guide</strong> mit den verfügbaren EPG-Informationen aufrufen. So greifen Sie auf Einstellungen und zusätzliche Optionen zu:</p>
+
+        <ol>
+          <li>Halten Sie während der Wiedergabe eines Senders die Taste <strong>OK / Select</strong> auf Ihrer Fernbedienung etwa zwei Sekunden lang gedrückt.</li>
+
+          <li>
+            Das Einstellungsmenü wird angezeigt und bietet je nach App-Version und Sender unter anderem folgende Optionen:
+
+            <ul style="margin-top: 10px;">
+              <li>Aufnahmeeinstellungen und geplante Aufnahmen</li>
+              <li>Untertiteleinstellungen und Sprachauswahl</li>
+              <li>Sender zu den Favoriten hinzufügen</li>
+              <li>Wiedergabeoptionen und Videoqualität einstellen</li>
+            </ul>
+          </li>
+        </ol>
+
+        <img
+          src="/assets/images/tivi-mate/tivi7.webp"
+          alt="TiviMate-Einstellungsmenü mit Optionen für Aufnahmen, Untertitel und Wiedergabe"
+          loading="lazy"
+          width="800"
+          height="600">
+
+        <p class="highlight">Genießen Sie Ihr IPTV-Erlebnis mit <strong>8kIPTV4U</strong> – mit flüssiger Wiedergabe und unserem verfügbaren Kundensupport!</p>
+
+        <p>Wenn Sie bei der Einrichtung oder Verwendung von TiviMate auf Probleme stoßen, <a href="/de/kontakt">kontaktieren Sie unser Support-Team</a>. Wir helfen Ihnen gerne bei der Fehlerbehebung.</p>
+
+        <!-- Continue Reading -->
+        <section class="guide-step continue-reading">
+          <h2>Weitere Installationsanleitungen für andere Geräte</h2>
+
+          <p>Erfahren Sie, wie Sie IPTV auf Ihrem bevorzugten Gerät installieren, oder besuchen Sie unseren <a href="/de/pages/iptv-installieren">Bereich mit allen Installationsanleitungen</a>:</p>
+
+          <ul class="continue-links">
+            <li><a href="/de/pages/iptv-installieren">Alle IPTV-Installationsanleitungen</a></li>
+            <li><a href="/de/pages/downloader-firestick-anleitung">Unbekannte Apps zulassen und die Downloader-App verwenden</a></li>
+            <li><a href="/de/pages/iptv-smarters-pro-anleitung">IPTV Smarters Player verwenden</a></li>
+            <li><a href="/de/pages/smarters-player-auf-firestick-anleitung">IPTV Smarters auf Amazon Fire TV installieren</a></li>
+            <li><a href="/de/pages/windows-iptv-anleitung">IPTV auf einem Windows-PC installieren</a></li>
+          </ul>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-about">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="footer-logo"
+          width="400"
+          height="200"
+          aria-label="Animiertes 8kIPTV4U-Logo"
+          poster="/assets/images/logo/8klogo.webp">
+
+          <source src="/assets/images/logo/8kanimated.webm" type="video/webm">
+
+          <img
+            src="/assets/images/logo/8klogo.webp"
+            alt="8kIPTV4U – Logo des IPTV-Streaming-Service"
+            loading="lazy"
+            width="140"
+            height="140">
+        </video>
+
+        <p>Ein umfangreiches Angebot an internationalen und europäischen TV-Sendern über IPTV.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Informationen</h3>
+        <ul>
+          <li><a href="/de/pages/iptv-installieren">IPTV installieren</a></li>
+          <li><a href="/de/pages/datenschutzerklaerung">Datenschutzerklärung</a></li>
+          <li><a href="/de/pages/erstattungsrichtlinie">Rückerstattungsrichtlinie</a></li>
+          <li><a href="/de/pages/nutzungsbedingungen">Nutzungsbedingungen</a></li>
+          <li><a href="/de/kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Hilfreiche Links</h3>
+        <ul>
+          <li><a href="/de/#FEATURES">IPTV-Funktionen</a></li>
+          <li><a href="/de/#pricing">IPTV-Tarife</a></li>
+          <li><a href="/de/pages/downloader-firestick-anleitung">Downloader-Anleitung</a></li>
+          <li><a href="/de/pages/smarters-player-auf-firestick-anleitung">Firestick-Anleitung</a></li>
+          <li><a href="/de/pages/iptv-smarters-pro-anleitung">Smarters-Pro-Anleitung</a></li>
+          <li><a href="/de/pages/tivi-mate-anleitung">TiviMate-Anleitung</a></li>
+          <li><a href="/de/pages/windows-iptv-anleitung">IPTV für Windows</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-payments">
+        <h3>Sichere Zahlungsmethoden</h3>
+
+        <div class="payment-icon">
+          <img
+            src="/assets/images/payment/1.webp"
+            alt="Akzeptierte Zahlungsmethoden: Visa, Mastercard, PayPal, Kryptowährungen und Banküberweisung"
+            loading="lazy"
+            width="300"
+            height="50">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 8kIPTV4U. Alle Rechte vorbehalten. | <a href="/de/pages/datenschutzerklaerung">Datenschutzerklärung</a></p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a
+    href="https://wa.me/447898045582"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chatten Sie mit 8kIPTV4U über WhatsApp"
+    title="Kontaktieren Sie uns über WhatsApp">
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="60"
+      width="60"
+      viewBox="0 0 640 640"
+      aria-hidden="true">
+
+      <path
+        fill="#1eae13"
+        d="M188.1 318.6C188.1 343.5 195.1 367.8 208.3 388.7L211.4 393.7L198.1 442.3L248 429.2L252.8 432.1C273 444.1 296.2 450.5 319.9 450.5L320 450.5C392.6 450.5 453.3 391.4 453.3 318.7C453.3 283.5 438.1 250.4 413.2 225.5C388.2 200.5 355.2 186.8 320 186.8C247.3 186.8 188.2 245.9 188.1 318.6zM370.8 394C358.2 395.9 348.4 394.9 323.3 384.1C286.5 368.2 261.5 332.6 256.4 325.4C256 324.8 255.7 324.5 255.6 324.3C253.6 321.7 239.4 302.8 239.4 283.3C239.4 264.9 248.4 255.4 252.6 251C252.9 250.7 253.1 250.5 253.3 250.2C256.9 246.2 261.2 245.2 263.9 245.2C266.5 245.2 269.2 245.2 271.5 245.3L272.3 245.3C274.6 245.3 277.5 245.3 280.4 252.1C281.6 255 283.4 259.4 285.3 263.9C288.6 271.9 292 280.2 292.6 281.5C293.6 283.5 294.3 285.8 292.9 288.4C289.5 295.2 286 298.8 283.6 301.4C280.5 304.6 279.1 306.1 281.3 310C296.6 336.3 311.9 345.4 335.2 357.1C339.2 359.1 341.5 358.8 343.8 356.1C346.1 353.5 353.7 344.5 356.3 340.6C358.9 336.6 361.6 337.3 365.2 338.6C368.8 339.9 388.3 349.5 392.3 351.5C393.1 351.9 393.8 352.2 394.4 352.5C397.2 353.9 399.1 354.8 399.9 356.1C400.8 358 400.8 366 397.5 375.2C394.2 384.5 378.4 392.9 370.8 394zM544 160C544 124.7 515.3 96 480 96L160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160zM244.1 457.9L160 480L182.5 397.8C168.6 373.8 161.3 346.5 161.3 318.5C161.4 231.1 232.5 160 319.9 160C362.3 160 402.1 176.5 432.1 206.5C462 236.5 480 276.3 480 318.7C480 406.1 407.3 477.2 319.9 477.2C293.3 477.2 267.2 470.5 244.1 457.9z">
+      </path>
+    </svg>
+  </a>
+
+  <!-- JavaScript -->
+  <script src="/assets/JS/navbar.js" defer></script>
+  <script src="/assets/JS/language-selector.js" defer></script>
+
+</body>
+</html>
