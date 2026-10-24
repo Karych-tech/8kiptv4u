@@ -278,3 +278,11 @@
     transition: none;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .language-switcher__toggle,
+  .language-switcher__active-flag,
+  .language-switcher__option {
+    transition: none;
+  }
+}

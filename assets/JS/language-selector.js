@@ -80,6 +80,18 @@
         de: "/de/pages/smarters-player-auf-firestick-anleitung",
         es: "/es/pages/codigo-downloader-iptv-smarters-firestick"
       },
+      "/pages/how-to-install-iptv/tivi-mate": {
+        en: "/pages/how-to-install-iptv/tivi-mate",
+        fr: "/fr/pages/guide-tivi-mate",
+        de: "/de/pages/tivi-mate-anleitung",
+        es: "/es/pages/guia-tivi-mate"
+      },
+      "/pages/how-to-install-iptv/windows": {
+        en: "/pages/how-to-install-iptv/windows",
+        fr: "/fr/pages/guide-iptv-windows",
+        de: "/de/pages/windows-iptv-anleitung",
+        es: "/es/pages/guia-iptv-windows"
+      },
       "/pages/privacy-policy": {
         en: "/pages/privacy-policy",
         fr: "/fr/pages/politique-de-confidentialite",
@@ -154,6 +166,14 @@
     "/pages/code-downloader-iptv-smarters-firestick": "/pages/how-to-install-iptv/smarters-player-on-amazon-firestick",
     "/pages/smarters-player-auf-firestick-anleitung": "/pages/how-to-install-iptv/smarters-player-on-amazon-firestick",
     "/pages/codigo-downloader-iptv-smarters-firestick": "/pages/how-to-install-iptv/smarters-player-on-amazon-firestick",
+    "/pages/how-to-install-iptv/tivi-mate": "/pages/how-to-install-iptv/tivi-mate",
+    "/pages/guide-tivi-mate": "/pages/how-to-install-iptv/tivi-mate",
+    "/pages/tivi-mate-anleitung": "/pages/how-to-install-iptv/tivi-mate",
+    "/pages/guia-tivi-mate": "/pages/how-to-install-iptv/tivi-mate",
+    "/pages/how-to-install-iptv/windows": "/pages/how-to-install-iptv/windows",
+    "/pages/guide-iptv-windows": "/pages/how-to-install-iptv/windows",
+    "/pages/windows-iptv-anleitung": "/pages/how-to-install-iptv/windows",
+    "/pages/guia-iptv-windows": "/pages/how-to-install-iptv/windows",
     "/pages/iptv-installation-guide": "/pages/how-to-install-iptv"
   };
   const canonicalPage = (path) => {
@@ -289,6 +309,15 @@
 
       setOpen(false);
     });
+
+    // While the menu is open, scrolling collapses the flags back into the
+    // switcher using the normal closing animation. The user must tap the
+    // switcher again to bring them back.
+    window.addEventListener("scroll", () => {
+      if (toggle.getAttribute("aria-expanded") === "true") setOpen(false);
+    }, { passive: true });
+
+    document.body.append(switcher);
 
     document.body.append(switcher);
 })();
