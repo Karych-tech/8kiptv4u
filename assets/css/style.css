@@ -3022,3 +3022,17 @@ h3,
     animation: none;
   }
 }
+
+/* --------------------------------------------------------------------------
+   HERO SLIDER — slightly rounded card corners
+   Overrides the sharp 2px radius set by the homepage visual system with a
+   soft curve. The slide and its image share the same radius so corners clip
+   cleanly together.
+   -------------------------------------------------------------------------- */
+.home-page .hero-swiper .swiper-slide {
+  border-radius: 16px;
+}
+
+.home-page .hero-swiper .swiper-slide img {
+  border-radius: 16px;
+}
