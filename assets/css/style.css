@@ -2619,14 +2619,7 @@ h3,
   text-align: left;
 }
 
-.home-page .accent-title-badge::after {
-  left: 0;
-  width: 52px;
-  height: 2px;
-  transform: none;
-  border-radius: 0;
-  background: linear-gradient(90deg, var(--home-teal), var(--home-gold));
-}
+
 
 .home-page .steps-container,
 .home-page .sports-container,
@@ -3035,4 +3028,41 @@ h3,
 
 .home-page .hero-swiper .swiper-slide img {
   border-radius: 16px;
+}
+/* Entertainment section — title, spacing and hover polish.
+   The section itself stays transparent so it blends with the page background.
+   Side padding matches the other homepage sections so the slider lines up
+   with the content column used across the page. */
+.home-page section[aria-labelledby="entertainment-title"] {
+  background: none;
+  border-top: 0;
+  padding: 88px max(24px, calc((100vw - 1300px) / 2));
+}
+
+.home-page section[aria-labelledby="entertainment-title"] .movies-slider {
+  max-width: 100%;
+}
+
+.home-page section[aria-labelledby="entertainment-title"] .accent-title-badge {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+
+/* Center the section heading underline like other centered sections */
+.home-page section[aria-labelledby="entertainment-title"] .accent-title-badge::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.home-page section[aria-labelledby="entertainment-title"] .movies-slider .swiper-slide img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.home-page section[aria-labelledby="entertainment-title"] .movies-slider .swiper-slide img:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 209, 102, 0.55);
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.6);
 }
