@@ -77,13 +77,13 @@ main {
   height: 3px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(90deg, #00a3a3, #ffd700);
+  background: linear-gradient(90deg, #ffd166, #ffd700);
   transition: width 0.3s ease;
 }
 
 .navbar-container .navbar-menu li a:hover,
 .navbar-container .navbar-menu li a.active {
-  color: #ffffff;
+  color: #ffd166;
   background: transparent;
 }
 
@@ -115,10 +115,8 @@ main {
    14. FOOTER + WHATSAPP
    ========================================================================== */
 .footer {
-  background:
-    radial-gradient(700px 300px at 85% 0%, rgba(0, 163, 163, 0.12), transparent 60%),
-    linear-gradient(180deg, #0d1418 0%, #071214 100%);
-  border-top: 1px solid rgba(255, 215, 0, 0.18);
+  background: transparent;
+  border-top: 3px solid #ffd700;
   color: white;
   padding: 60px 20px 0;
 }
@@ -141,7 +139,7 @@ main {
 }
 
 .footer-about p {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.95rem;
   font-weight: 400;
   margin-top: 8px;
@@ -181,11 +179,16 @@ main {
 .footer-links h3,
 .footer-payments h3 {
   color: #ffd700;
+  background: #1a1f2e;
+  padding: 10px 15px;
   margin-bottom: 16px;
   font-size: 1.05em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #333;
 }
 
 .footer-links ul {
@@ -198,68 +201,46 @@ main {
 }
 
 .footer-links ul li a {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.95);
   font-weight: 500;
   font-size: 0.95rem;
   text-decoration: none;
   position: relative;
-  transition: color 0.3s ease, padding-left 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ffd700;
 }
 
 .footer-links ul li a::before {
   content: "›";
   position: absolute;
   left: -14px;
-  opacity: 0;
   color: #ffd700;
-  transition: opacity 0.3s ease;
-}
-
-.footer-links ul li a:hover {
-  color: #ffd700;
-  padding-left: 14px;
-}
-
-.footer-links ul li a:hover::before {
-  opacity: 1;
 }
 
 .payment-icon img {
   width: 260px;
   height: auto;
   padding: 14px 18px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #1a1f2e;
+  border: 1px solid #333;
   border-radius: 14px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.payment-icon img:hover {
-  transform: translateY(-3px);
-  border-color: rgba(255, 215, 0, 0.4);
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 48px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
   padding: 20px;
   font-size: 0.88em;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .footer-bottom a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffd700;
   text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-bottom a:hover {
-  color: #ffd700;
-}
-
-.footer-bottom a:hover {
-  color: #ffd700;
 }
 
 /* WhatsApp Float */
