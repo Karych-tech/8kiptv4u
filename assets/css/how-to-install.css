@@ -1,137 +1,756 @@
 /* ==========================================================================
-   HOW-TO-INSTALL / GUIDES — MODERN STYLES
+   HOW-TO-INSTALL / GUIDES — REBUILT (Entertainment editorial design)
    Shared by: how-to-install-iptv, downloader-guide, iptv-smarters-pro,
    smarters-player-on-amazon-firestick, tivi-mate, windows
-   Brand language: dark glass + gold (#ffd700) + teal (#00a3a3)
+   Palette borrowed from Entertainment.css:
+     ink   #07110f   panel #0d1a18   raised #132320
+     text  #f3f4ed   muted #a5b4ad
+     teal  #67d6c4   gold  #dfbb79
+     line  rgba(236, 242, 233, 0.14)
    ========================================================================== */
 
 * {
   box-sizing: border-box;
-  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(0, 163, 163, 0.18), transparent 60%),
-    radial-gradient(900px 500px at 0% 30%, rgba(255, 215, 0, 0.06), transparent 55%),
-    linear-gradient(180deg, #071214 0%, #0a1416 40%, #071214 100%);
-  background-attachment: fixed;
-  min-height: 100vh;
-  color: #fff;
+  --hi-ink: #07110f;
+  --hi-panel: #0d1a18;
+  --hi-raised: #132320;
+  --hi-text: #f3f4ed;
+  --hi-muted: #a5b4ad;
+  --hi-teal: #67d6c4;
+  --hi-gold: #dfbb79;
+  --hi-line: rgba(236, 242, 233, 0.14);
+  background: var(--hi-ink);
+  color: var(--hi-text);
   font-family: "Jost", system-ui, sans-serif;
   font-weight: 400;
-  overflow-x: hidden;
+  min-height: 100vh;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--hi-gold);
+  outline-offset: 4px;
+}
+
 /* --------------------------------------------------------------------------
-   GUIDES HUB — .how-to-install (cards grid)
+   Small caps eyebrow — same treatment as Entertainment.css
+   -------------------------------------------------------------------------- */
+.how-to-install .eyebrow,
+.guide-content-section .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  color: var(--hi-teal);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.how-to-install .eyebrow::before,
+.guide-content-section .eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: var(--hi-gold);
+}
+
+/* --------------------------------------------------------------------------
+   GUIDES HUB — .how-to-install sections
    -------------------------------------------------------------------------- */
 .how-to-install {
-  padding: 60px 20px;
-}
-
-.how-to-install h2 {
-  text-align: center;
-  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  background: linear-gradient(90deg, #ffd700, #ffe666);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding-bottom: 14px;
-  margin-bottom: 30px;
   position: relative;
+  padding: 88px 0;
+  border-top: 1px solid var(--hi-line);
 }
 
-.how-to-install h2::after {
+.how-to-install:first-child {
+  border-top: 0;
+}
+
+.how-to-install:nth-of-type(even) {
+  background: #0b1715;
+}
+
+.how-to-install .container {
+  width: min(100%, 1380px);
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* Section headings — editorial, numbered, gold keyword.
+   Scoped to DIRECT children so card headings are not affected. */
+main {
+  counter-reset: hi-section;
+}
+
+.how-to-install {
+  counter-increment: hi-section;
+}
+
+.how-to-install > .container > h2 {
+  position: relative;
+  max-width: 780px;
+  margin: 0;
+  padding-top: 26px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: 0;
+  color: var(--hi-text);
+}
+
+.how-to-install > .container > h2::before {
+  content: counter(hi-section, decimal-leading-zero);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(223, 187, 121, 0.85);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  font-variant-numeric: tabular-nums;
+}
+
+.how-to-install > .container > h2::after {
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 70px;
-  height: 4px;
-  border-radius: 4px;
-  background: linear-gradient(90deg, #00a3a3, #ffd700);
+  top: 6px;
+  left: 44px;
+  width: 34px;
+  height: 1px;
+  background: var(--hi-line);
 }
 
+/* The FAQ heading already has its own "Good to know" eyebrow — no number */
+.how-to-install.faq-section > .container > h2 {
+  padding-top: 0;
+}
+
+.how-to-install.faq-section > .container > h2::before,
+.how-to-install.faq-section > .container > h2::after {
+  content: none;
+}
+
+.how-to-install h2 em {
+  color: var(--hi-gold);
+  font-style: normal;
+}
+
+/* Intro line under each section heading gets separated from the heading */
+.how-to-install .container>h2+p {
+  margin-top: 18px;
+  padding-top: 20px;
+  border-top: 1px solid var(--hi-line);
+}
+
+/* Hero (first section with the h1) */
 .how-to-install .container h1 {
-  text-align: center;
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 800;
-  letter-spacing: -1px;
-  background: linear-gradient(90deg, #ffd700 0%, #ffe666 50%, #00d5d5 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 0 0 0.75rem;
-  line-height: 1.15;
+  max-width: 820px;
+  margin: 0;
+  padding-top: 22px;
+  position: relative;
+  font-size: clamp(2.8rem, 6.5vw, 5rem);
+  font-weight: 700;
+  line-height: 0.99;
+  letter-spacing: 0;
+  color: var(--hi-text);
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+/* Eyebrow above the h1 — pure CSS, no HTML change needed */
+.how-to-install:first-child h1::before {
+  content: "8kiptv4u \2014 setup guides";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--hi-teal);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.how-to-install:first-child h1::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 210px;
+  width: 46px;
+  height: 1px;
+  background: var(--hi-gold);
+}
+
+.how-to-install .container h1 em {
+  color: var(--hi-gold);
+  font-style: normal;
+}
+
+/* Hero gets a subtle scanline texture + teal glow like the Entertainment hero */
+.how-to-install:first-child {
+  background: radial-gradient(ellipse at 85% 20%, rgba(103, 214, 196, 0.09), transparent 46%),
+    var(--hi-ink);
+}
+
+/* --------------------------------------------------------------------------
+   INSTALL HERO — Entertainment .entertainment-hero treatment, verbatim layout:
+   full-bleed dark hero, backdrop image on the right 37%, oversized h1 on the
+   left with eyebrow above, signature + vertical side-note as decoration.
+   -------------------------------------------------------------------------- */
+.install-hero {
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 660px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 0;
+  padding: 100px max(7vw, calc((100vw - 1380px) / 2)) 110px;
+  background:
+    radial-gradient(ellipse at 82% 24%, rgba(103, 214, 196, 0.1), transparent 44%),
+    var(--hi-ink);
+}
+
+.install-hero::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.14;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 100% 86px, 86px 100%;
+  mask-image: linear-gradient(90deg, black, transparent 88%);
+  pointer-events: none;
+}
+
+.install-hero__backdrop {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 0 37%;
+  overflow: hidden;
+}
+
+.install-hero__backdrop::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background:
+    linear-gradient(90deg, var(--hi-ink) 0%, rgba(7, 17, 15, 0.82) 13%, rgba(7, 17, 15, 0.18) 62%, rgba(7, 17, 15, 0.38) 100%),
+    linear-gradient(0deg, var(--hi-ink) 0%, transparent 34%, rgba(7, 17, 15, 0.15) 100%);
+}
+
+.install-hero__backdrop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  opacity: 0.78;
+  filter: saturate(0.78);
+  mask-image: linear-gradient(90deg, transparent 0%, black 27%);
+}
+
+.install-hero__content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 760px);
+  max-width: 760px;
+  animation: entertainment-arrive 700ms ease both;
+}
+
+.install-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  color: var(--hi-teal);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.install-eyebrow span {
+  width: 26px;
+  height: 2px;
+  background: var(--hi-gold);
+}
+
+.install-hero h1 {
+  max-width: 760px;
+  margin: 0;
+  padding: 0;
+  font-size: 5.25rem;
+  font-weight: 700;
+  line-height: 0.99;
+  letter-spacing: 0;
+  color: var(--hi-text);
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+.install-hero h1::before,
+.install-hero h1::after {
+  content: none;
+}
+
+.install-hero h1 em {
+  color: var(--hi-gold);
+  font-style: normal;
+}
+
+.install-hero__intro {
+  max-width: 535px;
+  margin: 24px 0 0;
+  color: var(--hi-muted);
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.install-hero__intro + .install-hero__intro {
+  margin-top: 16px;
+}
+
+.install-hero__signature {
+  position: absolute;
+  z-index: 2;
+  right: max(7vw, calc((100vw - 1380px) / 2));
+  bottom: 42px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(243, 244, 237, 0.74);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.install-hero__signature span:first-child {
+  color: var(--hi-gold);
+  font-size: 1.45rem;
+  letter-spacing: 0;
+}
+
+.install-hero__side-note {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 28px;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  color: rgba(243, 244, 237, 0.72);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  writing-mode: vertical-rl;
+}
+
+.install-hero__side-note span {
+  color: var(--hi-teal);
+}
+
+@keyframes entertainment-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+/* Responsive — mirrors the Entertainment hero breakpoints */
+@media (max-width: 1100px) {
+  .install-hero {
+    min-height: 600px;
+    padding: 84px max(5vw, calc((100vw - 1380px) / 2)) 90px;
+  }
+
+  .install-hero h1 {
+    max-width: 680px;
+    font-size: 4.4rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .install-hero {
+    min-height: 590px;
+    padding: 74px 5vw 84px;
+  }
+
+  .install-hero__backdrop {
+    inset: 0 0 0 20%;
+  }
+
+  .install-hero__backdrop::after {
+    background:
+      linear-gradient(90deg, #07110f 0%, rgba(7, 17, 15, 0.72) 28%, rgba(7, 17, 15, 0.17) 100%),
+      linear-gradient(0deg, #07110f 0%, transparent 42%);
+  }
+
+  .install-hero h1 {
+    max-width: 590px;
+    font-size: 3.7rem;
+  }
+
+  .install-hero__intro {
+    max-width: 465px;
+    font-size: 1rem;
+  }
+
+  .install-hero__side-note {
+    right: 13px;
+  }
+
+  .install-hero__signature {
+    right: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .install-hero {
+    min-height: 560px;
+    padding: 64px 19px 74px;
+  }
+
+  .install-hero__backdrop {
+    inset: 0 0 0 6%;
+    opacity: 0.57;
+  }
+
+  .install-hero__content {
+    width: 100%;
+  }
+
+  .install-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.09em;
+  }
+
+  .install-hero h1 {
+    font-size: 3.15rem;
+  }
+
+  .install-hero__intro {
+    margin-top: 19px;
+    font-size: 0.93rem;
+    line-height: 1.6;
+  }
+
+  .install-hero__signature {
+    right: 19px;
+    font-size: 0.57rem;
+  }
+
+  .install-hero__side-note {
+    display: none;
+  }
 }
 
 .how-to-install .container>p {
-  text-align: center;
-  max-width: 780px;
-  margin: 0 auto 2.5rem;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 1.08rem;
-  font-weight: 400;
-  line-height: 1.7;
+  max-width: 640px;
+  margin: 22px 0 0;
+  color: var(--hi-muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
+/* Breathing room between the intro and the card grid */
+.how-to-install .container>p+.install-grid,
+.how-to-install .container>p~.install-grid {
+  margin-top: 34px;
+}
+
+/* An empty placeholder grid (comment-only) takes no space */
+.install-grid:empty {
+  display: none;
+}
+
+/* Checklist sections span the full row instead of leaving empty columns */
+.install-grid:has(.checklist-card) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.install-grid .checklist-card {
+  grid-column: 1 / -1;
+  max-width: 980px;
+}
+
+/* Two-up checklist rows on wide screens, single column on small */
+@media (min-width: 769px) {
+  .checklist {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 44px;
+  }
+
+  .checklist li:first-child {
+    border-top: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   GUIDE CARDS GRID — flat bordered cards, Entertainment collection style
+   -------------------------------------------------------------------------- */
 .install-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: none;
+  margin: 0;
 }
 
 .install-card {
+  position: relative;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 0;
   width: 100%;
   max-width: none;
   text-align: left;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-  border: 1px solid rgba(255, 215, 0, 0.22);
-  border-radius: 18px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  background: var(--hi-panel);
+  border: 1px solid var(--hi-line);
+  border-radius: 0;
+  backdrop-filter: none;
+  box-shadow: none;
+  overflow: hidden;
+  transition:
+    border-color 220ms ease,
+    transform 260ms cubic-bezier(0.2, 0.75, 0.2, 1),
+    box-shadow 260ms ease;
 }
 
-.install-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(255, 215, 0, 0.55);
-  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.4);
-}
+/* No card-level hover — only the image and the button inside react */
 
 .install-card img {
+  display: block;
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  display: block;
-  margin-bottom: 14px;
-  transition: transform 0.3s ease;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0;
+  margin: 6px;
+  background: var(--hi-raised);
+  border-bottom: 1px solid var(--hi-line);
+  filter: saturate(0.85);
+  transition: transform 550ms cubic-bezier(0.2, 0.75, 0.2, 1), filter 350ms ease;
 }
 
-.install-card:hover img {
-  transform: scale(1.02);
+/* Image hover — reacts ONLY when the pointer is over the image itself */
+.install-card img:hover {
+  transform: scale(1.05);
+  filter: saturate(1.12) brightness(1.04);
 }
 
-.install-card h2 {
-  -webkit-text-fill-color: #ffd700;
-  background: none;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 10px 0 8px;
+.install-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.install-card h2,
+.install-card h3 {
+  margin: 0 0 12px;
   padding: 0;
+  border: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--hi-text);
+  text-decoration: none;
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+.install-card p {
+  margin: 0 0 20px;
+  color: var(--hi-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.install-card h2::before,
+.install-card h2::after,
+.install-card h3::before,
+.install-card h3::after {
+  content: none;
+}
+
+/* Cards WITHOUT an image (Supported Devices / Problems) —
+   turn them into Entertainment feature-card style numbered panels */
+.install-grid {
+  counter-reset: hi-card;
+}
+
+.install-card:not(:has(img)) {
+  justify-content: flex-start;
+  padding: 26px 24px 24px;
+  border-top: 2px solid rgba(223, 187, 121, 0.55);
+  background: linear-gradient(160deg, var(--hi-raised), var(--hi-panel) 62%);
+}
+
+.install-card:not(:has(img))::before {
+  counter-increment: hi-card;
+  content: counter(hi-card, decimal-leading-zero);
+  display: block;
+  margin-bottom: 18px;
+  color: rgba(223, 187, 121, 0.8);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+}
+
+.install-card:not(:has(img)) h3 {
+  margin: 0 0 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--hi-line);
+  font-size: 1.08rem;
+}
+
+.install-card:not(:has(img)) p {
+  margin-bottom: 0;
+}
+
+/* No card-level hover on the numbered panels either — static, per design */
+
+/* Expandable problem cards — same accordion logic as the FAQ (navbar.js):
+   .faq-item card, .faq-question button in the heading, .faq-answer panel below */
+.install-card.faq-item .faq-question {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.install-card.faq-item .faq-question span {
+  flex: 0 0 auto;
+  align-self: center;
+  color: var(--hi-teal);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1;
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.install-card.faq-item .faq-question:hover,
+.install-card.faq-item .faq-question:hover ~ * ,
+.install-card.faq-item:has(.faq-question:hover) h3 {
+  color: var(--hi-teal);
+}
+
+.install-card.faq-item .faq-question:focus-visible {
+  outline: 2px solid var(--hi-teal);
+  outline-offset: 3px;
+}
+
+.install-card.faq-item .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.install-card.faq-item .faq-answer p {
+  margin: 14px 0 4px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(103, 214, 196, 0.3);
+  color: var(--hi-muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.install-card.faq-item.active {
+  border-top-color: var(--hi-gold);
+  border-color: rgba(103, 214, 196, 0.5);
+  background: linear-gradient(160deg, #1a2f2a, var(--hi-panel) 70%);
+}
+
+.install-card.faq-item.active .faq-question span {
+  transform: rotate(45deg);
+  color: var(--hi-gold);
+}
+
+.install-card.faq-item.active .faq-answer {
+  max-height: 400px;
+}
+
+/* No-JS fallback: hide answers with a clip instead of a transition race */
+@supports not (selector(:has(*))) {
+  .install-card.faq-item .faq-answer {
+    display: none;
+  }
+
+  .install-card.faq-item.active .faq-answer {
+    display: block;
+    max-height: none;
+  }
+}
+
+/* ------------------------------------------------------------------
+   WIDTH-BASED BEHAVIOR for the problem cards:
+   - 2+ cards per row (tablet/desktop, > 480px): answers are ALWAYS
+     visible, the "+" marker is hidden and the button is inert —
+     cards behave like plain text cards.
+   - 1 card per row (phone, ≤ 480px): full accordion, tap to expand.
+   ------------------------------------------------------------------ */
+@media (min-width: 481px) {
+  .install-card.faq-item .faq-question {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .install-card.faq-item .faq-question span {
+    display: none;
+  }
+
+  /* !important so it also beats the inline max-height navbar.js sets */
+  .install-card.faq-item .faq-answer {
+    max-height: none !important;
+  }
+
+  .install-card.faq-item.active {
+    border-top-color: rgba(223, 187, 121, 0.55);
+    border-color: var(--hi-line);
+    background: linear-gradient(160deg, var(--hi-raised), var(--hi-panel) 62%);
+  }
+
+  .install-card.faq-item.active .faq-question span {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Accordion as before — nothing extra needed, base rules apply */
 }
 
 .install-card h2::after {
@@ -139,39 +758,85 @@ body {
 }
 
 .install-card p {
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 16px;
+  margin: 0 0 18px;
+  color: var(--hi-muted);
+  font-size: 0.9rem;
   line-height: 1.6;
 }
 
-/* Buttons */
+/* Card link — gold block button, square corners (Entertainment .button--light) */
 .read-more,
 .install-btn {
   margin-top: auto;
   align-self: flex-start;
-  display: inline-block;
-  padding: 11px 22px;
-  background: linear-gradient(90deg, #ffd700, #ffca28);
-  color: #071214;
-  border-radius: 999px;
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 10px 18px;
+  border: 1px solid transparent;
+  background: var(--hi-gold);
+  color: var(--hi-ink);
+  border-radius: 0;
   font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow: none;
+  transition: background 180ms ease, transform 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.read-more::after,
+.install-btn::after {
+  content: "\2192";
   font-size: 0.95rem;
-  box-shadow: 0 8px 22px rgba(255, 215, 0, 0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 180ms ease;
 }
 
 .read-more:hover,
 .read-more:focus,
 .install-btn:hover,
 .install-btn:focus {
-  background: linear-gradient(90deg, #ffd700, #ffca28);
-  color: #071214;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
+  background: #f0d39c;
+  color: var(--hi-ink);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(223, 187, 121, 0.22);
   outline: none;
+}
+
+.read-more:hover::after,
+.install-btn:hover::after {
+  transform: translateX(4px);
+}
+
+/* Ghost variant used inside plain text contexts */
+.install-card .read-more--ghost,
+a.read-more--ghost {
+  background: transparent;
+  border-color: rgba(243, 244, 237, 0.42);
+  color: var(--hi-text);
+}
+
+a.read-more--ghost:hover,
+a.read-more--ghost:focus {
+  background: rgba(103, 214, 196, 0.08);
+  border-color: var(--hi-teal);
+  color: var(--hi-teal);
+}
+
+/* Inline text link (Entertainment .text-link) */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--hi-teal);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  color: var(--hi-gold);
 }
 
 /* --------------------------------------------------------------------------
@@ -182,8 +847,9 @@ body {
 .IPTVSmarters-guide,
 .FIRESTICK-guide,
 .guide-content-section {
-  padding: 60px 20px;
-  color: rgba(255, 255, 255, 0.88);
+  position: relative;
+  padding: 72px 0 88px;
+  color: var(--hi-text);
   line-height: 1.75;
 }
 
@@ -192,10 +858,15 @@ body {
 .IPTVSmarters-guide .container,
 .FIRESTICK-guide .container,
 .guide-detail-container {
-  font-weight: 400;
-  text-align: center;
-  max-width: 900px;
+  width: min(100%, 900px);
   margin: 0 auto;
+  padding: 0 24px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.guide-detail-container {
+  text-align: left;
 }
 
 .TiviMate-guide h1,
@@ -203,15 +874,22 @@ body {
 .IPTVSmarters-guide h1,
 .FIRESTICK-guide h1,
 .guide-title-smarters {
-  font-size: clamp(1.9rem, 4.5vw, 3rem);
-  font-weight: 800;
-  letter-spacing: -1px;
-  background: linear-gradient(90deg, #ffd700 0%, #ffe666 50%, #00d5d5 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 30px;
-  line-height: 1.2;
+  margin: 0 0 14px;
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.02;
+  color: var(--hi-text);
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+.TiviMate-guide h1 em,
+.Windows-guide h1 em,
+.IPTVSmarters-guide h1 em,
+.FIRESTICK-guide h1 em {
+  color: var(--hi-gold);
+  font-style: normal;
 }
 
 .TiviMate-guide h2,
@@ -219,26 +897,34 @@ body {
 .IPTVSmarters-guide h2,
 .FIRESTICK-guide h2,
 .guide-content-section h2 {
-  font-size: clamp(1.4rem, 3vw, 1.8rem);
-  font-weight: 700;
-  color: #ffd700;
-  margin-top: 44px;
-  margin-bottom: 16px;
-  padding-left: 14px;
-  border-left: 4px solid #00a3a3;
-  border-radius: 2px;
+  margin: 52px 0 18px;
+  padding: 0 0 12px;
+  border: 0;
+  border-bottom: 1px solid var(--hi-line);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--hi-text);
   text-align: left;
+}
+
+.TiviMate-guide h2 em,
+.Windows-guide h2 em,
+.IPTVSmarters-guide h2 em,
+.FIRESTICK-guide h2 em,
+.guide-content-section h2 em {
+  color: var(--hi-gold);
+  font-style: normal;
 }
 
 .TiviMate-guide h3,
 .Windows-guide h3,
 .IPTVSmarters-guide h3,
 .FIRESTICK-guide h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #ffe666;
-  margin-top: 26px;
-  margin-bottom: 10px;
+  margin: 30px 0 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--hi-teal);
   text-align: left;
 }
 
@@ -247,29 +933,30 @@ body {
 .IPTVSmarters-guide p,
 .FIRESTICK-guide p,
 .guide-content-section p {
-  font-size: 1.02rem;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  color: var(--hi-muted);
   text-align: left;
 }
 
 .TiviMate-guide a,
 .Windows-guide a,
 .IPTVSmarters-guide a,
-.FIRESTICK-guide a {
-  color: #00d5d5;
+.FIRESTICK-guide a,
+.guide-content-section a {
+  color: var(--hi-teal);
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 213, 213, 0.5);
-  transition: color 0.3s ease, border-color 0.3s ease;
+  border-bottom: 1px solid rgba(103, 214, 196, 0.45);
+  transition: color 180ms ease, border-color 180ms ease;
 }
 
 .TiviMate-guide a:hover,
 .Windows-guide a:hover,
 .IPTVSmarters-guide a:hover,
-.FIRESTICK-guide a:hover {
-  color: #ffd700;
-  border-color: #ffd700;
+.FIRESTICK-guide a:hover,
+.guide-content-section a:hover {
+  color: var(--hi-gold);
+  border-color: var(--hi-gold);
 }
 
 /* Images inside guides */
@@ -281,14 +968,14 @@ body {
   width: 100%;
   max-width: 640px;
   height: auto;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0;
+  border: 1px solid var(--hi-line);
   margin: 24px auto;
   object-fit: cover;
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+  box-shadow: none;
 }
 
-/* Lists / steps */
+/* Lists / steps — bordered panel, Entertainment quality-list style */
 .FIRESTICK-guide ol,
 .FIRESTICK-guide ul,
 .Windows-guide ol,
@@ -300,14 +987,13 @@ body {
 .guide-content-section ol,
 .guide-content-section ul,
 .activation-steps {
-  text-align: left;
-  margin: 20px auto;
-  max-width: 720px;
-  padding-left: 24px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 14px;
+  max-width: none;
+  margin: 22px 0;
   padding: 20px 20px 20px 44px;
+  background: var(--hi-panel);
+  border: 1px solid var(--hi-line);
+  border-radius: 0;
+  text-align: left;
 }
 
 .FIRESTICK-guide li,
@@ -317,34 +1003,45 @@ body {
 .guide-content-section li,
 .activation-steps li {
   margin-bottom: 12px;
-  font-weight: 400;
-  font-size: 1.02rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #d9e2dc;
+}
+
+.FIRESTICK-guide li::marker,
+.Windows-guide li::marker,
+.TiviMate-guide li::marker,
+.IPTVSmarters-guide li::marker,
+.guide-content-section li::marker,
+.activation-steps li::marker {
+  color: var(--hi-teal);
+  font-weight: 700;
 }
 
 .TiviMate-guide strong,
 .Windows-guide strong,
 .IPTVSmarters-guide strong,
 .FIRESTICK-guide strong,
-.guide-content-section strong {
-  color: #ffd700;
-  font-weight: 700;
+.guide-content-section strong,
+.checklist li strong {
+  color: var(--hi-gold);
+  font-weight: 600;
 }
 
-/* Highlight / alert callouts */
+/* Highlight / alert callouts — teal left border, flat */
 .FIRESTICK-guide p.highlight,
 .Windows-guide p.highlight,
 .TiviMate-guide p.highlight,
 .IPTVSmarters-guide p.highlight,
 .alert-box {
-  background: linear-gradient(135deg, rgba(0, 163, 163, 0.16), rgba(0, 163, 163, 0.06));
-  border-left: 4px solid #00d5d5;
-  border-radius: 12px;
+  margin: 24px 0;
   padding: 18px 20px;
-  margin: 22px 0;
+  background: rgba(103, 214, 196, 0.06);
+  border: 1px solid rgba(103, 214, 196, 0.25);
+  border-left: 3px solid var(--hi-teal);
+  border-radius: 0;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+  color: #dbe6e0;
   text-align: left;
 }
 
@@ -352,119 +1049,151 @@ body {
 .back-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  margin-bottom: 24px;
-  color: #00d5d5;
+  gap: 8px;
+  margin-bottom: 26px;
+  color: var(--hi-teal);
   text-decoration: none;
+  font-size: 0.85rem;
   font-weight: 600;
-  transition: color 0.3s ease, transform 0.3s ease;
+  letter-spacing: 0.04em;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.back-link::before {
+  content: "\2190";
 }
 
 .back-link:hover {
-  color: #ffd700;
+  color: var(--hi-gold);
   transform: translateX(-4px);
 }
 
-/* Setup option boxes / placeholders / code */
+/* Setup option boxes */
 .setup-option {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 14px;
-  padding: 22px;
-  margin-bottom: 22px;
+  margin-bottom: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   text-align: left;
 }
 
-.setup-option:hover {
-  border-color: rgba(255, 215, 0, 0.4);
+/* --------------------------------------------------------------------------
+   CHECKLIST — Entertainment picks-list style (numbered / checked rows)
+   -------------------------------------------------------------------------- */
+.checklist-card {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 34px 34px 26px;
+  background: linear-gradient(165deg, var(--hi-panel), #0b1715 78%);
+  border: 1px solid var(--hi-line);
+  border-top: 2px solid rgba(103, 214, 196, 0.4);
 }
 
-/* Checklist card ("Before You Install") */
-.checklist-card {
-  max-width: 900px;
-  margin: 0 auto;
-  width: 100%;
+.checklist-card:hover {
+  border-top-color: rgba(103, 214, 196, 0.8);
 }
 
 .checklist-card h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #ffd700;
-  margin-bottom: 16px;
+  margin: 0 0 26px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--hi-line);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--hi-text);
   text-align: left;
 }
 
 .checklist {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
   text-align: left;
+  counter-reset: item;
 }
 
 .checklist li {
   position: relative;
-  padding: 14px 14px 14px 40px;
-  margin-bottom: 10px;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.82);
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  transition: border-color 0.25s ease, background 0.25s ease;
+  display: block;
+  padding: 22px 0 22px 52px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--hi-line);
+  font-size: 0.97rem;
+  line-height: 1.72;
+  color: var(--hi-muted);
+  background: transparent;
+  border-radius: 0;
+  transition: padding 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.checklist li:last-child {
+  border-bottom: 0;
+}
+
+.checklist li > strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--hi-gold);
+}
+
+.checklist li:first-child {
+  border-top: 1px solid var(--hi-line);
 }
 
 .checklist li:hover {
-  border-color: rgba(255, 215, 0, 0.35);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(103, 214, 196, 0.045);
+  border-bottom-color: rgba(103, 214, 196, 0.35);
+  border-top-color: rgba(103, 214, 196, 0.35);
+}
+
+.checklist li:hover::before {
+  color: rgba(223, 187, 121, 1);
 }
 
 .checklist li::before {
-  content: "\2714";
+  counter-increment: item;
+  content: counter(item, decimal-leading-zero);
   position: absolute;
-  left: 14px;
-  top: 14px;
-  color: #00d5d5;
-  font-weight: 700;
-}
-
-.checklist li strong {
-  color: #ffd700;
-  font-weight: 700;
-}
-
-/* Numbered variant used by the "How to Get Started With IPTV" steps list */
-.checklist-steps {
-  counter-reset: step;
-}
-
-.checklist-steps li {
-  counter-increment: step;
+  left: 0;
+  top: 24px;
+  color: rgba(223, 187, 121, 0.8);
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
 }
 
 .checklist-steps li::before {
-  content: counter(step);
-  width: 22px;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgba(0, 163, 163, 0.2);
-  color: #00d5d5;
-  font-size: 0.85rem;
-  top: 16px;
+  content: counter(item, decimal-leading-zero);
+  background: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+}
+
+.checklist li strong {
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
+  .checklist-card {
+    padding: 24px 18px 18px;
+  }
+
+  .checklist-card h3 {
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+  }
+
   .checklist li {
-    padding: 12px 12px 12px 36px;
-    font-size: 0.95rem;
+    padding: 16px 0 16px 40px;
+    font-size: 0.9rem;
   }
 
   .checklist li::before {
-    left: 12px;
-    top: 12px;
+    top: 18px;
   }
 }
 
@@ -473,54 +1202,56 @@ body {
   width: 100%;
   max-width: 800px;
   height: auto;
-  border-radius: 14px;
   margin: 24px auto;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--hi-line);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 code {
-  background: rgba(255, 215, 0, 0.12);
-  border: 1px solid rgba(255, 215, 0, 0.25);
-  color: #ffe666;
   padding: 2px 7px;
-  border-radius: 6px;
+  background: rgba(103, 214, 196, 0.1);
+  border: 1px solid rgba(103, 214, 196, 0.3);
+  color: var(--hi-teal);
+  border-radius: 0;
   font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
-   CONTINUE READING — related guides block (dark glass + gold + teal)
+   CONTINUE READING — related guides block
    -------------------------------------------------------------------------- */
 .continue-reading {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-  border: 1px solid rgba(255, 215, 0, 0.22);
-  border-radius: 18px;
-  padding: 28px;
-  margin-top: 44px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-top: 48px;
+  padding: 26px 24px;
+  background: var(--hi-panel);
+  border: 1px solid var(--hi-line);
+  border-top: 2px solid var(--hi-gold);
+  border-radius: 0;
+  backdrop-filter: none;
+  box-shadow: none;
 }
 
-.continue-reading h2 {
+.continue-reading h2,
+.continue-reading h3 {
   margin-top: 0;
-  padding-left: 0;
-  border-left: none;
-  background: linear-gradient(90deg, #ffd700, #ffe666);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  padding: 0;
+  border: 0;
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--hi-text);
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .continue-reading h3 {
-  margin-top: 0;
-  color: #ffd700;
+  color: var(--hi-teal);
 }
 
 .continue-reading ul.continue-links {
-  list-style: none;
+  margin: 14px 0 0;
   padding: 0;
-  margin: 0;
   max-width: none;
+  list-style: none;
   background: transparent;
   border: none;
   border-radius: 0;
@@ -528,95 +1259,55 @@ code {
 }
 
 .continue-reading ul.continue-links li {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  padding: 13px 16px;
-  margin-bottom: 10px;
-  transition: border-color 0.25s ease, background 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--hi-line);
+  background: transparent;
+  border-radius: 0;
+  transition: padding 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.continue-reading ul.continue-links li::before {
+  content: "\2192";
+  color: var(--hi-gold);
+  font-weight: 600;
 }
 
 .continue-reading ul.continue-links li:hover {
-  border-color: rgba(255, 215, 0, 0.4);
-  background: rgba(255, 255, 255, 0.05);
+  padding-right: 8px;
+  padding-left: 8px;
+  background: rgba(103, 214, 196, 0.045);
+  border-color: rgba(103, 214, 196, 0.35);
 }
 
 .continue-reading p a,
 .continue-reading ul.continue-links a {
-  color: #00d5d5;
+  color: var(--hi-teal);
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 213, 213, 0.5);
-  transition: color 0.3s ease, border-color 0.3s ease;
+  border-bottom: 1px solid rgba(103, 214, 196, 0.4);
+  transition: color 180ms ease, border-color 180ms ease;
 }
 
 .continue-reading p a:hover,
 .continue-reading ul.continue-links a:hover {
-  color: #ffd700;
-  border-color: #ffd700;
+  color: var(--hi-gold);
+  border-color: var(--hi-gold);
 }
 
 /* --------------------------------------------------------------------------
-   RESPONSIVE
-   -------------------------------------------------------------------------- */
-@media (max-width: 768px) {
-
-  .how-to-install,
-  .TiviMate-guide,
-  .Windows-guide,
-  .IPTVSmarters-guide,
-  .FIRESTICK-guide,
-  .guide-content-section {
-    padding: 44px 16px;
-  }
-
-  .install-grid {
-    gap: 18px;
-  }
-
-  .install-card {
-    padding: 16px;
-  }
-
-  .install-card h2 {
-    font-size: 1.1rem;
-  }
-
-  .install-card p {
-    font-size: 0.9rem;
-  }
-
-  .FIRESTICK-guide ol,
-  .FIRESTICK-guide ul,
-  .Windows-guide ol,
-  .Windows-guide ul,
-  .TiviMate-guide ol,
-  .TiviMate-guide ul,
-  .IPTVSmarters-guide ol,
-  .IPTVSmarters-guide ul,
-  .activation-steps {
-    padding: 16px 16px 16px 36px;
-  }
-}
-
-/* Respect reduced-motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-    animation: none !important;
-    scroll-behavior: auto;
-  }
-}
-/* --------------------------------------------------------------------------
-   FAQ � same look & motion as movies-entertainment.html FAQ list
+   FAQ — Entertainment .faq-list (thin rules, teal + rotating to gold)
    -------------------------------------------------------------------------- */
 .faq-list {
   max-width: 1000px;
   margin: 30px auto 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid var(--hi-line);
 }
 
 .faq-list details {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid var(--hi-line);
 }
 
 .faq-list summary {
@@ -625,11 +1316,16 @@ code {
   align-items: center;
   justify-content: space-between;
   gap: 22px;
-  color: #fff;
+  color: var(--hi-text);
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   list-style: none;
+  transition: color 180ms ease;
+}
+
+.faq-list summary:hover {
+  color: var(--hi-teal);
 }
 
 .faq-list summary::-webkit-details-marker {
@@ -638,43 +1334,54 @@ code {
 
 .faq-list summary span {
   flex: 0 0 auto;
-  color: #00a3a3;
+  color: var(--hi-teal);
   font-size: 1.35rem;
   transition: transform 180ms ease;
 }
 
 .faq-list details[open] summary span {
   transform: rotate(45deg);
+  color: var(--hi-gold);
 }
 
 .faq-list details p {
   max-width: 760px;
   margin: -2px 40px 22px 0;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--hi-muted);
   font-size: 0.9rem;
   line-height: 1.65;
 }
 
 .faq-list details p a {
-  color: #00a3a3;
+  color: var(--hi-teal);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(103, 214, 196, 0.55);
+  text-underline-offset: 3px;
+}
+
+.faq-list details p a:hover {
+  color: var(--hi-gold);
+  text-decoration-color: currentColor;
 }
 
 @media (max-width: 640px) {
   .faq-list summary {
     min-height: 64px;
+    gap: 14px;
+    font-size: 0.9rem;
   }
 
   .faq-list details p {
     margin-right: 25px;
+    font-size: 0.84rem;
   }
 }
 
-/* --------------------------------------------------------------------------
-   FAQ SECTION HEADING � same layout as movies-entertainment.html
-   -------------------------------------------------------------------------- */
+/* FAQ section heading — Entertainment .section-heading layout */
 .faq-section {
-  padding-top: 40px;
-  padding-bottom: 80px;
+  padding-top: 88px;
+  padding-bottom: 100px;
 }
 
 .section-heading {
@@ -692,28 +1399,30 @@ code {
   font-weight: 600;
   line-height: 1.08;
   letter-spacing: 0;
-  color: #fff;
+  color: var(--hi-text);
+  padding-bottom: 0;
 }
 
 .section-heading h2 em {
-  font-style: italic;
-  color: #00a3a3;
+  font-style: normal;
+  color: var(--hi-gold);
 }
 
-.section-heading__note {
+.section-heading__note,
+.section-heading p:not(.eyebrow) {
   max-width: 360px;
   margin: 0;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.98rem;
+  color: var(--hi-muted);
+  font-size: 0.94rem;
   line-height: 1.65;
 }
 
 .eyebrow {
   margin: 0 0 10px;
-  color: #00a3a3;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  color: var(--hi-teal);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 
@@ -725,11 +1434,14 @@ code {
   }
 }
 
-.Windows-guide .faq-list .faq-item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+/* FAQ accordion — JS-driven .faq / .faq-item structure (navbar.js logic)
+   (used by the hub page and the Windows guide) */
+.faq-list .faq-item,
+.faq-list .faq {
+  border-bottom: 1px solid var(--hi-line);
 }
 
-.Windows-guide .faq-list .faq-question {
+.faq-list .faq-question {
   display: flex;
   width: 100%;
   min-height: 68px;
@@ -739,60 +1451,84 @@ code {
   padding: 0;
   border: 0;
   background: transparent;
-  color: #fff;
+  color: var(--hi-text);
   font: inherit;
   font-size: 1rem;
   font-weight: 500;
   text-align: left;
   cursor: pointer;
+  transition: color 180ms ease;
 }
 
-.Windows-guide .faq-list .faq-question::after {
+.faq-list .faq-question:hover {
+  color: var(--hi-teal);
+}
+
+.faq-list .faq-question::after {
   content: none;
 }
 
-.Windows-guide .faq-list .faq-question span {
+.faq-list .faq-question span {
   flex: 0 0 auto;
-  color: #00a3a3;
+  color: var(--hi-teal);
   font-size: 1.35rem;
-  transition: transform 180ms ease;
+  transition: transform 180ms ease, color 180ms ease;
 }
 
-.Windows-guide .faq-list .faq-item.active .faq-question span {
+.faq-list .faq-item.active .faq-question span,
+.faq-list .faq.active .faq-question span {
   transform: rotate(45deg);
+  color: var(--hi-gold);
 }
 
-.Windows-guide .faq-list .faq-answer {
+.faq-list .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
 }
 
-.Windows-guide .faq-list .faq-answer p {
+.faq-list .faq-answer p {
   max-width: 760px;
   margin: -2px 40px 22px 0;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--hi-muted);
   font-size: 0.9rem;
   line-height: 1.65;
 }
 
-.Windows-guide .faq-list .faq-question:focus-visible {
-  outline: 2px solid #00a3a3;
+.faq-list .faq-answer p a {
+  color: var(--hi-teal);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(103, 214, 196, 0.55);
+  text-underline-offset: 3px;
+}
+
+.faq-list .faq-answer p a:hover,
+.faq-list .faq-answer p a:focus-visible {
+  color: var(--hi-gold);
+  text-decoration-color: currentColor;
+}
+
+.faq-list .faq-question:focus-visible {
+  outline: 2px solid var(--hi-teal);
   outline-offset: 3px;
 }
 
 @media (max-width: 640px) {
-  .Windows-guide .faq-list .faq-question {
+  .faq-list .faq-question {
     min-height: 64px;
+    gap: 14px;
+    font-size: 0.9rem;
   }
 
-  .Windows-guide .faq-list .faq-answer p {
+  .faq-list .faq-answer p {
     margin-right: 25px;
+    font-size: 0.84rem;
   }
 }
 
 /* ============================================================
-   SEO Update: Downloader Code Callout + Step/Shortcut Lists
+   DOWNLOADER GUIDE — Code Callout + Step / Shortcut / Troubleshoot
    ============================================================ */
 
 /* Above-the-fold high-contrast callout box */
@@ -803,20 +1539,22 @@ code {
   justify-content: center;
   gap: 12px 20px;
   margin: 28px auto;
-  padding: 20px 28px;
-  background: linear-gradient(135deg, #0f3d0f, #1a6b1a);
-  color: #ffffff;
-  border: 2px solid #7fff7f;
-  border-radius: 14px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  padding: 22px 28px;
+  background: var(--hi-raised);
+  color: var(--hi-text);
+  border: 1px solid rgba(103, 214, 196, 0.45);
+  border-left: 4px solid var(--hi-teal);
+  border-radius: 0;
+  box-shadow: none;
   text-align: center;
 }
 
 .code-callout-label {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: #ffe97a;
-  letter-spacing: 0.3px;
+  color: var(--hi-teal);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .code-callout-code {
@@ -824,24 +1562,24 @@ code {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   letter-spacing: 0.35em;
-  color: #ffffff;
-  background: #000000;
+  color: var(--hi-gold);
+  background: var(--hi-ink);
   padding: 8px 20px;
-  border-radius: 10px;
-  border: 2px solid #7fff7f;
+  border-radius: 0;
+  border: 1px solid rgba(223, 187, 121, 0.5);
   user-select: all;
   cursor: pointer;
 }
 
 .code-callout-cta {
-  color: #ffffff;
+  color: var(--hi-teal);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
 .code-callout-cta:hover {
-  color: #ffe97a;
+  color: var(--hi-gold);
 }
 
 /* Inline variant for the mid-article keyword section */
@@ -851,23 +1589,29 @@ code {
   max-width: 420px;
 }
 
-/* Clean ordered step list (replaces loose <h3> steps) */
+/* Clean ordered step list */
 .step-list {
-  padding-left: 24px;
-  margin: 20px 0;
+  max-width: none;
+  margin: 22px 0;
+  padding: 20px 20px 20px 44px;
+  background: var(--hi-panel);
+  border: 1px solid var(--hi-line);
+  border-radius: 0;
 }
 
-.step-list > li {
+.step-list>li {
   margin-bottom: 32px;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   line-height: 1.6;
+  color: #d9e2dc;
 }
 
-.step-list > li > strong {
+.step-list>li>strong {
   display: block;
-  font-size: 1.15rem;
-  color: #ffd24a;
   margin-bottom: 6px;
+  font-size: 1.12rem;
+  color: var(--hi-gold);
+  font-weight: 600;
 }
 
 .step-list img {
@@ -875,52 +1619,64 @@ code {
   max-width: 100%;
   height: auto;
   margin: 12px 0 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--hi-line);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* Quick 3-step shortcut list */
 .quick-shortcut {
-  padding-left: 24px;
+  max-width: none;
   margin: 16px 0;
+  padding: 16px 16px 16px 40px;
+  background: rgba(103, 214, 196, 0.05);
+  border: 1px solid rgba(103, 214, 196, 0.22);
+  border-radius: 0;
 }
 
 .quick-shortcut li {
   margin-bottom: 12px;
   line-height: 1.6;
+  color: #d9e2dc;
 }
 
 .code-inline {
   font-family: "Courier New", monospace;
   font-weight: 800;
-  background: #000;
-  color: #7fff7f;
+  background: var(--hi-ink);
+  color: var(--hi-teal);
   padding: 2px 8px;
-  border-radius: 6px;
-  border: 1px solid #7fff7f;
+  border: 1px solid rgba(103, 214, 196, 0.5);
+  border-radius: 0;
   letter-spacing: 0.2em;
 }
 
-/* Troubleshooting list */
+/* Troubleshooting list — gold left-border rows */
 .troubleshoot-list {
-  padding-left: 0;
-  list-style: none;
   margin: 20px 0;
+  padding: 0;
+  list-style: none;
 }
 
-.troubleshoot-list > li {
-  background: #1f1f1f;
-  border-left: 4px solid #ff9f43;
-  border-radius: 8px;
+.troubleshoot-list>li {
+  margin-bottom: 0;
   padding: 18px 22px;
-  margin-bottom: 18px;
+  background: var(--hi-panel);
+  border: 1px solid var(--hi-line);
+  border-left: 3px solid var(--hi-gold);
+  border-radius: 0;
 }
 
-.troubleshoot-list > li > strong {
+.troubleshoot-list>li+li {
+  border-top: 0;
+}
+
+.troubleshoot-list>li>strong {
   display: block;
-  font-size: 1.1rem;
-  color: #ff9f43;
   margin-bottom: 8px;
+  font-size: 1.05rem;
+  color: var(--hi-gold);
+  font-weight: 600;
 }
 
 .troubleshoot-list ul {
@@ -931,4 +1687,157 @@ code {
 .troubleshoot-list ul li {
   margin-bottom: 6px;
   line-height: 1.55;
+  color: var(--hi-muted);
+}
+
+/* Downloader device blocks */
+.device-block {
+  margin: 26px 0;
+  padding: 20px 22px;
+  background: var(--hi-panel);
+  border: 1px solid var(--hi-line);
+  border-radius: 0;
+}
+
+.device-block h3,
+.device-block h2 {
+  margin-top: 0;
+}
+
+/* Guide step rows (downloader-guide) */
+.guide-step {
+  margin: 26px 0;
+  padding: 18px 20px;
+  background: var(--hi-panel);
+  border: 1px solid var(--hi-line);
+  border-radius: 0;
+}
+
+.guide-step:hover {
+  border-color: rgba(103, 214, 196, 0.4);
+}
+
+.guide-step h3,
+.guide-step h2 {
+  margin-top: 0;
+  color: var(--hi-teal);
+}
+
+.intro-text {
+  color: var(--hi-muted);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .how-to-install .container {
+    padding: 0 34px;
+  }
+
+  .install-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+
+  .how-to-install,
+  .TiviMate-guide,
+  .Windows-guide,
+  .IPTVSmarters-guide,
+  .FIRESTICK-guide,
+  .guide-content-section {
+    padding: 60px 0 68px;
+  }
+
+  .faq-section {
+    padding-top: 60px;
+    padding-bottom: 68px;
+  }
+
+  .how-to-install .container,
+  .TiviMate-guide .container,
+  .Windows-guide .container,
+  .IPTVSmarters-guide .container,
+  .FIRESTICK-guide .container,
+  .guide-detail-container {
+    padding: 0 22px;
+  }
+
+  .install-grid {
+    gap: 11px;
+  }
+
+  .install-card__body {
+    padding: 15px;
+  }
+
+  .install-card h2,
+  .install-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .install-card p {
+    font-size: 0.86rem;
+  }
+
+  .read-more,
+  .install-btn {
+    min-height: 42px;
+    gap: 8px;
+    padding: 9px 12px;
+    font-size: 0.79rem;
+  }
+
+  .FIRESTICK-guide ol,
+  .FIRESTICK-guide ul,
+  .Windows-guide ol,
+  .Windows-guide ul,
+  .TiviMate-guide ol,
+  .TiviMate-guide ul,
+  .IPTVSmarters-guide ol,
+  .IPTVSmarters-guide ul,
+  .activation-steps,
+  .step-list,
+  .quick-shortcut {
+    padding: 16px 16px 16px 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-to-install .container {
+    padding: 0 18px;
+  }
+
+  .install-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .how-to-install .container h1 {
+    padding-top: 30px;
+    font-size: 2.6rem;
+  }
+
+  .how-to-install:first-child h1::after {
+    display: none;
+  }
+
+  .code-callout {
+    flex-direction: column;
+    padding: 18px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+  body,
+  body *,
+  body *::before,
+  body *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }

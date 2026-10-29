@@ -13,10 +13,10 @@
   <meta name="mobile-web-app-capable" content="yes">
 
   <title>How to Install IPTV on All Devices | 8KIPTV4U</title>
-<link rel="preload" href="/assets/fonts/fonts.css" as="style">
-<link rel="preload" href="/assets/fonts/jost-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/jost-latin-ext-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="preload" href="/assets/fonts/fonts.css" as="style">
+  <link rel="preload" href="/assets/fonts/jost-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/jost-latin-ext-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
 
   <!-- ✅ Canonical URL & hreflang -->
   <link rel="canonical" href="https://www.8kiptv4u.com/pages/how-to-install-iptv">
@@ -299,38 +299,47 @@
 
   <!-- ✅ Main Content -->
   <main>
-    <section class="how-to-install">
-      <div class="container">
-        <h1>How to Install IPTV on All Devices</h1>
+    <section class="install-hero" aria-labelledby="install-title">
 
-        <p>
+      <div class="install-hero__backdrop" aria-hidden="true">
+        <img src="/assets/images/how-to-install/hero.webp" alt="" width="600" height="900" fetchpriority="high">
+      </div>
+
+      <div class="install-hero__content">
+        <p class="install-eyebrow"><span></span> 8kIPTV4U — Setup guides</p>
+        <h1 id="install-title">How to Install IPTV on <em>All Devices</em></h1>
+
+        <p class="install-hero__intro">
           This page explains how to get started with IPTV, what you need before you begin, and how the setup process
-          works on different devices. IPTV (Internet Protocol Television) delivers live TV channels, movies, and series
-          over an internet connection instead of a cable or satellite aerial.
+          works on different devices. IPTV (Internet Protocol Television) delivers live TV channels, movies, and
+          series over an internet connection instead of a cable or satellite aerial.
         </p>
-        <p>
+        <p class="install-hero__intro">
           To get IPTV working, you need three things: a device that can run an IPTV player (such as a Fire TV Stick,
-          Android TV, Smart TV, phone, or computer), a reasonably stable internet connection, and login details from an
-          IPTV provider. Because each device uses a different operating system, the exact installation steps differ —
-          some players come from an app store, while on Fire TV devices they are usually sideloaded with the Downloader
-          app.
+          Android TV, Smart TV, phone, or computer), a reasonably stable internet connection, and login details from
+          an IPTV provider. Because each device uses a different operating system, the exact installation steps
+          differ — some players come from an app store, while on Fire TV devices they are usually sideloaded with the
+          Downloader app.
         </p>
-        <p>
+        <p class="install-hero__intro">
           Start with the section below for the general process, then choose the step-by-step guide that matches your
           device or player from the cards below. Each guide covers installation, logging in, and what to check if
           something doesn't work straight away.
         </p>
+      </div>
 
-        <div class="install-grid">
-          <!-- Guides for each device and player are listed above -->
-        </div>
+      <div class="install-hero__signature" aria-hidden="true"><span>8K</span><span>GUIDES FOR EVERY
+          DEVICE</span></div>
+      <p class="install-hero__side-note" aria-hidden="true">01 <span>/</span> SETUP</p>
+    </section>
 
+    <section class="how-to-install">
+      <div class="container">
 
         <div class="install-grid">
           <article class="install-card">
             <img src="/assets/images/how-to-install/amazon-firestick.webp"
-              alt="Amazon Fire TV Stick next to a television" fetchpriority="high"
-              width="400" height="300">
+              alt="Amazon Fire TV Stick next to a television" fetchpriority="high" width="400" height="300">
             <h2>Install IPTV on Firestick &amp; Fire TV</h2>
             <p>Sideload the IPTV Smarters player onto any Amazon Fire TV device. The guide covers enabling apps from
               unknown sources, installing the Downloader app, and logging in with your account details.</p>
@@ -341,8 +350,7 @@
 
           <article class="install-card">
             <img src="/assets/images/how-to-install/iptv-smarters-pro.webp"
-              alt="IPTV Smarters Pro player interface on a screen" fetchpriority="high"
-              width="400" height="300">
+              alt="IPTV Smarters Pro player interface on a screen" fetchpriority="high" width="400" height="300">
             <h2>Set Up IPTV in IPTV Smarters Pro</h2>
             <p>Once the Smarters Pro app is installed on your device, this guide shows how to log in with the Xtream
               Codes API method and open live TV, movies, and series.</p>
@@ -352,8 +360,7 @@
 
           <article class="install-card">
             <img src="/assets/images/how-to-install/tivi-mate.webp"
-              alt="TiviMate IPTV player channel list on an Android TV" fetchpriority="high" width="400"
-              height="300">
+              alt="TiviMate IPTV player channel list on an Android TV" fetchpriority="high" width="400" height="300">
             <h2>Set Up IPTV in TiviMate</h2>
             <p>A step-by-step walkthrough of adding a playlist to TiviMate on Android TV devices, including the
               electronic programme guide (EPG) and player settings.</p>
@@ -363,8 +370,8 @@
 
           <article class="install-card">
             <img src="/assets/images/downloader-guide/downloader-banner.webp"
-              alt="Downloader app icon used to install apps on Amazon Fire TV" fetchpriority="high"
-              width="400" height="300">
+              alt="Downloader app icon used to install apps on Amazon Fire TV" fetchpriority="high" width="400"
+              height="300">
             <h2>Install IPTV Apps on Firestick with Downloader</h2>
             <p>Many IPTV players are not listed on the Amazon Appstore. This guide explains how to use the Downloader
               app to install IPTV players on Fire TV devices step by step.</p>
@@ -492,54 +499,77 @@
     </section>
 
     <!-- Common Problems Section -->
-    <section class="how-to-install">
+    <section class="how-to-install faq-section" aria-labelledby="problems-title">
       <div class="container">
-        <h2>Common IPTV Setup Problems &amp; Solutions</h2>
+        <h2 id="problems-title">Common IPTV Setup Problems &amp; Solutions</h2>
         <p>If something doesn't work after installation, the cause is usually one of four things: the device, the
-          player app, the internet connection, or the IPTV provider. Here are practical checks for the most common
-          problems.</p>
+          player app, the internet connection, or the IPTV provider. On smaller screens, tap a problem to see the fix.
+        </p>
         <div class="install-grid">
-          <article class="install-card">
-            <h3>Invalid Login Credentials</h3>
-            <p>Double-check your username, password, and server URL for typos and extra spaces — credentials are
-              usually case-sensitive. If you have just subscribed, confirm your subscription is active. If the details
-              look correct but still fail, contact your provider's support.</p>
+          <article class="install-card faq-item">
+            <h3><button class="faq-question" type="button" aria-expanded="false">Invalid Login Credentials<span
+                  aria-hidden="true">+</span></button></h3>
+            <div class="faq-answer">
+              <p>Double-check your username, password, and server URL for typos and extra spaces — credentials are
+                usually case-sensitive. If you have just subscribed, confirm your subscription is active. If the details
+                look correct but still fail, contact your provider's support.</p>
+            </div>
           </article>
-          <article class="install-card">
-            <h3>Invalid or Expired Playlist</h3>
-            <p>An M3U playlist or login that has expired, or was copied incorrectly, will not load. Re-copy the URL or
-              credentials from your provider's email, check for missing characters, and confirm the subscription hasn't
-              ended.</p>
+          <article class="install-card faq-item">
+            <h3><button class="faq-question" type="button" aria-expanded="false">Invalid or Expired Playlist<span
+                  aria-hidden="true">+</span></button></h3>
+            <div class="faq-answer">
+              <p>An M3U playlist or login that has expired, or was copied incorrectly, will not load. Re-copy the URL or
+                credentials from your provider's email, check for missing characters, and confirm the subscription
+                hasn't
+                ended.</p>
+            </div>
           </article>
-          <article class="install-card">
-            <h3>Playlist Not Loading</h3>
-            <p>First confirm the credentials are correct. Then check whether other apps on the same device can reach
-              the internet — if they can't, the problem is the connection, not the playlist. If the playlist still
-              fails on a working connection, the provider's server may be down temporarily.</p>
+          <article class="install-card faq-item">
+            <h3><button class="faq-question" type="button" aria-expanded="false">Playlist Not Loading<span
+                  aria-hidden="true">+</span></button></h3>
+            <div class="faq-answer">
+              <p>First confirm the credentials are correct. Then check whether other apps on the same device can reach
+                the internet — if they can't, the problem is the connection, not the playlist. If the playlist still
+                fails on a working connection, the provider's server may be down temporarily.</p>
+            </div>
           </article>
-          <article class="install-card">
-            <h3>Buffering</h3>
-            <p>Buffering is most often caused by a slow or unstable internet connection. Restart your router, move
-              closer to Wi-Fi or use a wired Ethernet connection, and close other apps using bandwidth. If buffering
-              happens on every device and connection, ask your provider whether a different server is available.</p>
+          <article class="install-card faq-item">
+            <h3><button class="faq-question" type="button" aria-expanded="false">Buffering<span
+                  aria-hidden="true">+</span></button></h3>
+            <div class="faq-answer">
+              <p>Buffering is most often caused by a slow or unstable internet connection. Restart your router, move
+                closer to Wi-Fi or use a wired Ethernet connection, and close other apps using bandwidth. If buffering
+                happens on every device and connection, ask your provider whether a different server is available.</p>
+            </div>
           </article>
-          <article class="install-card">
-            <h3>Black Screen on Channels</h3>
-            <p>A black screen with audio, or nothing at all, usually points to the specific channel stream rather than
-              your device. Try a different channel: if other channels work, the stream itself is likely down — try
-              again later or tell your provider. If every channel is black, restart the app and then the device.</p>
+          <article class="install-card faq-item">
+            <h3><button class="faq-question" type="button" aria-expanded="false">Black Screen on Channels<span
+                  aria-hidden="true">+</span></button></h3>
+            <div class="faq-answer">
+              <p>A black screen with audio, or nothing at all, usually points to the specific channel stream rather than
+                your device. Try a different channel: if other channels work, the stream itself is likely down — try
+                again later or tell your provider. If every channel is black, restart the app and then the device.</p>
+            </div>
           </article>
-          <article class="install-card">
-            <h3>Missing EPG / TV Guide</h3>
-            <p>If the programme guide is empty, open your player's settings and refresh or reload the EPG data. Some
-              players need the EPG URL to be entered separately — check that it matches what your provider sent. EPG
-              data can also take a few minutes to populate after the first login.</p>
+          <article class="install-card faq-item">
+            <h3><button class="faq-question" type="button" aria-expanded="false">Missing EPG / TV Guide<span
+                  aria-hidden="true">+</span></button></h3>
+            <div class="faq-answer">
+              <p>If the programme guide is empty, open your player's settings and refresh or reload the EPG data. Some
+                players need the EPG URL to be entered separately — check that it matches what your provider sent. EPG
+                data can also take a few minutes to populate after the first login.</p>
+            </div>
           </article>
-          <article class="install-card">
-            <h3>App Compatibility &amp; Crashing</h3>
-            <p>Not every player runs on every device — check the player's requirements against your device's operating
-              system version. If the app crashes or will not open, update the app (or reinstall the latest version) and
-              clear its cache in your device settings. An out-of-date device system can also cause crashes.</p>
+          <article class="install-card faq-item">
+            <h3><button class="faq-question" type="button" aria-expanded="false">App Compatibility &amp; Crashing<span
+                  aria-hidden="true">+</span></button></h3>
+            <div class="faq-answer">
+              <p>Not every player runs on every device — check the player's requirements against your device's operating
+                system version. If the app crashes or will not open, update the app (or reinstall the latest version)
+                and
+                clear its cache in your device settings. An out-of-date device system can also cause crashes.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -550,53 +580,74 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <p style="color: #00d5d5; font-weight: 600; letter-spacing: 0.5px; margin: 0 0 10px;">Good to know</p>
+            <p
+              style="color: #67d6c4; font-weight: 700; font-size: 0.74rem; letter-spacing: 0.11em; text-transform: uppercase; margin: 0 0 10px;">
+              Good to know</p>
             <h2 id="install-faq-title">IPTV Installation <em>FAQ</em></h2>
           </div>
-          <p style="color: rgba(255,255,255,0.7); max-width: 320px;">Quick answers about getting started
+          <p style="color: #a5b4ad; max-width: 320px;">Quick answers about getting started
             with IPTV, players, and common setup problems.</p>
         </div>
         <div class="faq-list">
-          <details>
-            <summary>What do I need to get started with IPTV?<span aria-hidden="true">+</span></summary>
-            <p>You need a device that can run an IPTV player (Fire TV Stick, Android TV, Smart TV, phone, tablet, or
-              computer), a reasonably stable internet connection, and login details or a playlist URL from an IPTV
-              provider. The player app itself is free to install on most devices; the channels come from your provider
-              subscription.</p>
-          </details>
-          <details>
-            <summary>How do I install IPTV on my device?<span aria-hidden="true">+</span></summary>
-            <p>The process depends on the device. On Android, Smart TVs, phones, and Windows, you usually install a
-              player from the device's app store or website, then log in with your provider details. On Fire TV
-              devices, players are typically sideloaded using the Downloader app. Pick the guide for your device from
-              the cards on this page for exact steps.</p>
-          </details>
-          <details>
-            <summary>Is an IPTV player the same as an IPTV subscription?<span aria-hidden="true">+</span></summary>
-            <p>No. An IPTV player is just software — it reads a playlist or connects to a service, but shows nothing
-              without login details or a playlist URL. A subscription from a provider is what supplies the channels.
-              You need both: the player installed and valid credentials to enter into it.</p>
-          </details>
-          <details>
-            <summary>Can I use IPTV on different devices?<span aria-hidden="true">+</span></summary>
-            <p>Yes, the same provider credentials can generally be entered into players on multiple devices. Check with
-              your provider how many devices can stream at the same time on your plan, as this varies between
-              subscriptions.</p>
-          </details>
-          <details>
-            <summary>Why is my IPTV playlist not loading?<span aria-hidden="true">+</span></summary>
-            <p>Common causes are a mistyped or expired playlist URL or credentials, an inactive subscription, or no
-              internet connection on the device. Re-copy the details exactly as your provider sent them, confirm the
-              subscription is active, and test other apps on the same device to rule out a connection problem. If it
-              still fails, contact your provider.</p>
-          </details>
-          <details>
-            <summary>What should I check if IPTV keeps buffering?<span aria-hidden="true">+</span></summary>
-            <p>Buffering usually comes from the internet connection rather than the player. Restart your router, use a
-              wired Ethernet connection if possible, move closer to your Wi-Fi router, and stop other downloads or
-              streams sharing the connection. If buffering persists across devices and connections, the issue may be
-              on the provider's side.</p>
-          </details>
+          <div class="faq">
+            <button class="faq-question" type="button" aria-expanded="false">What do I need to get started with
+              IPTV?<span aria-hidden="true">+</span></button>
+            <div class="faq-answer">
+              <p>You need a device that can run an IPTV player (Fire TV Stick, Android TV, Smart TV, phone, tablet, or
+                computer), a reasonably stable internet connection, and login details or a playlist URL from an IPTV
+                provider. The player app itself is free to install on most devices; the channels come from your provider
+                subscription.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <button class="faq-question" type="button" aria-expanded="false">How do I install IPTV on my device?<span
+                aria-hidden="true">+</span></button>
+            <div class="faq-answer">
+              <p>The process depends on the device. On Android, Smart TVs, phones, and Windows, you usually install a
+                player from the device's app store or website, then log in with your provider details. On Fire TV
+                devices, players are typically sideloaded using the Downloader app. Pick the guide for your device from
+                the cards on this page for exact steps.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <button class="faq-question" type="button" aria-expanded="false">Is an IPTV player the same as an IPTV
+              subscription?<span aria-hidden="true">+</span></button>
+            <div class="faq-answer">
+              <p>No. An IPTV player is just software — it reads a playlist or connects to a service, but shows nothing
+                without login details or a playlist URL. A subscription from a provider is what supplies the channels.
+                You need both: the player installed and valid credentials to enter into it.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <button class="faq-question" type="button" aria-expanded="false">Can I use IPTV on different devices?<span
+                aria-hidden="true">+</span></button>
+            <div class="faq-answer">
+              <p>Yes, the same provider credentials can generally be entered into players on multiple devices. Check
+                with
+                your provider how many devices can stream at the same time on your plan, as this varies between
+                subscriptions.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <button class="faq-question" type="button" aria-expanded="false">Why is my IPTV playlist not loading?<span
+                aria-hidden="true">+</span></button>
+            <div class="faq-answer">
+              <p>Common causes are a mistyped or expired playlist URL or credentials, an inactive subscription, or no
+                internet connection on the device. Re-copy the details exactly as your provider sent them, confirm the
+                subscription is active, and test other apps on the same device to rule out a connection problem. If it
+                still fails, contact your provider.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <button class="faq-question" type="button" aria-expanded="false">What should I check if IPTV keeps
+              buffering?<span aria-hidden="true">+</span></button>
+            <div class="faq-answer">
+              <p>Buffering usually comes from the internet connection rather than the player. Restart your router, use a
+                wired Ethernet connection if possible, move closer to your Wi-Fi router, and stop other downloads or
+                streams sharing the connection. If buffering persists across devices and connections, the issue may be
+                on the provider's side.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
