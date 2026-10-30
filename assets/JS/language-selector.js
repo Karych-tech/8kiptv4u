@@ -80,6 +80,12 @@
         de: "/de/pages/smarters-player-auf-firestick-anleitung",
         es: "/es/pages/codigo-downloader-iptv-smarters-firestick"
       },
+      "/pages/how-to-install-iptv/ibo-player": {
+        en: "/pages/how-to-install-iptv/ibo-player",
+        fr: "/fr/pages/guide-ibo-player",
+        de: "/de/pages/ibo-player-anleitung",
+        es: "/es/pages/guia-ibo-player"
+      },
       "/pages/how-to-install-iptv/tivi-mate": {
         en: "/pages/how-to-install-iptv/tivi-mate",
         fr: "/fr/pages/guide-tivi-mate",
@@ -166,6 +172,10 @@
     "/pages/code-downloader-iptv-smarters-firestick": "/pages/how-to-install-iptv/smarters-player-on-amazon-firestick",
     "/pages/smarters-player-auf-firestick-anleitung": "/pages/how-to-install-iptv/smarters-player-on-amazon-firestick",
     "/pages/codigo-downloader-iptv-smarters-firestick": "/pages/how-to-install-iptv/smarters-player-on-amazon-firestick",
+    "/pages/how-to-install-iptv/ibo-player": "/pages/how-to-install-iptv/ibo-player",
+    "/pages/guide-ibo-player": "/pages/how-to-install-iptv/ibo-player",
+    "/pages/ibo-player-anleitung": "/pages/how-to-install-iptv/ibo-player",
+    "/pages/guia-ibo-player": "/pages/how-to-install-iptv/ibo-player",
     "/pages/how-to-install-iptv/tivi-mate": "/pages/how-to-install-iptv/tivi-mate",
     "/pages/guide-tivi-mate": "/pages/how-to-install-iptv/tivi-mate",
     "/pages/tivi-mate-anleitung": "/pages/how-to-install-iptv/tivi-mate",

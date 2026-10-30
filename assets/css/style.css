@@ -782,6 +782,71 @@ header {
 
 }
 
+/* Offer badge — floating pill on the 12-month plan card */
+.price-card {
+  position: relative;
+}
+
+.price-card .plan-badge {
+  position: absolute;
+  top: 14px;
+  right: -6px;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #ffd700, #ffb300);
+  color: #1a1a1a;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(255, 215, 0, 0.35);
+  white-space: nowrap;
+}
+
+/* Gold emphasis list item — offer included with the plan */
+.price-card li.offer-li {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.price-card li.offer-li::before {
+  color: #ffd700;
+  content: '\2605';
+}
+
+/* Small offer note inside install cards — boxed, padded callout */
+.install-card .offer-note {
+  margin: 14px 0 16px;
+  padding: 12px 14px;
+  background: rgba(255, 215, 0, 0.08);
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  border-left: 3px solid #ffd700;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #ffd700;
+  text-align: left;
+}
+
+.install-card .offer-note a {
+  color: #ffe666;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.install-card .offer-note a:hover {
+  color: #fff3b0;
+}
+
+@media (max-width: 480px) {
+  .price-card .plan-badge {
+    top: -12px;
+    right: 12px;
+    font-size: 0.68rem;
+  }
+}
+
 .price-card h3 {
   font-size: 1.5rem;
   margin-top: 0;
